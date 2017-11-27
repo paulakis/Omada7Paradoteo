@@ -119,6 +119,8 @@ public class Dhlwsh {
 			if(item.iseidossinallaghs){
 			 double poso += item.poso;
 			}
+			else
+			{double poso -= item.poso}
 		}
 		return poso;
 	}*/

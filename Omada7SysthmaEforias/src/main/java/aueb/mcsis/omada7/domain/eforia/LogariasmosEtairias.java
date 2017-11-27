@@ -3,6 +3,7 @@ package aueb.mcsis.omada7.domain.eforia;
 
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -12,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.mgiandia.library.domain.Loan;
+
 
 
 
@@ -20,7 +23,8 @@ import javax.persistence.Table;
 public class LogariasmosEtairias  {
 	
 	Set<Dhlwsh> dhlwseis;
-	
+	//Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
+
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -128,7 +132,9 @@ public class LogariasmosEtairias  {
 			return false;
 		return true;
 	}
-
+	// public Set<Dhlwsh> getDhlwseis() {
+	  //      return new HashSet<Dhlwsh>(Dhlwseis);
+	    //}
 	
 	
 	
