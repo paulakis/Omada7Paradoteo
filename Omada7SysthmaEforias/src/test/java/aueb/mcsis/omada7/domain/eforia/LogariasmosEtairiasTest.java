@@ -1,15 +1,20 @@
 package aueb.mcsis.omada7.domain.eforia;
 
-import org.junit.Assert;
+import java.util.Date;
 
-import com.mgiandia.library.domain.Borrower;
-import com.mgiandia.library.domain.Loan;
+import org.junit.*;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 public class LogariasmosEtairiasTest {
+	
+	
+	@Test
+	public void EanToAfmEinaiValid(){
+		LogariasmosEtairias a=new LogariasmosEtairias(1, "emeis", new Date(), "1234567899", "asdasdasdasd", 2105012217,
+				true , false);
+		Assert.assertTrue(a.isValidAfm(a));
+	}
+	
 	
 	  @Test
 	  public void setDhlwshToLogariasmouEtairias() {
@@ -32,7 +37,7 @@ public class LogariasmosEtairiasTest {
 				  Dhlwsh dhlwsh = new Dhlwsh();
 	        dhlwsh.setLogariasmosEtairias(logariasmos);
 	        Assert.assertTrue(logariasmos.getDhlwseis().contains(dhlwsh));
-	        LogariasmosEtairias newlogariasmos = new  LogariasmosEtairias() 
+	        LogariasmosEtairias newlogariasmos = new  LogariasmosEtairias(); 
 	        
 	        dhlwsh.setLogariasmosEtairias(newlogariasmos);
 	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 0);

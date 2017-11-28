@@ -1,6 +1,7 @@
 package aueb.mcsis.omada7.domain.eforia;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -14,6 +15,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Dhlwsh")
 public class Dhlwsh {
+	
+	String afmkatoxou;
 	
 	Set<Parastatiko> parastatika;
 	
@@ -114,17 +117,48 @@ public class Dhlwsh {
 	}
 	
 	
-	/*public double sinoloposou(Set<Parastatiko> p){
-		for (<Parastatiko> item :p){
-			if(item.iseidossinallaghs){
-			 double poso += item.poso;
-			}
-			else
-			{double poso -= item.poso}
+	public boolean MporeiNaKaneiTropopoihsh(boolean e){
+		if (e){
+			return true;
+		}else{
+			return false;
 		}
-		return poso;
-	}*/
+	}
 	
+	public void EisagwghNeasDhlwshs(int id, Date submissiondate, double sinoloprostimou, boolean emprothesmh){
+		new Dhlwsh(id,submissiondate,sinoloprostimou,emprothesmh);
+	}
+	
+	//diorthwsh
+	public void TropopoihshDhlwshs(Set<Parastatiko> parastatika, boolean e , Parastatiko p ){
+		boolean a=true;
+		if(e){
+			for (Parastatiko g: parastatika){
+				if (g.getArithmosparastatikou()==p.arithmosparastatikou){
+					g.setPoso(p.poso);
+					g.setEidossinallaghs(p.eidossinallaghs);
+				}
+				else{
+					parastatika.add(p);
+				}
+			}
+		}
+	}
+	
+	//diorthwsh
+	public int SinoloParastatikwn(Set<Parastatiko> parastatika,String afm){
+		int i=0;
+		for (Parastatiko s :parastatika){
+			if(true){
+				i++;
+			}
+		}
+		return i;
+	}
+	
+	
+
+
 	
 
 }

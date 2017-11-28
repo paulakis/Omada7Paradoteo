@@ -1,6 +1,7 @@
 package aueb.mcsis.omada7.domain.eforia;
 
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +18,8 @@ public class Parastatiko {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
+	//undeer investigetation(mallon nai)
+	String afmprwteuontos;
 	
 	String afmsimvalwmenoou;
 	
@@ -41,15 +44,42 @@ public class Parastatiko {
 	}
 	
 	
-	public Parastatiko(String afmsimvalwmenoou, int arithmosparastatikou, boolean eidossinallaghs, double poso,
-			Date hmeromhniaparastatikou) {
+
+	
+	
+	public Parastatiko(int id, String afmprwteuontos, String afmsimvalwmenoou, int arithmosparastatikou,
+			boolean eidossinallaghs, double poso, Date hmeromhniaparastatikou) {
 		super();
+		this.id = id;
+		this.afmprwteuontos = afmprwteuontos;
 		this.afmsimvalwmenoou = afmsimvalwmenoou;
 		this.arithmosparastatikou = arithmosparastatikou;
 		this.eidossinallaghs = eidossinallaghs;
 		this.poso = poso;
 		this.hmeromhniaparastatikou = hmeromhniaparastatikou;
 	}
+
+
+
+
+
+	
+	public String getAfmprwteuontos() {
+		return afmprwteuontos;
+	}
+
+
+
+
+
+	public void setAfmprwteuontos(String afmprwteuontos) {
+		this.afmprwteuontos = afmprwteuontos;
+	}
+
+
+
+
+
 	public int getId() {
 		return id;
 	}
@@ -132,8 +162,18 @@ public class Parastatiko {
 		return true;
 	}
 	
+// na koitaksoume thn sisxetish ps tha paei telika me th dhlwsh h me ta parastatika.
+	public double sinoloesodwneksodwn(Set<Parastatiko> p, LogariasmosEtairias e, boolean x ){
+		double poso=0;
+		for (Parastatiko item :p){
+			if(item.afmprwteuontos==e.getAfm()){
+			if(item.eidossinallaghs)
+			{poso += item.poso;}
+			else
+			{ poso -= item.poso;}
+		 }
+		}
+		return poso;}
 	
-	
-	
-
 }
+

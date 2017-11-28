@@ -45,23 +45,75 @@ public class LogariasmosEtairias  {
 	@Column(nullable = false, unique = true)
 	int thlefwno;
 	
+	//if it's true then eforos has done the check.when false then they can submit the statement
+	
+	@Column(nullable = false, unique = true)
+	boolean exeiElefthei;
+	
+	//eforos must check thhis logarriasmos.
+	
+	@Column(nullable = false, unique = true)
+	boolean needCheck;
+	
 	
 	public LogariasmosEtairias() {
 		super();
 	}
 	
-	public LogariasmosEtairias(String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno) {
+
+	
+
+
+	public LogariasmosEtairias(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
+			boolean exeiElefthei, boolean needCheck) {
 		super();
+		this.id = id;
 		this.epwnimia = epwnimia;
 		this.hmeromhniasistashs = hmeromhniasistashs;
 		this.afm = afm;
 		this.email = email;
 		this.thlefwno = thlefwno;
+		this.exeiElefthei = exeiElefthei;
+		this.needCheck = needCheck;
 	}
-	
-	
-	
-	
+
+
+
+
+
+	public Set<Dhlwsh> getDhlwseis() {
+		return dhlwseis;
+	}
+
+
+
+	public void setDhlwseis(Set<Dhlwsh> dhlwseis) {
+		this.dhlwseis = dhlwseis;
+	}
+
+
+
+	public boolean isExeiElefthei() {
+		return exeiElefthei;
+	}
+
+
+
+	public void setExeiElefthei(boolean exeiElefthei) {
+		this.exeiElefthei = exeiElefthei;
+	}
+
+
+
+
+	public boolean isNeedCheck() {
+		return needCheck;
+	}
+
+	public void setNeedCheck(boolean needCheck) {
+		this.needCheck = needCheck;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -129,14 +181,72 @@ public class LogariasmosEtairias  {
 		} else if (!afm.equals(other.afm))
 			return false;
 		if (id != other.id)
-			return false;
+			return false;	
 		return true;
 	}
-	// public Set<Dhlwsh> getDhlwseis() {
-	  //      return new HashSet<Dhlwsh>(Dhlwseis);
-	    //}
 	
 	
+	public Set<Dhlwsh> getDhlwseis(LogariasmosEtairias e, Set<Dhlwsh> dhlwseis) {
+		Set <Dhlwsh> a=new HashSet<>();
+		for (Dhlwsh s : dhlwseis){
+			if (s.afmkatoxou==e.getAfm()){
+				a.add(s);
+			}
+		}
+        return a ;
+   }
+	
+	
+	public boolean MporeiNaKaneiDhlwsh(LogariasmosEtairias e ){
+		
+		if (e.exeiElefthei && !e.needCheck){
+			return true;
+		}
+		return false;
+	}
+	
+	
+	public boolean isValidAfm(LogariasmosEtairias e){
+		if(e.getAfm().length()>9){
+			System.out.println("den einai egiros arithmos");
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	
+	public boolean EgirosAfm(LogariasmosEtairias e){
+		  char[] afm;
+	        double count=0;
+	        double digit,finalNum=0;
+	        String temp;
+	        afm=e.getAfm().toCharArray();
+
+	        for(int i=afm.length;i>=1;i--){
+	            if(count!=0){
+	            temp=String.valueOf(afm[i-1]);
+	            digit=Integer.parseInt(temp);
+	           finalNum=finalNum+digit*Math.pow(2,count);
+	            }
+	           count++;
+	        }
+
+	        temp=String.valueOf(afm[afm.length-1]);
+	        digit=Integer.parseInt(temp);
+
+	        if(((finalNum%11)%10)==digit){
+	           return true;
+	        }
+	        else {return false;	}
+	        
+	}
+	
+	
+	public LogariasmosEtairias TropopoihshEggrafhs(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
+			boolean exeiElefthei, boolean needCheck){
+		return new LogariasmosEtairias(id, epwnimia, hmeromhniasistashs, afm, email, thlefwno, false, true);
+	}
 	
 	
 	
