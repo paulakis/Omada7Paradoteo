@@ -33,7 +33,7 @@ public class LogariasmosEtairiasTest {
 
 	  @Test
 	  public void setDhlwshToNewLogariasmosEtairias() {
-		  LogariasmosEtairias logariasmos = new  LogariasmosEtairias()        
+		  LogariasmosEtairias logariasmos = new  LogariasmosEtairias() ;      
 				  Dhlwsh dhlwsh = new Dhlwsh();
 	        dhlwsh.setLogariasmosEtairias(logariasmos);
 	        Assert.assertTrue(logariasmos.getDhlwseis().contains(dhlwsh));
