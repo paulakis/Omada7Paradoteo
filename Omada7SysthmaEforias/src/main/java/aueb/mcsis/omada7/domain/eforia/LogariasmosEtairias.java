@@ -36,7 +36,7 @@ public class LogariasmosEtairias  {
 	@Column(nullable = false, unique = true)
 	Date hmeromhniasistashs;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="afmprwteuontos",nullable = false, unique = true)
 	String afm;
 	
 	@Column(nullable = false, unique = true)

@@ -1,7 +1,8 @@
 package aueb.mcsis.omada7.services.eforia;
 
 public class IpovolhDhlwshsService {
-	//DEXETE BOOLEAN OTI UPARXEI LOGARIASMOS
-	//KAI BOOLEAN GIA TO XRONIKO DIASTIMA DILOSEWN
-	//EKXOREI SE DUO VARIABLE ESODA KAI EXODA
+	// koitaei sto logariasmo me  afm ean mporei na kanei dhlwsh
+	// kanei dhlwsh 
+	// 
+	
 }

@@ -5,6 +5,5 @@ public class EpivolhProstimouService {
 	// epivolh mikrou prostimou
 	//an apath true kai anantistixiwn true(meta thn enimerosi) 
 	// epivolh prostimou apo mia dikia mas sinaritisi!!
-	// DIKIA MOUUU
-	// SOKOLATAAAAA
+	
 }
