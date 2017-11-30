@@ -91,8 +91,8 @@ exei </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>420</y>
+      <x>430</x>
+      <y>390</y>
       <w>230</w>
       <h>100</h>
     </coordinates>
@@ -107,16 +107,16 @@ static prostimo:double
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>260</y>
-      <w>170</w>
-      <h>180</h>
+      <x>650</x>
+      <y>400</y>
+      <w>220</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m1=*
-m2=1
+m1=1
+m2=*
 ginetai</panel_attributes>
-    <additional_attributes>10.0;160.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;200.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -219,10 +219,10 @@ dinatothtatropopoihshs:boolean
     <coordinates>
       <x>220</x>
       <y>370</y>
-      <w>380</w>
-      <h>100</h>
+      <w>230</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;360.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;210.0;50.0</additional_attributes>
   </element>
 </diagram>
