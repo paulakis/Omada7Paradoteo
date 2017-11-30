@@ -1,5 +1,10 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("anantistoixies")
 public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	double diaforaposou;
