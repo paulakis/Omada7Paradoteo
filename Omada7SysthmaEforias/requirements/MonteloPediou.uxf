@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
+      <x>460</x>
       <y>0</y>
       <w>190</w>
-      <h>120</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>LogariasmosEtaireias
 --
@@ -16,6 +16,16 @@ epwnimia:String
 afm:string
 email:string
 tilefwno:string
+--
+isvalidafm()
+isegiros()
+mporeinakaneidhlwsh()
+tropopoihsheggrafhs()
+?getDhlwseis()
+eisagwghdhlwshs()
+tropopoihshdhlwshs()
+
+
 
 
 
@@ -27,16 +37,23 @@ tilefwno:string
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>850</x>
-      <y>150</y>
+      <x>870</x>
+      <y>160</y>
       <w>260</w>
-      <h>120</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>Dhlwsh
 --
 submissiondate:Date
 sinoloprostimou: double
 /emprothesmh:boolean
+--
+fereparastatika()
+correctparastatiko()
+eisagwghparastatikou()
+
+
+
 
 </panel_attributes>
     <additional_attributes/>
@@ -44,24 +61,24 @@ sinoloprostimou: double
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>640</x>
       <y>40</y>
-      <w>150</w>
-      <h>130</h>
+      <w>250</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=*
 m2=1
 kanei</panel_attributes>
-    <additional_attributes>130.0;110.0;10.0;10.0</additional_attributes>
+    <additional_attributes>230.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>850</x>
-      <y>350</y>
+      <y>460</y>
       <w>320</w>
-      <h>120</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Parastatika
 --
@@ -70,6 +87,8 @@ arithmosparastatikou:string
 poso:double
 eidossinnalaghs:boolean(0--&gt;esoda,1--&gt;eksoda)
 hmeromhniaParastatikou:Date
+--
+sinoloxrhmatwn()
 
 </panel_attributes>
     <additional_attributes/>
@@ -78,57 +97,63 @@ hmeromhniaParastatikou:Date
     <id>Relation</id>
     <coordinates>
       <x>1050</x>
-      <y>260</y>
-      <w>50</w>
-      <h>110</h>
+      <y>330</y>
+      <w>60</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 m2=1
 exei </panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;30.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
-      <y>390</y>
+      <x>410</x>
+      <y>620</y>
       <w>230</w>
-      <h>100</h>
+      <h>140</h>
     </coordinates>
     <panel_attributes>Elegxos_apaths
 --
 soumaesodwneksodwn:double
 /apath:boolean(1 exei ginei apath)
 static prostimo:double
+--
+ekaneapath()
+dwsesinolopithaanwnapatwn()
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>400</y>
-      <w>220</w>
-      <h>70</h>
+      <x>630</x>
+      <y>510</y>
+      <w>240</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=1
 m2=*
 ginetai</panel_attributes>
-    <additional_attributes>10.0;40.0;200.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;220.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>150</y>
+      <y>260</y>
       <w>210</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>Elegxos_Gia_Anantistoixies
 --
 diaforaposou:double
+--
+vressinoloanantistoixiwn()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -136,28 +161,30 @@ diaforaposou:double
     <id>Relation</id>
     <coordinates>
       <x>620</x>
-      <y>170</y>
-      <w>250</w>
-      <h>50</h>
+      <y>190</y>
+      <w>270</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 m2=1
 pragmatopoieitai stis</panel_attributes>
-    <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>250.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>300</y>
+      <x>400</x>
+      <y>450</y>
       <w>290</w>
-      <h>70</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Aithma_Elegxou_Emprothesmhs_ipovolhs
 --
 
 prostimoekpro :double
+--
+updatesinoloprostimou()
 
 </panel_attributes>
     <additional_attributes/>
@@ -165,22 +192,22 @@ prostimoekpro :double
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>220</y>
+      <x>680</x>
+      <y>230</y>
       <w>210</w>
-      <h>100</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=1
 m2=1
 elegxetai</panel_attributes>
-    <additional_attributes>190.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>190.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>290</y>
+      <y>400</y>
       <w>230</w>
       <h>100</h>
     </coordinates>
@@ -189,6 +216,9 @@ elegxetai</panel_attributes>
 oloklhrwshelegxou:boolean
 enhmerwsh_eforou:boolean
 dinatothtatropopoihshs:boolean
+--
+egineElegxos()
+
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -196,7 +226,7 @@ dinatothtatropopoihshs:boolean
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>180</y>
+      <y>290</y>
       <w>220</w>
       <h>130</h>
     </coordinates>
@@ -207,22 +237,22 @@ dinatothtatropopoihshs:boolean
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>330</y>
-      <w>180</w>
+      <y>460</y>
+      <w>200</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;30.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;180.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>370</y>
-      <w>230</w>
-      <h>70</h>
+      <y>480</y>
+      <w>210</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;210.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;190.0;170.0</additional_attributes>
   </element>
 </diagram>

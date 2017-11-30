@@ -185,7 +185,7 @@ public class LogariasmosEtairias  {
 		return true;
 	}
 	
-	
+	//mallon auto den xreiazetai
 	public Set<Dhlwsh> getDhlwseis(LogariasmosEtairias e, Set<Dhlwsh> dhlwseis) {
 		Set <Dhlwsh> a=new HashSet<>();
 		for (Dhlwsh s : dhlwseis){
