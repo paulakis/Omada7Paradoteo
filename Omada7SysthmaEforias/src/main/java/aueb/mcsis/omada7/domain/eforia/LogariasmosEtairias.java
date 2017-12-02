@@ -237,32 +237,7 @@ public class LogariasmosEtairias  {
 		}
 	}
 	
-	public boolean EgirosAfm(LogariasmosEtairias e){
-		  char[] afm;
-	        double count=0;
-	        double digit,finalNum=0;
-	        String temp;
-	        afm=e.getAfm().toCharArray();
 
-	        for(int i=afm.length;i>=1;i--){
-	            if(count!=0){
-	            temp=String.valueOf(afm[i-1]);
-	            digit=Integer.parseInt(temp);
-	           finalNum=finalNum+digit*Math.pow(2,count);
-	            }
-	           count++;
-	        }
-
-	        temp=String.valueOf(afm[afm.length-1]);
-	        digit=Integer.parseInt(temp);
-
-	        if(((finalNum%11)%10)==digit){
-	           return true;
-	        }
-	        else {return false;	}
-	        
-	}
-	
 	
 	//na vazei mesa sto set dhlwsewn mia kainourgia eggrafh dhlwshs gia thn etairia
 	public void addDhlwsh(Dhlwsh d){

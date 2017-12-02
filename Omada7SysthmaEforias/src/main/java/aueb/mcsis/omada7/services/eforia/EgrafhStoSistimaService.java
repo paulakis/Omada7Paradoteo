@@ -1,41 +1,75 @@
 package aueb.mcsis.omada7.services.eforia;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 
 public class EgrafhStoSistimaService {
-	 // to service auto elexgxei an uparxei allh etairia me to idio afm
-	 // an to afm einai egkiro kai exoun elex8ei ta stoixeia tote stelnei mnm epitixous eggrafhs
-	 // kataxwrei thn eggrafh sth vash logariasmoi !!!
-	 // h arxikopoihsh twnn pediwn prepei na elegthei kai pending einai katallhlh
-
+	 // to service auto elexgxei an uparxei allh etairia me to idio afm tik
+	 // an to afm einai egkiro kai exoun elex8ei ta stoixeia tote stelnei mnm epitixous eggrafhs tik
+	 // kataxwrei thn eggrafh sth vash logariasmoi !!!tik
+	 // h arxikopoihsh twnn pediwn prepei na elegthei kai pending einai katallhlh tik
+	//diaagrafh etairias den prepei na ginetai kanonika,na menoun ta stoixeia gia panta tik
 	private EntityManager em;
-
+	
+	
 	public EgrafhStoSistimaService(EntityManager em) {
 		super();
 		this.em = em;
 	}
 	
 	public boolean KaneNeaEggrafh(LogariasmosEtairias e){
-		if (e!=null){
+		
+		
+		if(VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm())!=null && e!=null && EgirosAfm(e)){
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			// vazei ena antikeimeno sthn vash
 			em.persist(e);
+			tx.commit();
+			em.close();
 			return true;
-		}else
+		}
+		else
 		{
 			return false;
 		}
-	}
+		
+}
 	
-	//diaagrafh etairias den prepei na ginetai kanonika,na menoun ta stoixeia gia panta
-	
-	
+
 	public LogariasmosEtairias VresEanExeiKsanakataxwrhtheiToAfm(String afm){
 		return em.find(LogariasmosEtairias.class, afm);
 	}
 	
-	//oxi tropopoihsh edw eini se alo service
+	public boolean EgirosAfm(LogariasmosEtairias e){
+		  char[] afm;
+	        double count=0;
+	        double digit,finalNum=0;
+	        String temp;
+	        afm=e.getAfm().toCharArray();
+
+	        for(int i=afm.length;i>=1;i--){
+	            if(count!=0){
+	            temp=String.valueOf(afm[i-1]);
+	            digit=Integer.parseInt(temp);
+	           finalNum=finalNum+digit*Math.pow(2,count);
+	            }
+	           count++;
+	        }
+
+	        temp=String.valueOf(afm[afm.length-1]);
+	        digit=Integer.parseInt(temp);
+
+	        if(((finalNum%11)%10)==digit){
+	           return true;
+	        }
+	        else {return false;	}
+	        
+	}
+	
 	
 	
 	
