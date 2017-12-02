@@ -13,7 +13,11 @@ public class ElegxosGiaAnantistixoiesService {
 			super();
 			this.em = em;
 		}
-	
+	    // tha pairnei apo fereafmkaipara tha kanei thn erwthsh na ferei thn katalllhlh dhlwsh kai to sinafes set parastatikwn kai
+		// tsekare kai to poso kai vrhke anantistoixia
+		// tha vazei diafora posou kai anantistoixia
+		// tropopoihsh dhlwshs
+		// return mia booelan 
 	
 
 }
