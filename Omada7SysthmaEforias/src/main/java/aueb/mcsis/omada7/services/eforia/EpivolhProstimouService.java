@@ -16,5 +16,7 @@ public class EpivolhProstimouService {
 		this.em = em;
 	}
 	
+	// prepei na parei to sinolo anantstixiwn 
+	// pinakas me dio afm kai th diafora tou posou.
 	
 }

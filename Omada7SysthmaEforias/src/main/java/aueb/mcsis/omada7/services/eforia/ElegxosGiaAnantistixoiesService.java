@@ -20,4 +20,6 @@ public class ElegxosGiaAnantistixoiesService {
 		// return mia booelan 
 	
 
+		// na ftiaxnei kai ton pinaka anantistixiwn pou tha pairnei o eforos gia thn epivolh prostimou.
+		
 }
