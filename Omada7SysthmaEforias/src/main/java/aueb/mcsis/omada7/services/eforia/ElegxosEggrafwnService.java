@@ -1,6 +1,12 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.util.List;
+import java.util.Set;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+
+
 
 public class ElegxosEggrafwnService {
 	// elegxos pinaka etairiwn gia nees eggrafes(koitaei ta dio boolean pedia)
@@ -9,11 +15,23 @@ public class ElegxosEggrafwnService {
 	 
 	private EntityManager em;
 
+	
+	
 	public ElegxosEggrafwnService(EntityManager em) {
 		super();
 		this.em = em;
 	}
 	
 	
+	@SuppressWarnings("unchecked")
+	public List<LogariasmosEtairias> FerePendingLogariasmous(){
+		//fernei apo ton pinaka ths vashs tis eggrafes twn logariasmwn pou den exoun elegthei
+		List<LogariasmosEtairias> results = null;
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		results=em.
+		createQuery("select e from LogariasmoEtairias e where e.elegxos=false && e.theleielegxo=true").getResultList();
+		return results;	
+	}
 	
 }

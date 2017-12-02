@@ -28,7 +28,9 @@ public class LogariasmosEtairias  {
 	            mappedBy="id", fetch=FetchType.LAZY)
 	private Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
 
-
+	@Id
+	@Column(name="id",nullable = false, unique = true)
+	int id;
 	
 	@Column(name="epwnimia",nullable = false, unique = true)
 	private String epwnimia;
@@ -65,14 +67,20 @@ public class LogariasmosEtairias  {
 	
 
 
-	
-  
 
 
 
-	public LogariasmosEtairias(String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
+
+
+
+
+
+
+
+	public LogariasmosEtairias(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
 			boolean exeiElefthei, boolean needCheck) {
 		super();
+		this.id = id;
 		this.epwnimia = epwnimia;
 		this.hmeromhniasistashs = hmeromhniasistashs;
 		this.afm = afm;
@@ -81,6 +89,14 @@ public class LogariasmosEtairias  {
 		this.exeiElefthei = exeiElefthei;
 		this.needCheck = needCheck;
 	}
+
+
+
+
+
+
+
+
 
 
 

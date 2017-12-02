@@ -63,15 +63,15 @@ public class Initializer {
          	Dhlwsh d2 = new Dhlwsh(2,a,0,true);
         	Dhlwsh d3 = new Dhlwsh(3,a,500000,false);
                  
-           Parastatiko p1= new Parastatiko(1, "987654321","987654322" , 1234,true , 300000 , a);
-           Parastatiko p2= new Parastatiko(2, "987654321","987654323" , 2341,true , 250000 , a);
-           Parastatiko p3= new Parastatiko(3, "987654321","987654323", 3412,false , 100000 , a);
-           Parastatiko p4= new Parastatiko(4, "987654323","987654324" , 4123,true , 500000 , a);//edo tha xtipaei
-           Parastatiko p5= new Parastatiko(5, "987654324","987654322", 1243,true , 450000 , a);
-           Parastatiko p6= new Parastatiko(6, "987654322","987654324" , 1423,true , 330000 , a);
-           Parastatiko p7= new Parastatiko(7, "987654321","987654322" , 1432,true , 270000 , a );
-           Parastatiko p8= new Parastatiko(8, "987654324","987654323" , 2134,true , 550000 , a );
-           Parastatiko p9= new Parastatiko(9, "987654324","987654322" , 3142,false , 60000 , a );
+           Parastatiko p1= new Parastatiko(1, "987654322" , 1234,true , 300000 , a);
+           Parastatiko p2= new Parastatiko(2,"987654323" , 2341,true , 250000 , a);
+           Parastatiko p3= new Parastatiko(3,"987654323", 3412,false , 100000 , a);
+           Parastatiko p4= new Parastatiko(4,"987654324" , 4123,true , 500000 , a);//edo tha xtipaei
+           Parastatiko p5= new Parastatiko(5,"987654322", 1243,true , 450000 , a);
+           Parastatiko p6= new Parastatiko(6,"987654324" , 1423,true , 330000 , a);
+           Parastatiko p7= new Parastatiko(7,"987654322" , 1432,true , 270000 , a );
+           Parastatiko p8= new Parastatiko(8,"987654323" , 2134,true , 550000 , a );
+           Parastatiko p9= new Parastatiko(9,"987654322" , 3142,false , 60000 , a );
           
            
            
