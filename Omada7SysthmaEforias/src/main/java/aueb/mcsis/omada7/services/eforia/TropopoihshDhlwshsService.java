@@ -8,10 +8,16 @@ public class TropopoihshDhlwshsService {
 	//EISAGWGH ESODWN EXODWN SE VAR KAI DIAXRAFONTAI OI PROIGOUMENES KATAXORISEIS
 	//(PERNEI THN TROPOISI APO TON ELEGXO)
 	private EntityManager em;
-
+	
+	
+	
 	public TropopoihshDhlwshsService(EntityManager em) {
 		super();
 		this.em = em;
+		
+		//elegxos gi ahdh iparxousa
+		
+		
 	}
 	
 	
