@@ -8,9 +8,9 @@ import javax.persistence.Entity;
 public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	
-	double prostimoekprothesmis;
+	private	double prostimoekprothesmis;
 
-	
+	private Dhlwsh dh;
 	
 	
 	public AithmaElegxouEmprothesmisIpovolhs(double prostimoekprothesmis) {
@@ -24,6 +24,18 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	public void setProstimoekprothesmis(double prostimoekprothesmis) {
 		this.prostimoekprothesmis = prostimoekprothesmis;
+	}
+	
+	public void ElegkseGiaEkprothesmh(){
+		Trimhno ela=new Trimhno();
+		if (ela.paremeres()>20){
+			dh.setEmprothesmh(true);
+			
+		}else{
+			dh.setEmprothesmh(false);
+		}
+		
+		
 	}
 	
 	
