@@ -3,9 +3,6 @@ package aueb.mcsis.omada7.services.eforia;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
-
-import com.mgiandia.library.domain.Borrower;
-
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
@@ -16,7 +13,7 @@ public class IpovolhDhlwshsService {
 	// 
 	private EntityManager em;
 	private LogariasmosEtairias etairia;
-
+	private Parastatiko para;
 	
 	
 	
@@ -72,10 +69,21 @@ public class IpovolhDhlwshsService {
 	
 	
 	//vazoume kai ta parastatika afou exoume kanei nea dhlwsh
-	public Parastatiko ValeNeoParastatiko(){
-		//prwta mallon kalei th sinarthsh gia na vrei thn dhlwsh
+	public boolean ValeNeoParastatiko(int id){
+		
+		//prwta mallon kalei th sinarthsh gia na vrei thn dhlwsh.auto mporei kai na mhn xreiazetai
+		Dhlwsh d=VresDhlwshById(id);
+		if(d==null){
+			return false;
+		}else{
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			em.persist(para);
+			tx.commit();
+			return true;
+		}
 		//metaa vazei sth dhlwsh to kataallhlo parastatiko.
-		return new Parastatiko();
+	
 	}
 	
 	
