@@ -26,19 +26,20 @@ public class Parastatiko {
 	String afmprwteuontos;
 	//den xreiazzetai apo tiiw dhlwseis tha ginetai oti theloume
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="afmmsimvalwmenou", nullable = false, unique = true)
 	String afmsimvalwmenoou;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="arithmosparastatikou",nullable = false, unique = true)
 	int arithmosparastatikou;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="eidos",nullable = false, unique = true)
+	//gia esoda tha einai 1,gia eksoda tha einai 0
 	boolean eidossinallaghs;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="poso",nullable = false, unique = true)
 	double poso;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="hmeromhniaparas",nullable = false, unique = true)
 	Date hmeromhniaparastatikou;
 	
 	
@@ -171,7 +172,16 @@ public class Parastatiko {
 		return true;
 	}
 	
-	//   sinoloxrhmatvn sinarthsh
+	//   sinoloxrhmatvn sinarthsh(mporei kai na mhn xreiastei)
 	
+	
+	// epistrefei to poso analoga me to ti einai kaii pairnei ws orisma ena parastaiko apo to set parastikwn pou diathetei h dhlwsh
+	public double PareToPoso(Parastatiko p){
+		if (p.isEidossinallaghs())
+		{return p.getPoso();}
+		else{
+			return -p.getPoso();
+		}
+	}
 }
 

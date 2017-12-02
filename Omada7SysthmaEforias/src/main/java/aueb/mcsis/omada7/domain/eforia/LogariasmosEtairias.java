@@ -30,30 +30,30 @@ public class LogariasmosEtairias  {
 
 
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="epwnimia",nullable = false, unique = true)
 	String epwnimia;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="hmeromhniasistashs",nullable = false, unique = true)
 	Date hmeromhniasistashs;
 	
 	@Id
 	@Column(name="afmprwteuontos",nullable = false, unique = true)
 	String afm;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="email",nullable = false, unique = true)
 	String email;
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="thlefwno",nullable = false, unique = true)
 	int thlefwno;
 	
 	//if it's true then eforos has done the check.when false then they can submit the statement
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="elegxos",nullable = false, unique = true)
 	boolean exeiElefthei;
 	
 	//eforos must check thhis logarriasmos.
 	
-	@Column(nullable = false, unique = true)
+	@Column(name="theleielegxo",nullable = false, unique = true)
 	boolean needCheck;
 	
 	
@@ -263,12 +263,18 @@ public class LogariasmosEtairias  {
 	        
 	}
 	
+	// na tsekaroume ean iparxei afm sth vash tetoio wste na exoume logariasmo
+	public boolean iparxeiEtairiaSthVash(){
+		return true;
+		
+	}
+	
 	
 	//tropopoihsh eggrafhs na doume
 	
 	//iparxeidinatothtatropopoihshsdhlwshs
 	
-
+	
 	
 	//na vazei mesa sto set dhlwsewn mia kainourgia eggrafh dhlwshs gia thn etairia
 	public void addDhlwsh(){

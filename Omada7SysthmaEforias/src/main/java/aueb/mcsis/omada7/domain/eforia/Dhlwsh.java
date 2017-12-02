@@ -23,7 +23,7 @@ public class Dhlwsh {
 	
 	String afmkatoxou;
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
-	            mappedBy="borrower", fetch=FetchType.LAZY)
+	            mappedBy="LogariasmosEtairias", fetch=FetchType.LAZY)
 	Set<Parastatiko> parastatika;
 	
 	@Id

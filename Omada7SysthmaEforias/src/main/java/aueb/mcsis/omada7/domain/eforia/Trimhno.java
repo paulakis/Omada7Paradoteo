@@ -7,10 +7,10 @@ import java.time.Period;
 public class Trimhno {
 	//vohthitikh klash gia na mas dinei to pedio emmprothesmh.
 
- public static LocalDate atrimhno = LocalDate.of(2017, Month.APRIL, 1);
-  static LocalDate btrimhno = LocalDate.of(2017, Month.JULY, 1);
-  static LocalDate gtrimhno = LocalDate.of(2017, Month.OCTOBER, 1);
-  static LocalDate dtrimhno = LocalDate.of(2017, Month.JANUARY, 1);
+ public static final LocalDate atrimhno = LocalDate.of(2017, Month.APRIL, 1);
+ public static final LocalDate btrimhno = LocalDate.of(2017, Month.JULY, 1);
+ public static final LocalDate gtrimhno = LocalDate.of(2017, Month.OCTOBER, 1);
+ public static final LocalDate dtrimhno = LocalDate.of(2017, Month.JANUARY, 1);
   
   LocalDate ela;
   
