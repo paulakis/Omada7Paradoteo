@@ -172,7 +172,7 @@ public class Parastatiko {
 		return true;
 	}
 	
-	//   sinoloxrhmatvn sinarthsh(mporei kai na mhn xreiastei)
+	
 	
 	
 	// epistrefei to poso analoga me to ti einai kaii pairnei ws orisma ena parastaiko apo to set parastikwn pou diathetei h dhlwsh

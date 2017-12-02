@@ -26,35 +26,35 @@ public class LogariasmosEtairias  {
 	
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
 	            mappedBy="borrower", fetch=FetchType.LAZY)
-	Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
+	private Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
 
 
 	
 	@Column(name="epwnimia",nullable = false, unique = true)
-	String epwnimia;
+	private String epwnimia;
 	
 	@Column(name="hmeromhniasistashs",nullable = false, unique = true)
-	Date hmeromhniasistashs;
+	private Date hmeromhniasistashs;
 	
 	@Id
 	@Column(name="afmprwteuontos",nullable = false, unique = true)
-	String afm;
+	private String afm;
 	
 	@Column(name="email",nullable = false, unique = true)
-	String email;
+	private String email;
 	
 	@Column(name="thlefwno",nullable = false, unique = true)
-	int thlefwno;
+	private int thlefwno;
 	
 	//if it's true then eforos has done the check.when false then they can submit the statement
 	
 	@Column(name="elegxos",nullable = false, unique = true)
-	boolean exeiElefthei;
+	private boolean exeiElefthei;
 	
 	//eforos must check thhis logarriasmos.
 	
 	@Column(name="theleielegxo",nullable = false, unique = true)
-	boolean needCheck;
+	private boolean needCheck;
 	
 	
 	public LogariasmosEtairias() {
@@ -264,7 +264,10 @@ public class LogariasmosEtairias  {
 	}
 	
 	// na tsekaroume ean iparxei afm sth vash tetoio wste na exoume logariasmo
-	public boolean iparxeiEtairiaSthVash(){
+	public boolean iparxeiEtairiaSthVash(String afm){
+		if (true){
+			
+		}
 		return true;
 		
 	}
@@ -272,12 +275,28 @@ public class LogariasmosEtairias  {
 	
 	//tropopoihsh eggrafhs na doume
 	
+	public void TropoEggrafhs(String afm){
+	//elegxos me to afm ean einai sth vash fere tastoixeia kai allakse ta 
+		//ean oxi tote girna sfalma prepei na kanete eisagwgh neas eggrafhs
+	}
+	
+	
 	//iparxeidinatothtatropopoihshsdhlwshs
+	public void TropoDhlwshs( int id ){
+		//vres to katallhlo id dhlwshs apo to set dhlwseis 
+		//elegkse ama einai dinaton na tropopoihthtei
+		//an den iparxei fwnakse thn adddhlwsh gia na kaneis eisagwgh neas dhlwshs
+		
+		
+	}
 	
 	
 	
 	//na vazei mesa sto set dhlwsewn mia kainourgia eggrafh dhlwshs gia thn etairia
-	public void addDhlwsh(){
+	public void addDhlwsh(Dhlwsh d){
+		if (d!= null){
+			dhlwseis.add(d);
+		}
 		
 	}
 	

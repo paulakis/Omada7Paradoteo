@@ -21,7 +21,6 @@ import javax.persistence.Table;
 @Table(name = "Dhlwsh")
 public class Dhlwsh {
 	
-	String afmkatoxou;
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
 	            mappedBy="LogariasmosEtairias", fetch=FetchType.LAZY)
 	Set<Parastatiko> parastatika;
@@ -140,8 +139,8 @@ public class Dhlwsh {
 	}
 	
 	
-	public boolean MporeiNaKaneiTropopoihsh(boolean e){
-		if (e){
+	public boolean MporeiNaKaneiTropopoihsh(){
+		if (etairia.isExeiElefthei()){
 			return true;
 		}else{
 			return false;
@@ -152,7 +151,7 @@ public class Dhlwsh {
 		new Dhlwsh(id,submissiondate,sinoloprostimou,emprothesmh);
 	}
 	
-	//diorthwsh
+	//diorthwsh mallon tha thn pame mesa sto logariasmo
 	public void TropopoihshDhlwshs(Set<Parastatiko> parastatika, boolean e , Parastatiko p ){
 		boolean a=true;
 		if(e){
@@ -168,31 +167,37 @@ public class Dhlwsh {
 		}
 	}
 	
-	//diorthwsh
-	public int SinoloParastatikwn(Set<Parastatiko> parastatika,String afm){
-		int i=0;
-		for (Parastatiko s :parastatika){
-			if(true){
-				i++;
-			}
-		}
-		return i;
+	//metraei ta parastatika pou exei katathesei sthn kathe tou dhlwsh h x etairia
+	public int SinoloParastatikwn(){
+		return parastatika.size();
 	}
 	
 	//eisagei neo parastatiko
-	public void addParastatiko(){
-		
+	public void addParastatiko(Parastatiko p){
+		if(p!=null){
+			parastatika.add(p);
+		}
 	}
 
 	
-	//diorwthwnei hddh iparxon parastatiko
-	public void correctParastatiko(){
-		
+	//diorwthwnei hddh iparxon parastatiko mono ean einai emprothesmh kai den exw kseperasei tis meres pou mporw na kanw thn allagh
+	//pithanon na thelei kai allo orisma
+	//anloga me to id tha prepei na vriskw to parastaiko x kai na tou allazw to aparaithta pedia
+	public void correctParastatiko(int id ){
+		if(true){
+			
+		}
 	}
 	
 	//elegxos ean iparxei sta parastatika.used by correctParastatiko
-	public  boolean IparxeiHdhStaParastatika(){
-		return true;
+	public  boolean IparxeiHdhStaParastatika(Parastatiko p){
+		if(parastatika.contains(p)){
+			return true;	
+		}else{
+			return false;
+		}
+		
+		
 	}
 	
 
