@@ -3,6 +3,7 @@ package aueb.mcsis.omada7.domain.eforia;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,21 +24,25 @@ public class Parastatiko {
 	
 	//undeer investigetation(mallon nai)
 	String afmprwteuontos;
+	//den xreiazzetai apo tiiw dhlwseis tha ginetai oti theloume
 	
+	@Column(nullable = false, unique = true)
 	String afmsimvalwmenoou;
 	
-	
+	@Column(nullable = false, unique = true)
 	int arithmosparastatikou;
 	
-	
+	@Column(nullable = false, unique = true)
 	boolean eidossinallaghs;
 	
-	
+	@Column(nullable = false, unique = true)
 	double poso;
 	
-	
+	@Column(nullable = false, unique = true)
 	Date hmeromhniaparastatikou;
 	
+	
+	//ean einai monodromh telika tote den xreiazetai 
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id")
 	private Dhlwsh d;
@@ -166,18 +171,7 @@ public class Parastatiko {
 		return true;
 	}
 	
-// na koitaksoume thn sisxetish ps tha paei telika me th dhlwsh h me ta parastatika.
-	public double sinoloesodwneksodwn(Set<Parastatiko> p, LogariasmosEtairias e, boolean x ){
-		double poso=0;
-		for (Parastatiko item :p){
-			if(item.afmprwteuontos==e.getAfm()){
-			if(item.eidossinallaghs)
-			{poso += item.poso;}
-			else
-			{ poso -= item.poso;}
-		 }
-		}
-		return poso;}
+	//   sinoloxrhmatvn sinarthsh
 	
 }
 

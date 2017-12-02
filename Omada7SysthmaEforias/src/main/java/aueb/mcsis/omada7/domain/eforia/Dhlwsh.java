@@ -41,7 +41,7 @@ public class Dhlwsh {
 	boolean emprothesmh;
 
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="afmprwteuontos" , nullable=false)
+	@JoinColumn(name="afmprwteuontos" )
 	private LogariasmosEtairias etairia;
 	
 	
