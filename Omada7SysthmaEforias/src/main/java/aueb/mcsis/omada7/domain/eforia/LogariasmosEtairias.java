@@ -25,7 +25,7 @@ public class LogariasmosEtairias  {
 	
 	
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
-	            mappedBy="borrower", fetch=FetchType.LAZY)
+	            mappedBy="id", fetch=FetchType.LAZY)
 	private Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
 
 
@@ -66,7 +66,7 @@ public class LogariasmosEtairias  {
 
 
 	
-
+  
 
 
 
@@ -262,34 +262,6 @@ public class LogariasmosEtairias  {
 	        else {return false;	}
 	        
 	}
-	
-	// na tsekaroume ean iparxei afm sth vash tetoio wste na exoume logariasmo
-	public boolean iparxeiEtairiaSthVash(String afm){
-		if (true){
-			
-		}
-		return true;
-		
-	}
-	
-	
-	//tropopoihsh eggrafhs na doume
-	
-	public void TropoEggrafhs(String afm){
-	//elegxos me to afm ean einai sth vash fere tastoixeia kai allakse ta 
-		//ean oxi tote girna sfalma prepei na kanete eisagwgh neas eggrafhs
-	}
-	
-	
-	//iparxeidinatothtatropopoihshsdhlwshs
-	public void TropoDhlwshs( int id ){
-		//vres to katallhlo id dhlwshs apo to set dhlwseis 
-		//elegkse ama einai dinaton na tropopoihthtei
-		//an den iparxei fwnakse thn adddhlwsh gia na kaneis eisagwgh neas dhlwshs
-		
-		
-	}
-	
 	
 	
 	//na vazei mesa sto set dhlwsewn mia kainourgia eggrafh dhlwshs gia thn etairia

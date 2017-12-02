@@ -22,7 +22,7 @@ import javax.persistence.Table;
 public class Dhlwsh {
 	
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
-	            mappedBy="LogariasmosEtairias", fetch=FetchType.LAZY)
+	            mappedBy="Parastatika", fetch=FetchType.LAZY)
 	Set<Parastatiko> parastatika;
 	
 	@Id
@@ -146,26 +146,12 @@ public class Dhlwsh {
 			return false;
 		}
 	}
-	
+	// den kserw an xreiazetai
 	public void EisagwghNeasDhlwshs(int id, Date submissiondate, double sinoloprostimou, boolean emprothesmh){
 		new Dhlwsh(id,submissiondate,sinoloprostimou,emprothesmh);
 	}
 	
-	//diorthwsh mallon tha thn pame mesa sto logariasmo
-	public void TropopoihshDhlwshs(Set<Parastatiko> parastatika, boolean e , Parastatiko p ){
-		boolean a=true;
-		if(e){
-			for (Parastatiko g: parastatika){
-				if (g.getArithmosparastatikou()==p.arithmosparastatikou){
-					g.setPoso(p.poso);
-					g.setEidossinallaghs(p.eidossinallaghs);
-				}
-				else{
-					parastatika.add(p);
-				}
-			}
-		}
-	}
+	
 	
 	//metraei ta parastatika pou exei katathesei sthn kathe tou dhlwsh h x etairia
 	public int SinoloParastatikwn(){
@@ -183,10 +169,8 @@ public class Dhlwsh {
 	//diorwthwnei hddh iparxon parastatiko mono ean einai emprothesmh kai den exw kseperasei tis meres pou mporw na kanw thn allagh
 	//pithanon na thelei kai allo orisma
 	//anloga me to id tha prepei na vriskw to parastaiko x kai na tou allazw to aparaithta pedia
-	public void correctParastatiko(int id ){
-		if(true){
-			
-		}
+	public void diorthwseParastatiko(int id ){
+		//na mpei sta service
 	}
 	
 	//elegxos ean iparxei sta parastatika.used by correctParastatiko

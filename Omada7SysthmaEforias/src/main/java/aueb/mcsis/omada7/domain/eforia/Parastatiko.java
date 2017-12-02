@@ -22,9 +22,6 @@ public class Parastatiko {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
-	//undeer investigetation(mallon nai)
-	String afmprwteuontos;
-	//den xreiazzetai apo tiiw dhlwseis tha ginetai oti theloume
 	
 	@Column(name="afmmsimvalwmenou", nullable = false, unique = true)
 	String afmsimvalwmenoou;
@@ -56,12 +53,10 @@ public class Parastatiko {
 	
 
 	
-	
-	public Parastatiko(int id, String afmprwteuontos, String afmsimvalwmenoou, int arithmosparastatikou,
-			boolean eidossinallaghs, double poso, Date hmeromhniaparastatikou) {
+	public Parastatiko(int id, String afmsimvalwmenoou, int arithmosparastatikou, boolean eidossinallaghs, double poso,
+			Date hmeromhniaparastatikou) {
 		super();
 		this.id = id;
-		this.afmprwteuontos = afmprwteuontos;
 		this.afmsimvalwmenoou = afmsimvalwmenoou;
 		this.arithmosparastatikou = arithmosparastatikou;
 		this.eidossinallaghs = eidossinallaghs;
@@ -73,18 +68,8 @@ public class Parastatiko {
 
 
 
-	
-	public String getAfmprwteuontos() {
-		return afmprwteuontos;
-	}
 
 
-
-
-
-	public void setAfmprwteuontos(String afmprwteuontos) {
-		this.afmprwteuontos = afmprwteuontos;
-	}
 
 
 
