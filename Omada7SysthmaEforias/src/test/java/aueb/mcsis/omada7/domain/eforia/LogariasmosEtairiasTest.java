@@ -24,7 +24,7 @@ public class LogariasmosEtairiasTest {
 	        
 	        Dhlwsh dhlwsh = new Dhlwsh();
 	        
-	       dhlwsh.setLogariasmosEtairias(logariasmos);
+	       //dhlwsh.setLogariasmosEtairias(logariasmos);
 	        
 	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 1);
 	        Assert.assertTrue(logariasmos.getDhlwseis().contains(dhlwsh));
@@ -35,11 +35,11 @@ public class LogariasmosEtairiasTest {
 	  public void setDhlwshToNewLogariasmosEtairias() {
 		  LogariasmosEtairias logariasmos = new  LogariasmosEtairias() ;      
 				  Dhlwsh dhlwsh = new Dhlwsh();
-	        dhlwsh.setLogariasmosEtairias(logariasmos);
+	        //dhlwsh.setLogariasmosEtairias(logariasmos);
 	        Assert.assertTrue(logariasmos.getDhlwseis().contains(dhlwsh));
 	        LogariasmosEtairias newlogariasmos = new  LogariasmosEtairias(); 
 	        
-	        dhlwsh.setLogariasmosEtairias(newlogariasmos);
+	        //dhlwsh.setLogariasmosEtairias(newlogariasmos);
 	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 0);
 	                
 	        Assert.assertTrue(newlogariasmos.getDhlwseis().size() == 1);
