@@ -7,12 +7,12 @@ import javax.persistence.Entity;
 @DiscriminatorValue("emprothesmh")
 public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
-	
+	final double protimo=500;
 	private	double prostimoekprothesmis;
 
 	private Dhlwsh dh;
 	
-	
+	// den xreiazontaii mallon 
 	public AithmaElegxouEmprothesmisIpovolhs(double prostimoekprothesmis) {
 		super();
 		this.prostimoekprothesmis = prostimoekprothesmis;
@@ -33,11 +33,15 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 			
 		}else{
 			dh.setEmprothesmh(false);
+			updatesinolopros();
 		}
-		
-		
-	}
+		}
 	
+	
+	public void updatesinolopros(){
+		// mporei na ginei kai xwris prosthesh
+		dh.setSinoloprostimou(protimo+dh.getSinoloprostimou());
+	}
 	
 
 	
