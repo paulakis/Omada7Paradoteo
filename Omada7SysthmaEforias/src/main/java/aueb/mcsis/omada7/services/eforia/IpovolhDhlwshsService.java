@@ -1,16 +1,23 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
+import aueb.mcsis.omada7.domain.eforia.Dhlwsh;;
+
 
 public class IpovolhDhlwshsService {
 	// koitaei sto logariasmo me  afm ean mporei na kanei dhlwsh
 	// kanei dhlwsh 
-	// 
+	// psaxnei gia dhlwsh me id
+	//vazei neo parastatiko
+	//diagrafh den exw valei gia na mhn feugoun pote ta stoixeia.
+	
 	private EntityManager em;
 	private LogariasmosEtairias etairia;
 	private Parastatiko para;
@@ -44,8 +51,12 @@ public class IpovolhDhlwshsService {
 		if (etairia.isExeiElefthei() && !etairia.isNeedCheck() ){
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
-			//apo constructor ths dhlwshs apothikeuseh sth vash
-			
+			d=new Dhlwsh();
+			d.setSinoloprostimou(0);
+			d.setSubmissiondate(new Date());
+			em.persist(d);
+			tx.commit();
+			em.close();
 		}
 		}
 		
@@ -71,13 +82,13 @@ public class IpovolhDhlwshsService {
 	//vazoume kai ta parastatika afou exoume kanei nea dhlwsh
 	public boolean ValeNeoParastatiko(int id){
 		
-		//prwta mallon kalei th sinarthsh gia na vrei thn dhlwsh.auto mporei kai na mhn xreiazetai
 		Dhlwsh d=VresDhlwshById(id);
 		if(d==null){
 			return false;
 		}else{
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
+			// arxikopoihsh tou parastaikou diamorfwsh antikeimenou para.
 			em.persist(para);
 			tx.commit();
 			return true;

@@ -22,7 +22,6 @@ public class ElegxosEggrafwnService {
 		this.em = em;
 	}
 	
-	
 	@SuppressWarnings("unchecked")
 	public List<LogariasmosEtairias> FerePendingLogariasmous(){
 		//fernei apo ton pinaka ths vashs tis eggrafes twn logariasmwn pou den exoun elegthei
@@ -32,6 +31,17 @@ public class ElegxosEggrafwnService {
 		results=em.
 		createQuery("select e from LogariasmoEtairias e where e.elegxos=false && e.theleielegxo=true").getResultList();
 		return results;	
+	}
+	
+	//kai kala oti tous exei elegksei.
+
+	public void TropopoihseKatastashLogariasmwn(){
+		List<LogariasmosEtairias> lista=FerePendingLogariasmous();
+		for(LogariasmosEtairias e: lista){
+			e.setExeiElefthei(true);
+			e.setNeedCheck(false);
+			
+		}
 	}
 	
 }
