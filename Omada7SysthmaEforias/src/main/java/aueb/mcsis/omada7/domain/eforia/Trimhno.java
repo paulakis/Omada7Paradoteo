@@ -5,7 +5,7 @@ import java.time.Month;
 import java.time.Period;
 
 public class Trimhno {
-	//vohthitikh klash gia na mas dinei to pedio emmprothesmh.
+	//vohthitikh klash gia na mas dinei to pedio emmprothesmh.kai na kanoume kai allous elegxous
 
  public static final LocalDate atrimhno = LocalDate.of(2017, Month.APRIL, 1);
  public static final LocalDate btrimhno = LocalDate.of(2017, Month.JULY, 1);
