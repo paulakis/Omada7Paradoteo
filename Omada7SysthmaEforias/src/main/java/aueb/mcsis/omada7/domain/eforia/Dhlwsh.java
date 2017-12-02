@@ -100,6 +100,21 @@ public class Dhlwsh {
 		this.emprothesmh = emprothesmh;
 	}
 
+	
+	
+	//den exw valei setter gia n mhn mporei kapoios na peiraksei ena parastatiko
+	public Set<Parastatiko> getParastatika() {
+		return parastatika;
+	}
+
+
+	//no setter gia na mhn mporei kapoiow na peiraksei thn etairia
+	public LogariasmosEtairias getEtairia() {
+		return etairia;
+	}
+
+
+
 
 	@Override
 	public int hashCode() {
@@ -164,9 +179,21 @@ public class Dhlwsh {
 		return i;
 	}
 	
+	//eisagei neo parastatiko
+	public void addParastatiko(){
+		
+	}
+
 	
-
-
+	//diorwthwnei hddh iparxon parastatiko
+	public void correctParastatiko(){
+		
+	}
+	
+	//elegxos ean iparxei sta parastatika.used by correctParastatiko
+	public  boolean IparxeiHdhStaParastatika(){
+		return true;
+	}
 	
 
 }

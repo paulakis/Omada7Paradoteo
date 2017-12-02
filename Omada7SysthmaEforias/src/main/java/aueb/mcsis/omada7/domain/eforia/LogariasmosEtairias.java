@@ -6,11 +6,14 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -22,13 +25,12 @@ import javax.persistence.Table;
 @Table(name = "LogariasmosEtairias")
 public class LogariasmosEtairias  {
 	
-	Set<Dhlwsh> dhlwseis;
-	//Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
-
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	int id;
+	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
+	            mappedBy="borrower", fetch=FetchType.LAZY)
+	Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
+
+
 	
 	@Column(nullable = false, unique = true)
 	String epwnimia;
@@ -36,6 +38,7 @@ public class LogariasmosEtairias  {
 	@Column(nullable = false, unique = true)
 	Date hmeromhniasistashs;
 	
+	@Id
 	@Column(name="afmprwteuontos",nullable = false, unique = true)
 	String afm;
 	
@@ -64,10 +67,14 @@ public class LogariasmosEtairias  {
 	
 
 
-	public LogariasmosEtairias(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
+	
+
+
+
+
+	public LogariasmosEtairias(String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
 			boolean exeiElefthei, boolean needCheck) {
 		super();
-		this.id = id;
 		this.epwnimia = epwnimia;
 		this.hmeromhniasistashs = hmeromhniasistashs;
 		this.afm = afm;
@@ -76,6 +83,11 @@ public class LogariasmosEtairias  {
 		this.exeiElefthei = exeiElefthei;
 		this.needCheck = needCheck;
 	}
+
+
+
+
+
 
 
 
@@ -114,13 +126,6 @@ public class LogariasmosEtairias  {
 		this.needCheck = needCheck;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getEpwnimia() {
 		return epwnimia;
@@ -157,14 +162,27 @@ public class LogariasmosEtairias  {
 		this.thlefwno = thlefwno;
 	}
 
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((afm == null) ? 0 : afm.hashCode());
-		result = prime * result + id;
+		result = prime * result + ((dhlwseis == null) ? 0 : dhlwseis.hashCode());
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((epwnimia == null) ? 0 : epwnimia.hashCode());
 		return result;
 	}
+
+
+
+
+
+
+
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -180,22 +198,27 @@ public class LogariasmosEtairias  {
 				return false;
 		} else if (!afm.equals(other.afm))
 			return false;
-		if (id != other.id)
-			return false;	
+		if (dhlwseis == null) {
+			if (other.dhlwseis != null)
+				return false;
+		} else if (!dhlwseis.equals(other.dhlwseis))
+			return false;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (epwnimia == null) {
+			if (other.epwnimia != null)
+				return false;
+		} else if (!epwnimia.equals(other.epwnimia))
+			return false;
 		return true;
 	}
-	
-	//mallon auto den xreiazetai
-	public Set<Dhlwsh> getDhlwseis(LogariasmosEtairias e, Set<Dhlwsh> dhlwseis) {
-		Set <Dhlwsh> a=new HashSet<>();
-		for (Dhlwsh s : dhlwseis){
-			if (s.afmkatoxou==e.getAfm()){
-				a.add(s);
-			}
-		}
-        return a ;
-   }
-	
+
+
+
+
 	
 	public boolean MporeiNaKaneiDhlwsh(LogariasmosEtairias e ){
 		
@@ -243,12 +266,14 @@ public class LogariasmosEtairias  {
 	}
 	
 	
-	public LogariasmosEtairias TropopoihshEggrafhs(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
-			boolean exeiElefthei, boolean needCheck){
-		return new LogariasmosEtairias(id, epwnimia, hmeromhniasistashs, afm, email, thlefwno, false, true);
+	//tropopoihsh eggrafhs na doume
+	
+	
+	
+	//na vazei mesa sto set dhlwsewn mia kainourgia eggrafh dhlwshs gia thn etairia
+	public void addDhlwsh(){
+		
 	}
-	
-	
 	
 	
 }
