@@ -19,14 +19,18 @@ public class LogariasmosEtairiasTest {
 	  @Test
 	  public void setDhlwshToLogariasmouEtairias() {
 		   LogariasmosEtairias logariasmos = new  LogariasmosEtairias();
-	        
-	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 0 );
+		   Assert.assertEquals(0,logariasmos.getDhlwseis().size());
+		   //^nomizo to pano einai pio sosto
+	       // Assert.assertTrue(logariasmos.getDhlwseis().size() == 0 );
 	        
 	        Dhlwsh dhlwsh = new Dhlwsh();
 	        
 	       //dhlwsh.setLogariasmosEtairias(logariasmos);
 	        
-	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 1);
+	       // Assert.assertTrue(logariasmos.getDhlwseis().size() == 1);
+	        
+	        Assert.assertEquals(1, logariasmos.getDhlwseis().size());
+	      //pali nomizo oti afto einai pio sosto
 	        Assert.assertTrue(logariasmos.getDhlwseis().contains(dhlwsh));
 	        
 	  }
