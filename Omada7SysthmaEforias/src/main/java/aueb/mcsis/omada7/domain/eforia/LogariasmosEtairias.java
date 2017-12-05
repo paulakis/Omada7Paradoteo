@@ -27,7 +27,7 @@ public class LogariasmosEtairias  {
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
 	            mappedBy="id", fetch=FetchType.LAZY)
 	private Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
-
+	//id na figei otan einai aktallhlh h sinthikh
 	@Id
 	@Column(name="id",nullable = false, unique = true)
 	int id;
@@ -89,22 +89,6 @@ public class LogariasmosEtairias  {
 		this.exeiElefthei = exeiElefthei;
 		this.needCheck = needCheck;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	public Set<Dhlwsh> getDhlwseis() {
