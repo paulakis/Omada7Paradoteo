@@ -13,11 +13,48 @@ public class Trimhno {
  public static final LocalDate dtrimhno = LocalDate.of(2017, Month.JANUARY, 1);
   
   LocalDate ela;
-  
+  int mhnas;
+  int etos;
+  int mera;
   
   
   public Trimhno() {
 	this.ela = LocalDate.now();
+}
+  
+  
+
+
+
+public Trimhno(int mhnas, int etos, int mera) {
+	super();
+	this.mhnas = mhnas;
+	this.etos = etos;
+	this.mera = mera;
+	this.ela = LocalDate.of(etos, mhnas, mera);
+}
+
+
+
+
+public LocalDate SePioTrimhnoEisai(){
+	
+	if(ela.getYear()<=LocalDate.now().getYear()){
+	if (ela.isBefore(atrimhno)){
+		return dtrimhno;
+	}else if (ela.isBefore(btrimhno) && ela.isAfter(atrimhno)) {
+		return atrimhno;
+	}else if (ela.isAfter(btrimhno) && ela.isBefore(gtrimhno)) {
+		return btrimhno;
+	}else if (ela.isAfter(gtrimhno) && ela.isBefore(dtrimhno)) {
+		return gtrimhno;
+	}else{
+		return null;
+	}
+	}
+	else{
+		return null;
+	}
 }
 
 
