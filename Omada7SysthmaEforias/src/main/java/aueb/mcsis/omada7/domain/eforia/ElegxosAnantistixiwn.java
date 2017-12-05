@@ -26,7 +26,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 		super();
 	}
 
-
+	
 
 	public double getDiaforaposou() {
 		return diaforaposou;
@@ -39,7 +39,8 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	// na doume mipws valoume mia klash anantistoixies.!!!!!!
 	//mipws na dinei pisw ena set apo afms diafora posou kai ta loipa 
-	public void AnantistoixiesEnaProsEna(){
+	public Set<Anantistoixia> AnantistoixiesEnaProsEna(){
+		Set<Anantistoixia> ana=new HashSet<Anantistoixia>();
 		for(Dhlwsh d:dhlwsh){
 			for(Parastatiko p:d.getParastatika()){
 				String afmtolook=p.getAfmsimvalwmenoou();
@@ -50,13 +51,14 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 						for(Parastatiko para:dhl.getParastatika()){
 							if(para.getArithmosparastatikou()==parastatikotollok){
 								double teliko= prwto-para.getPoso();
-								EinaiAnantistoixia(teliko);
+								ana.add(new Anantistoixia(afmtolook, d.getEtairia().getAfm(), teliko, EinaiAnantistoixia(teliko),parastatikotollok));
 							}
 						}
 					}
 				}
 			}
 		}
+		return ana;
 	}
 	
 
