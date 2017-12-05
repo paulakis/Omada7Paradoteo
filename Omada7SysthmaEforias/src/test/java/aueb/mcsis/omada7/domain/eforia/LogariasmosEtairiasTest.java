@@ -3,7 +3,12 @@ package aueb.mcsis.omada7.domain.eforia;
 import java.util.Date;
 
 import org.junit.*;
-
+//dimiourgrei logariasmo/null ka/ ekxorei koita me assert ola ta stoixeia 
+// dimiourgei kai dilosei pali me null ka kai use assert for all (gia to size tou set twn dilosewn
+// kai canmakedilosi
+//kai canmaketropoisi
+// me boolean ta duo panw
+//kai isos kati san to testGetDhlwshDue
 
 public class LogariasmosEtairiasTest {
 	
