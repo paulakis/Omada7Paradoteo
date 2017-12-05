@@ -34,10 +34,6 @@ public class AithmaElegxou {
 	@Column(nullable = false, unique = true)
 	boolean dinatothtatropo;
 
-
-	
-	
-	
 	
 	
 	
@@ -45,6 +41,7 @@ public class AithmaElegxou {
 	public AithmaElegxou() {
 		super();
 	}
+
 
 
 	public AithmaElegxou(boolean oloklhrwshelegxwn, boolean enhmerwsheforou, boolean dinatothtatropo) {
