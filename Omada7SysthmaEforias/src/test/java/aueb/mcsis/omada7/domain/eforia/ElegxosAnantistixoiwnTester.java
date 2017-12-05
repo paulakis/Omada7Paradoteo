@@ -14,4 +14,7 @@ public class ElegxosAnantistixoiwnTester {
 		Assert.assertEquals(new ElegxosAnantistixiwn().AnantistoixiesEnaProsEna().size(),2);
 	}
 	
+	
+	
+	
 }

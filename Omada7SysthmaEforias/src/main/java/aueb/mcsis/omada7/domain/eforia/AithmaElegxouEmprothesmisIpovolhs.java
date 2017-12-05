@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	final double protimo=500;
+	//mipws prepei na figei?
 	private	double prostimoekprothesmis;
 
 	private Dhlwsh dh;
