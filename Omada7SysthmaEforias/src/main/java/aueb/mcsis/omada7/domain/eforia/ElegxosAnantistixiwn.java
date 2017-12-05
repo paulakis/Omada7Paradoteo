@@ -13,6 +13,21 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	double diaforaposou;
 	Set<Dhlwsh> dhlwsh;
 
+	
+	
+	public ElegxosAnantistixiwn(double diaforaposou) {
+		super();
+		this.diaforaposou = diaforaposou;
+	}
+	
+	
+	
+	public ElegxosAnantistixiwn() {
+		super();
+	}
+
+
+
 	public double getDiaforaposou() {
 		return diaforaposou;
 	}
@@ -22,24 +37,37 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	}
 	
 	
-	// mia sinarthsh h opoia tha pigainei sto service
-	// kai tha tou dinei to arithmosparastatikou
-	// tha girname ena afm kai ena arithmo parastatikou.
-	public String fereAfmsimbalomenou(int id ){
-		String ela;
+	// na doume mipws valoume mia klash anantistoixies.!!!!!!
+	//mipws na dinei pisw ena set apo afms diafora posou kai ta loipa 
+	public void AnantistoixiesEnaProsEna(){
 		for(Dhlwsh d:dhlwsh){
-			if(d.getId()==id){
-				for(Parastatiko p:d.getParastatika()){
-					p.getAfmsimvalwmenoou();
-					
+			for(Parastatiko p:d.getParastatika()){
+				String afmtolook=p.getAfmsimvalwmenoou();
+				int parastatikotollok=p.getArithmosparastatikou();
+				double prwto=p.getPoso();
+				for(Dhlwsh dhl:dhlwsh){
+					if(dhl.getEtairia().getAfm()==afmtolook){
+						for(Parastatiko para:dhl.getParastatika()){
+							if(para.getArithmosparastatikou()==parastatikotollok){
+								double teliko= prwto-para.getPoso();
+								EinaiAnantistoixia(teliko);
+							}
+						}
+					}
 				}
-				
 			}
 		}
-		return;
-		
 	}
 	
+
+	
+	public boolean EinaiAnantistoixia(double x){
+		if (x!=0){
+			return true;
+		}else{
+		return false;}
+		
+	}
 	
 
 }

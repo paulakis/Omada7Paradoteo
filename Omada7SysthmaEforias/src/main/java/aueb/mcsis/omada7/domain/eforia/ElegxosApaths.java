@@ -15,11 +15,25 @@ public class ElegxosApaths extends AithmaElegxou {
 //sinoliko poso exodown-esodwn diafora <<0 episterfei boolean apath kai ekxorei sth vadh apati
 	//apo mian dhlwsh athroizei ola ta parastatika kai vgazei to sum
 	
-	public void Ipopsifiaapath(Dhlwsh d){
-		
+	public boolean Ipopsifiaapath(Dhlwsh d){
+		double souma=0;
+		for(Parastatiko p: d.getParastatika()){
+			souma =+ p.PareToPoso(p);
+		}
+		if (souma<-1000){
+		return true;
+		}else{
+			return false;
+		}
 	}
 	
-	
+	public String GirnaeiToAfmThsApaths(){
+		if(Ipopsifiaapath(d)){
+			return d.getEtairia().getAfm();
+		}else{
+		return null;
+		}
+	}
 	
 	
 
