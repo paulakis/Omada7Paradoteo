@@ -7,14 +7,13 @@ import javax.persistence.EntityTransaction;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosApaths;
+import aueb.mcsis.omada7.domain.eforia.Trimhno;
 
 public class ElegxosGiaApathService {
-	// sunoliko sum apo parastatika gia to idio afm gia ka8e etairia esodwn exodwn
-		//an <<0 to -->boolean apath true kai ekxorisi sth vash apath!!
-		// wra exw na to grapsw o PANOS gamietai!!xaxa
-
+	
 	private EntityManager em;
 	private ElegxosApaths m;
+
 	
 	public ElegxosGiaApathService(EntityManager em) {
 		super();
@@ -47,10 +46,30 @@ public class ElegxosGiaApathService {
 		List<Dhlwsh> d = findAllDhlwseis();
 		m=new ElegxosApaths();
 		for(Dhlwsh dil:d ){
-			m.Ipopsifiaapath(dil);
-			//to thema ama prepei na to apothikeuoume kapou.
+			if(tsekareEanEntosXronikouOriou(dil)){
+			if(m.EinaiApath(m.Ipopsifiaapath(dil))){
+			System.out.println("afm"+dil.getEtairia().getAfm()+"poso"+m.Ipopsifiaapath(dil));
+			}
+			}
+			//to thema ama prepei na to apothikeuoume kapou.ean tha kanoume pinaka na doume
 		}
 	}
+	
+	
+	//ean apofasisoume na kanoume klash apath tote mporoume na girname kai na dwsoume kai service pou tha leei ean exoume h oxi apates
+	
+	
+	
+	//h opoia tha tsekarei ean eimaste entos xronikou oriou
+	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
+		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
+		if(tr.paremeres()>35){
+			return true;
+		}else{
+		return false;}
+		
+	}
+	
 
 	
 }

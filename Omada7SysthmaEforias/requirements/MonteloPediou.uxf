@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>460</x>
-      <y>10</y>
+      <y>0</y>
       <w>190</w>
       <h>230</h>
     </coordinates>
@@ -38,7 +38,7 @@ tropopoihshdhlwshs()
     <id>UMLClass</id>
     <coordinates>
       <x>850</x>
-      <y>150</y>
+      <y>140</y>
       <w>260</w>
       <h>180</h>
     </coordinates>
@@ -63,7 +63,7 @@ MporeiNaKaneiTropopoihsh()
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>50</y>
+      <y>40</y>
       <w>230</w>
       <h>120</h>
     </coordinates>
@@ -77,7 +77,7 @@ kanei</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>860</x>
-      <y>470</y>
+      <y>460</y>
       <w>320</w>
       <h>150</h>
     </coordinates>
@@ -98,7 +98,7 @@ PareToPoso()
     <id>Relation</id>
     <coordinates>
       <x>1050</x>
-      <y>320</y>
+      <y>310</y>
       <w>60</w>
       <h>170</h>
     </coordinates>
@@ -112,7 +112,7 @@ exei </panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>430</x>
-      <y>590</y>
+      <y>580</y>
       <w>230</w>
       <h>160</h>
     </coordinates>
@@ -135,7 +135,7 @@ dwsesinolopithaanwnapatwn()?-service
     <id>Relation</id>
     <coordinates>
       <x>650</x>
-      <y>320</y>
+      <y>310</y>
       <w>220</w>
       <h>340</h>
     </coordinates>
@@ -149,7 +149,7 @@ ginetai</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>410</x>
-      <y>260</y>
+      <y>250</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
@@ -165,7 +165,7 @@ AnantistoixiesEnaProsEna()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>610</x>
-      <y>180</y>
+      <y>170</y>
       <w>260</w>
       <h>140</h>
     </coordinates>
@@ -179,7 +179,7 @@ pragmatopoieitai stis</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>370</x>
-      <y>430</y>
+      <y>420</y>
       <w>290</w>
       <h>100</h>
     </coordinates>
@@ -198,7 +198,7 @@ ElegkseGiaEkprothesmh()
     <id>Relation</id>
     <coordinates>
       <x>650</x>
-      <y>220</y>
+      <y>210</y>
       <w>220</w>
       <h>230</h>
     </coordinates>
@@ -212,7 +212,7 @@ elegxetai</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>410</y>
+      <y>400</y>
       <w>230</w>
       <h>100</h>
     </coordinates>
@@ -231,7 +231,7 @@ egineElegxos()
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>290</y>
+      <y>280</y>
       <w>210</w>
       <h>140</h>
     </coordinates>
@@ -242,7 +242,7 @@ egineElegxos()
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>460</y>
+      <y>450</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
@@ -253,7 +253,7 @@ egineElegxos()
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>490</y>
+      <y>480</y>
       <w>230</w>
       <h>150</h>
     </coordinates>

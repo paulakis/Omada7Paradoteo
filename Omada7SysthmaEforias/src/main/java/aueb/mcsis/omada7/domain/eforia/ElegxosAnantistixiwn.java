@@ -67,7 +67,8 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 		return ana;
 	}
 	
-
+	
+	
 	
 	public boolean EinaiAnantistoixia(double x){
 		if (x!=0){
@@ -77,5 +78,17 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 		
 	}
 	
-
+	//ean exoun perasei oi 30 meres gia na ginei o prwtos elegxos
+	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
+		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
+		if(tr.paremeres()>30){
+			return true;
+		}else{
+		return false;}
+		
+	}
+	
+	//na eksetasoume kai ton elegxo meta apo tis 35 meres
+	
+	
 }

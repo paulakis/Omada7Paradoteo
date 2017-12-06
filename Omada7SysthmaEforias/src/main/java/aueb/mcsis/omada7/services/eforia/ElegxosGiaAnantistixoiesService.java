@@ -9,6 +9,7 @@ import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.Anantistoixia;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;
+import aueb.mcsis.omada7.domain.eforia.Trimhno;
 
 public class ElegxosGiaAnantistixoiesService {
 		//dexete set parastikwn
@@ -59,7 +60,6 @@ public class ElegxosGiaAnantistixoiesService {
 		}
 		
 		// elegxos meta thn tropopoihsh twn anantistoixountwn parastatikwn?
-		
 		
 		
 }

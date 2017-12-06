@@ -61,7 +61,7 @@ public LocalDate SePioTrimhnoEisai(){
 
 public int paremeres(){
 	  int days=0;
-	  if (ela.isBefore(atrimhno)){
+	  if (ela.isBefore(atrimhno)  && ela.isAfter(dtrimhno)){
 		  Period age = Period.between(dtrimhno, ela);
 		  days = age.getDays();
 	  }else if (ela.isBefore(btrimhno) && ela.isAfter(atrimhno)) {
