@@ -1,9 +1,14 @@
 package aueb.mcsis.omada7.services.eforia;
 
-import javax.persistence.EntityManager;
+import java.util.List;
+import java.util.Set;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
+import aueb.mcsis.omada7.domain.eforia.Anantistoixia;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
-import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;
 
 public class ElegxosGiaAnantistixoiesService {
 		//dexete set parastikwn
@@ -11,20 +16,50 @@ public class ElegxosGiaAnantistixoiesService {
 		//epistrofh boolean true kai mnm tropoisi an oxi -->epivoliprosimou
 
 	private EntityManager em;
-	private LogariasmosEtairias e;
-	private Dhlwsh d;
+
 	
 		public ElegxosGiaAnantistixoiesService(EntityManager em) {
 			super();
 			this.em = em;
 		}
-	    // tha pairnei apo fereafmkaipara tha kanei thn erwthsh na ferei thn katalllhlh dhlwsh kai to sinafes set parastatikwn kai
-		// tsekare kai to poso kai vrhke anantistoixia
-		// tha vazei diafora posou kai anantistoixia
-		// tropopoihsh dhlwshs tha leei gia meta.
-		// return mia booelan 
-		 
+	    
 		
-		// na ftiaxnei kai ton pinaka anantistixiwn pou tha pairnei o eforos gia thn epivolh prostimou.
+		//fere tis dhlwseis oles
+		@SuppressWarnings("unchecked")
+		public List<Dhlwsh> findAllDhlwseis(){
+			List<Dhlwsh> d=null;
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			d=em.
+					createQuery("select * from Dhlwsh").getResultList();
+			tx.commit();
+			em.close();
+			return d;
+		}
+		
+		//apothikeuse sti vash to set anantistoixiwn ean to anantisoixies ginei vash
+		
+		
+		// trekse to paketo elegxosAnantistoixeiwn gia na kaneis to set twn anantistoixiwn
+		//sto domain model exoume valei na pairnei ena sinolo dhlwsewn edw pws tis fernei einai to thema thelei querry?sti vash me kapoio tropo
+		//an den iparxei logos gia tis dhlwseis na figei h parapanw sinarthsh
+		public Set<Anantistoixia> girnaTisAnantistoixies(){
+			ElegxosAnantistixiwn ele=new ElegxosAnantistixiwn();
+			//an to anantistoixia einai pinakas na apothikeuoume tis anantistoixies edw.me persist
+			return ele.AnantistoixiesEnaProsEna();
+		}
+		
+		//trekse ena aplo elegxo na deis ama iparxoun h oxi
+		public Boolean IparxounAnantistixoies(){
+			if(girnaTisAnantistoixies().size()>0){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		
+		// elegxos meta thn tropopoihsh twn anantistoixountwn parastatikwn?
+		
+		
 		
 }

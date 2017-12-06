@@ -31,6 +31,7 @@ public class ElegxosEggrafwnService {
 		results=em.
 		createQuery("select e from LogariasmoEtairias e where e.elegxos=false && e.theleielegxo=true").getResultList();
 		return results;	
+		
 	}
 	
 	//kai kala oti tous exei elegksei.

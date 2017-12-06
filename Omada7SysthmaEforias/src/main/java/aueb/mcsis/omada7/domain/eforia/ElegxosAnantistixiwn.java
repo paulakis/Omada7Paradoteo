@@ -3,15 +3,21 @@ package aueb.mcsis.omada7.domain.eforia;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 @Entity
 @DiscriminatorValue("anantistoixies")
 public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	double diaforaposou;
-	Set<Dhlwsh> dhlwsh;
+	
+	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
+            mappedBy="id", fetch=FetchType.LAZY)
+	private Set<Dhlwsh> dhlwsh=new HashSet<Dhlwsh>();
 
 	
 	
