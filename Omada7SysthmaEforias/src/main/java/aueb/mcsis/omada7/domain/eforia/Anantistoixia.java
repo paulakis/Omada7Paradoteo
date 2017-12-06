@@ -1,15 +1,35 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "anantistoixia")
 public class Anantistoixia {
 
 	//vohthitikh klash gia na epistrefoume ena set apo antikeimena gia ton eforo kai gia na enhmerwnonte o eforos-kai oi antisimbalomenoi.
+	@Column(name="afmsimba",nullable = false, unique = true)
 	String afmsimbalomenou;
+	@Column(name="afmanti",nullable = false, unique = true)
 	String afmanti;
+	@Column(name="diafora",nullable = false, unique = true)
 	double diafora;
+	@Column(name="apath",nullable = false, unique = true)
 	boolean apath;
+	@Id
+	@Column(name="arithmospara",nullable = false, unique = true)
 	int arithmospara;
 	
 	
+	
+	
+	public Anantistoixia() {
+		super();
+	}
+
+
 	public Anantistoixia(String afmsimbalomenou, String afmanti, double diafora, boolean apath, int arithmospara) {
 		super();
 		this.afmsimbalomenou = afmsimbalomenou;
