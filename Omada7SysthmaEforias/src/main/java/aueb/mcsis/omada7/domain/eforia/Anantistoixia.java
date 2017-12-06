@@ -12,8 +12,13 @@ public class Anantistoixia {
 	//vohthitikh klash gia na epistrefoume ena set apo antikeimena gia ton eforo kai gia na enhmerwnonte o eforos-kai oi antisimbalomenoi.
 	@Column(name="afmsimba",nullable = false, unique = true)
 	String afmsimbalomenou;
+	@Column(name="iddhlwshssimba",nullable = false, unique = true)
+	int iddsimba;
+	
 	@Column(name="afmanti",nullable = false, unique = true)
 	String afmanti;
+	@Column(name="iddhlwshsanti",nullable = false, unique = true)
+	int iddanti;
 	@Column(name="diafora",nullable = false, unique = true)
 	double diafora;
 	@Column(name="apath",nullable = false, unique = true)
@@ -30,14 +35,21 @@ public class Anantistoixia {
 	}
 
 
-	public Anantistoixia(String afmsimbalomenou, String afmanti, double diafora, boolean apath, int arithmospara) {
+	
+
+	public Anantistoixia(String afmsimbalomenou, int iddsimba, String afmanti, int iddanti, double diafora,
+			boolean apath, int arithmospara) {
 		super();
 		this.afmsimbalomenou = afmsimbalomenou;
+		this.iddsimba = iddsimba;
 		this.afmanti = afmanti;
+		this.iddanti = iddanti;
 		this.diafora = diafora;
 		this.apath = apath;
 		this.arithmospara = arithmospara;
 	}
+
+
 
 
 	public String getAfmsimbalomenou() {
@@ -87,6 +99,34 @@ public class Anantistoixia {
 
 	public void setArithmospara(int arithmospara) {
 		this.arithmospara = arithmospara;
+	}
+
+
+
+
+	public int getIddsimba() {
+		return iddsimba;
+	}
+
+
+
+
+	public void setIddsimba(int iddsimba) {
+		this.iddsimba = iddsimba;
+	}
+
+
+
+
+	public int getIddanti() {
+		return iddanti;
+	}
+
+
+
+
+	public void setIddanti(int iddanti) {
+		this.iddanti = iddanti;
 	}
 	
 	

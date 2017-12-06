@@ -57,7 +57,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 						for(Parastatiko para:dhl.getParastatika()){
 							if(para.getArithmosparastatikou()==parastatikotollok){
 								double teliko= prwto-para.getPoso();
-								ana.add(new Anantistoixia(afmtolook, d.getEtairia().getAfm(), teliko, EinaiAnantistoixia(teliko),parastatikotollok));
+								ana.add(new Anantistoixia(afmtolook,d.getId(), d.getEtairia().getAfm(),dhl.getId(), teliko, EinaiAnantistoixia(teliko),parastatikotollok));
 							}
 						}
 					}
@@ -88,7 +88,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 		
 	}
 	
-	//na eksetasoume kai ton elegxo meta apo tis 35 meres
+	//na eksetasoume kai ton elegxo meta apo tis 35 meres.ti tha ginetai
 	
 	
 }
