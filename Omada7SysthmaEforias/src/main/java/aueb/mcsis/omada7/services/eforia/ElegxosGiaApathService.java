@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
+import aueb.mcsis.omada7.domain.eforia.ElegxosApaths;
 
 public class ElegxosGiaApathService {
 	// sunoliko sum apo parastatika gia to idio afm gia ka8e etairia esodwn exodwn
@@ -13,8 +14,8 @@ public class ElegxosGiaApathService {
 		// wra exw na to grapsw o PANOS gamietai!!xaxa
 
 	private EntityManager em;
-	private Dhlwsh d;
-
+	private ElegxosApaths m;
+	
 	public ElegxosGiaApathService(EntityManager em) {
 		super();
 		this.em = em;
@@ -40,5 +41,14 @@ public class ElegxosGiaApathService {
 	//simfwna me to datae poy exw prepei na ferw autes tis dhlwseis kai oxi tis alles
 	//apo submissiondate ths dhlwshs na dei pou eimaste
 	//ean paiksoume mpala me to trimhno mporoume na doume ean exoun perasei oi meres.
+	
+	//sianrthsh pou ipologixei tis apates twra na apofasisoume ti tha kanoume.
+	public void ipologismosApaths(){
+		List<Dhlwsh> d = findAllDhlwseis();
+		m=new ElegxosApaths();
+		for(Dhlwsh dil:d ){
+			m.Ipopsifiaapath(dil);
+		}
+	}
 
 }

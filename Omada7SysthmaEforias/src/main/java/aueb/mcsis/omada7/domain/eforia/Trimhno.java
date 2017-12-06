@@ -40,7 +40,7 @@ public Trimhno(int mhnas, int etos, int mera) {
 public LocalDate SePioTrimhnoEisai(){
 	
 	if(ela.getYear()<=LocalDate.now().getYear()){
-	if (ela.isBefore(atrimhno)){
+	if (ela.isBefore(atrimhno) && ela.isAfter(dtrimhno)){
 		return dtrimhno;
 	}else if (ela.isBefore(btrimhno) && ela.isAfter(atrimhno)) {
 		return atrimhno;
