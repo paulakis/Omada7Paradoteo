@@ -48,7 +48,9 @@ public class ElegxosGiaApathService {
 		m=new ElegxosApaths();
 		for(Dhlwsh dil:d ){
 			m.Ipopsifiaapath(dil);
+			//to thema ama prepei na to apothikeuoume kapou.
 		}
 	}
 
+	
 }
