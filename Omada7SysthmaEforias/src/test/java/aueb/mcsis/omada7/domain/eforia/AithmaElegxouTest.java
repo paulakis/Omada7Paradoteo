@@ -20,7 +20,7 @@ public class AithmaElegxouTest {
 	//meta add elegxo an den einai null ara true ,false,true(me calenderal an einai empro8esmi)
 	//gia logariamos an den einai null otan dimourite false,true,true
 	//meta elegxo true ,false,true gia tropooisi
-	@Test
+	/*@Test
 	public void addNullForDhlwsh(){
 		LogariasmosEtairias log= new LogariasmosEtairias();
 		log.addDhlwsh(null);
@@ -70,7 +70,10 @@ public class AithmaElegxouTest {
 	        for(Dhlwsh dhlwsh : log.getDhlwseis()) {
 	            Assert.assertTrue(dhlwsh.getEtairia().contains(log));            
 	        }
-	    }
+	    } */
+	
+	
+	
 	}
 
 
