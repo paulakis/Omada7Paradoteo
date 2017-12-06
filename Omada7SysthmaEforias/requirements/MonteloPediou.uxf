@@ -76,8 +76,8 @@ kanei</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
-      <y>460</y>
+      <x>860</x>
+      <y>470</y>
       <w>320</w>
       <h>150</h>
     </coordinates>
@@ -99,14 +99,14 @@ PareToPoso()
     <coordinates>
       <x>1050</x>
       <y>320</y>
-      <w>80</w>
-      <h>160</h>
+      <w>60</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 m2=1
 exei </panel_attributes>
-    <additional_attributes>60.0;140.0;10.0;10.0</additional_attributes>
+    <additional_attributes>20.0;150.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
