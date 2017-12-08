@@ -16,7 +16,7 @@ public class TrimhnoTest {
 		Trimhno shmera= new Trimhno();
 		LocalDate a = shmera.SePioTrimhnoEisai();
 		//mikro lathaki
-		Period periodos= Period.between(a,shmera); 
+		Period periodos= Period.between(a,shmera.ela); 
 		int daysipo= periodos.getDays();
 		int days=shmera.paremeres();
 		Assert.assertEquals(days,daysipo);
@@ -25,11 +25,13 @@ public class TrimhnoTest {
 	
 	
 	@Test
-	public void TixaiaHmeromhnia(int mhnas, int etos,int mera){
-		Trimhno tote=new Trimhno(12, 2017, 2);
-		Assert.assertEquals(tote.paremeres(), 1);
+	public void TixaiaHmeromhnia(){
+		Trimhno tote=new Trimhno(12, 2017, 6);
+		Assert.assertEquals(tote.paremeres(), 5);
 		
 	}
+	
+	
 	
 	//elegxei ama exoume valei esfalmena kakh hmeromhnia
 	@Test
