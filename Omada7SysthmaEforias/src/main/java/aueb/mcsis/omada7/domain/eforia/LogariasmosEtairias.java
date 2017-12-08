@@ -29,7 +29,7 @@ public class LogariasmosEtairias  {
 	private Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
 	//id na figei otan einai aktallhlh h sinthikh
 
-	@Column(name="id",nullable = false, unique = true)
+	@Column(nullable = false, unique = true)
 	int id;
 	
 	@Column(name="epwnimia",nullable = false, unique = true)

@@ -26,14 +26,15 @@ public class Dhlwsh {
 	private Set<Parastatiko> parastatika = new HashSet<Parastatiko>();
 	
 	@Id
+	@Column(name="dhlwshid")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
 	
-	@Column(nullable = false, unique = true)
+	@Column()
 	Date submissiondate;
 	
-	@Column(nullable = false, unique = true)
+	@Column()
 	double sinoloprostimou;
 	
 	@Column(nullable = false, unique = true)
@@ -52,9 +53,9 @@ public class Dhlwsh {
 	}
 
 
-	public Dhlwsh(int id, Date submissiondate, double sinoloprostimou, boolean emprothesmh) {
+	public Dhlwsh( Date submissiondate, double sinoloprostimou, boolean emprothesmh) {
 		super();
-		this.id = id;
+		
 		this.submissiondate = submissiondate;
 		this.sinoloprostimou = sinoloprostimou;
 		this.emprothesmh = emprothesmh;
@@ -151,8 +152,8 @@ public class Dhlwsh {
 		}
 	}
 	// den kserw an xreiazetai
-	public void EisagwghNeasDhlwshs(int id, Date submissiondate, double sinoloprostimou, boolean emprothesmh){
-		new Dhlwsh(id,submissiondate,sinoloprostimou,emprothesmh);
+	public void EisagwghNeasDhlwshs( Date submissiondate, double sinoloprostimou, boolean emprothesmh){
+		new Dhlwsh(submissiondate,sinoloprostimou,emprothesmh);
 	}
 	
 	

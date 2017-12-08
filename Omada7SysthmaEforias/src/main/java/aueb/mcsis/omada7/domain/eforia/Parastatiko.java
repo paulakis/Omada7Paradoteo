@@ -17,6 +17,7 @@ import javax.persistence.Table;
 public class Parastatiko {
 	
 	@Id
+	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
@@ -51,10 +52,10 @@ public class Parastatiko {
 	
 
 	
-	public Parastatiko(int id, String afmsimvalwmenoou, int arithmosparastatikou, boolean eidossinallaghs, double poso,
+	public Parastatiko( String afmsimvalwmenoou, int arithmosparastatikou, boolean eidossinallaghs, double poso,
 			Date hmeromhniaparastatikou) {
 		super();
-		this.id = id;
+	
 		this.afmsimvalwmenoou = afmsimvalwmenoou;
 		this.arithmosparastatikou = arithmosparastatikou;
 		this.eidossinallaghs = eidossinallaghs;
