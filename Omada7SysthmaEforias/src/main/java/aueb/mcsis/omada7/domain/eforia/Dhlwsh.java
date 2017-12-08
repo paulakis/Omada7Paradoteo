@@ -112,7 +112,10 @@ public class Dhlwsh {
 		return etairia;
 	}
 
-
+	public void setLogarismosEtairias( LogariasmosEtairias etairia){
+		this.etairia=etairia;
+		
+	}
 
 
 	@Override
