@@ -103,7 +103,7 @@ public class Dhlwsh {
 	
 	//den exw valei setter gia n mhn mporei kapoios na peiraksei ena parastatiko
 	public HashSet<Parastatiko> getParastatika() {
-		return new HashSet<Parastatiko>();
+		return new HashSet<Parastatiko>(parastatika);
 	}
 
 
