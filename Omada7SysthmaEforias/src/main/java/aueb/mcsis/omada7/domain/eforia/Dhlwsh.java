@@ -23,7 +23,7 @@ public class Dhlwsh {
 	
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
 	            mappedBy="Parastatika", fetch=FetchType.LAZY)
-	Set<Parastatiko> parastatika;
+	private Set<Parastatiko> parastatika = new HashSet<Parastatiko>();
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
