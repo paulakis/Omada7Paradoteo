@@ -6,7 +6,6 @@ import org.junit.Test;
 public class ElegxosApathsTester {
 	//na valoume th dhlwsh pou theloume na kanoume gia na doume ta analoga apotelesmata
 	
-	Dhlwsh d;
 	ElegxosApaths e;
 	//sto initializer na valoume kai kapoies akraies periptwseis
 	//mia dhlwsh polla parastatika
@@ -32,7 +31,7 @@ public class ElegxosApathsTester {
 	@Test
 	public void ToGirnaeiToAfmTester(){
 		// an valoume kai mia kenh dhlwsh kai na paroume null
-		Assert.assertEquals(e.GirnaeiToAfmThsApaths(), d.getEtairia().getAfm());
+		Assert.assertEquals(e.GirnaeiToAfmThsApaths(), e.d.getEtairia().getAfm());
 	}
 	
 	

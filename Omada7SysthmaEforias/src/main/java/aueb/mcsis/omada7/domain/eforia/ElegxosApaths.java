@@ -3,6 +3,8 @@ package aueb.mcsis.omada7.domain.eforia;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -16,8 +18,9 @@ public class ElegxosApaths extends AithmaElegxou {
 	double soumaesodwneskodwn;
 	@Column
 	boolean apath;
-	@OneToOne
-	private  Dhlwsh d;
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="dhlwshid")
+	public  Dhlwsh d;
 	
 	
 	
@@ -105,4 +108,10 @@ public void setApath(boolean apath) {
 	}
 
 	//service elegxos apaths allages.
+	
+	//ena add na valoume ena antikeimeno.
+	
+	
+	
+	
 }
