@@ -22,20 +22,20 @@ public class Parastatiko {
 	int id;
 	
 	
-	@Column(name="afmmsimvalwmenou", nullable = false, unique = true)
+	@Column(name="afmmsimvalwmenou")
 	String afmsimvalwmenoou;
 	
 	@Column(name="arithmosparastatikou",nullable = false, unique = true)
 	int arithmosparastatikou;
 	
-	@Column(name="eidos",nullable = false, unique = true)
+	@Column(name="eidos")
 	//gia esoda tha einai 1,gia eksoda tha einai 0
 	boolean eidossinallaghs;
 	
-	@Column(name="poso",nullable = false, unique = true)
+	@Column(name="poso")
 	double poso;
 	
-	@Column(name="hmeromhniaparas",nullable = false, unique = true)
+	@Column(name="hmeromhniaparas")
 	Date hmeromhniaparastatikou;
 	
 	

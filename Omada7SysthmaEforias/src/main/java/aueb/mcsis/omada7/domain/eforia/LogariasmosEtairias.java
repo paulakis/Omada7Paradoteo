@@ -5,11 +5,8 @@ package aueb.mcsis.omada7.domain.eforia;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -24,38 +21,37 @@ import javax.persistence.Table;
 public class LogariasmosEtairias  {
 	
 	
-	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
-	            mappedBy="id", fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="etairia")
 	private Set<Dhlwsh> dhlwseis = new HashSet<Dhlwsh>();
 	//id na figei otan einai aktallhlh h sinthikh
 
-	@Column(nullable = false, unique = true)
+	@Column(name="logid")
 	int id;
 	
-	@Column(name="epwnimia",nullable = false, unique = true)
+	@Column(name="epwnimia")
 	private String epwnimia;
 	
-	@Column(name="hmeromhniasistashs",nullable = false, unique = true)
+	@Column(name="hmeromhniasistashs")
 	private Date hmeromhniasistashs;
 	
 	@Id
 	@Column(name="afmprwteuontos",nullable = false, unique = true)
 	private String afm;
 	
-	@Column(name="email",nullable = false, unique = true)
+	@Column(name="email")
 	private String email;
 	
-	@Column(name="thlefwno",nullable = false, unique = true)
+	@Column(name="thlefwno")
 	private int thlefwno;
 	
 	//if it's true then eforos has done the check.when false then they can submit the statement
 	
-	@Column(name="elegxos",nullable = false, unique = true)
+	@Column(name="elegxos")
 	private boolean exeiElefthei;
 	
 	//eforos must check thhis logarriasmos.
 	
-	@Column(name="theleielegxo",nullable = false, unique = true)
+	@Column(name="theleielegxo")
 	private boolean needCheck;
 	
 	

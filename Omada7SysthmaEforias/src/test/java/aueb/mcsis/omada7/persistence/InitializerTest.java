@@ -52,7 +52,7 @@ public class InitializerTest {
 	    public void SwstosArithmosParastatikwn(){
 	  	  int EXPECTED_PARASTATIKA_NUMBER = 9;
 	        EntityManager em = JPAUtil.getCurrentEntityManager();
-	        Query query = em.createQuery("select para from Parastatika para");
+	        Query query = em.createQuery("select para from Parastatiko para");
 	        List<Dhlwsh> results = query.getResultList();      
 	        Assert.assertEquals(EXPECTED_PARASTATIKA_NUMBER, results.size());
 	    }
