@@ -22,7 +22,7 @@ import javax.persistence.Table;
 public class Dhlwsh {
 	
 	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
-	            mappedBy="Parastatika", fetch=FetchType.LAZY)
+	            mappedBy="id", fetch=FetchType.LAZY)
 	private Set<Parastatiko> parastatika = new HashSet<Parastatiko>();
 	
 	@Id
@@ -40,7 +40,8 @@ public class Dhlwsh {
 	boolean emprothesmh;
 
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="afmprwteuontos" )
+	@JoinColumn(name="afmprwteuontos")
+	
 	private LogariasmosEtairias etairia;
 	
 	

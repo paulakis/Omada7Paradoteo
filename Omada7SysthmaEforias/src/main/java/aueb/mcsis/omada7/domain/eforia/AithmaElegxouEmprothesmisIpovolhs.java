@@ -3,8 +3,9 @@ package aueb.mcsis.omada7.domain.eforia;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-@Entity
+/*@Entity
 @DiscriminatorValue("emprothesmh")
+*/
 public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	final double protimo=500;

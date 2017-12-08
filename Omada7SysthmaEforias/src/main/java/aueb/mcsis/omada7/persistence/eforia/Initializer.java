@@ -28,11 +28,11 @@ public class Initializer {
       tx.begin();
       
       
-      Query query = em.createNativeQuery("delete from parastatiko");
+      Query query = em.createNativeQuery("delete from Parastatika");
       query.executeUpdate();
-      query = em.createNativeQuery("delete from dhlwsh");
+      query = em.createNativeQuery("delete from Dhlwsh");
       query.executeUpdate(); 
-      query = em.createNativeQuery("delete from logariamosetairias");
+      query = em.createNativeQuery("delete from LogariasmosEtairias");
       query.executeUpdate(); 
       tx.commit();
       em.close();
@@ -40,7 +40,7 @@ public class Initializer {
       
       
       
-  };
+  }
    
   
      public void prepareData() {

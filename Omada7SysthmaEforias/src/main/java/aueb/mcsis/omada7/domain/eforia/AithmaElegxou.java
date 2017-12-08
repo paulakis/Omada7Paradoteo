@@ -11,12 +11,13 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
-@Entity
+/*@Entity
 @Table(name="elegxoi")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type",
 discriminatorType = DiscriminatorType.STRING
 )
+*/
 public class AithmaElegxou {
 	
 	
