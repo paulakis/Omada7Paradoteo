@@ -47,8 +47,8 @@ public class ElegxosGiaApathService {
 		m=new ElegxosApaths();
 		for(Dhlwsh dil:d ){
 			if(tsekareEanEntosXronikouOriou(dil)){
-			if(m.EinaiApath(m.Ipopsifiaapath(dil))){
-			System.out.println("afm"+dil.getEtairia().getAfm()+"poso"+m.Ipopsifiaapath(dil));
+			if(m.EinaiApath(m.Ipopsifiaapath())){
+			System.out.println("afm"+dil.getEtairia().getAfm()+"poso"+m.Ipopsifiaapath());
 			}
 			}
 			//to thema ama prepei na to apothikeuoume kapou.ean tha kanoume pinaka na doume

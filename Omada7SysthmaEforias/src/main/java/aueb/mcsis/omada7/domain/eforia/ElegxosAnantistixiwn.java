@@ -1,13 +1,12 @@
 package aueb.mcsis.omada7.domain.eforia;
 
-import java.util.HashSet;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+
+import javax.persistence.OneToOne;
 
 @Entity
 @DiscriminatorValue("anantistoixies")
@@ -15,9 +14,9 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	double diaforaposou;
 	
-	@OneToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE}, 
-            mappedBy="id", fetch=FetchType.LAZY)
-	private Set<Dhlwsh> dhlwsh=new HashSet<Dhlwsh>();
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="dhlwshid")
+	public  Dhlwsh d;
 
 	
 	
@@ -45,7 +44,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	// na doume mipws valoume mia klash anantistoixies.!!!!!!
 	//mipws na dinei pisw ena set apo afms diafora posou kai ta loipa 
-	public Set<Anantistoixia> AnantistoixiesEnaProsEna(){
+/*	public Set<Anantistoixia> AnantistoixiesEnaProsEna(){
 		Set<Anantistoixia> ana=new HashSet<Anantistoixia>();
 		for(Dhlwsh d:dhlwsh){
 			for(Parastatiko p:d.getParastatika()){
@@ -69,7 +68,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	
 	
-	
+	*/
 	public boolean EinaiAnantistoixia(double x){
 		if (x!=0){
 			return true;

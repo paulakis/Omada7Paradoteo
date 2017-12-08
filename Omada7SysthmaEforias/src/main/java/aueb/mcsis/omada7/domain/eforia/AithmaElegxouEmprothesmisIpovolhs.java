@@ -2,6 +2,8 @@ package aueb.mcsis.omada7.domain.eforia;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -12,8 +14,9 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 	//mipws prepei na figei?
 	private	double prostimoekprothesmis;
 	
-	@OneToOne
-	private Dhlwsh dh;
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="dhlwshid")
+	public  Dhlwsh d;
 	
 	// den xreiazontaii mallon 
 	public AithmaElegxouEmprothesmisIpovolhs(double prostimoekprothesmis) {
@@ -32,10 +35,10 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 	public void ElegkseGiaEkprothesmh(){
 		Trimhno ela=new Trimhno();
 		if (ela.paremeres()>20){
-			dh.setEmprothesmh(true);
+			d.setEmprothesmh(true);
 			
 		}else{
-			dh.setEmprothesmh(false);
+			d.setEmprothesmh(false);
 			updatesinolopros();
 		}
 		}
@@ -43,7 +46,7 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 	
 	public void updatesinolopros(){
 		// mporei na ginei kai xwris prosthesh
-		dh.setSinoloprostimou(protimo+dh.getSinoloprostimou());
+		d.setSinoloprostimou(protimo+d.getSinoloprostimou());
 	}
 	
 

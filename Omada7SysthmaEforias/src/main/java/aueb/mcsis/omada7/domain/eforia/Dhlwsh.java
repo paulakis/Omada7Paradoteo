@@ -46,8 +46,15 @@ public class Dhlwsh {
 	
 	private LogariasmosEtairias etairia;
 	
-	@OneToOne(fetch=FetchType.LAZY,mappedBy="d")
+	@OneToOne(fetch=FetchType.LAZY)
 	private ElegxosApaths ea;
+	
+	@OneToOne(fetch=FetchType.LAZY)
+	private ElegxosAnantistixiwn mm;
+	
+	@OneToOne(fetch=FetchType.LAZY)
+	private AithmaElegxouEmprothesmisIpovolhs empr;
+	
 	
 	public Dhlwsh() {
 		super();
