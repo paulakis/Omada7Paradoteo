@@ -40,7 +40,7 @@ public class Parastatiko {
 	
 	//ean einai monodromh telika tote den xreiazetai 
 	@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="id")
+    @JoinColumn(name="dhlwshid")
 	private Dhlwsh d;
 	
 	
