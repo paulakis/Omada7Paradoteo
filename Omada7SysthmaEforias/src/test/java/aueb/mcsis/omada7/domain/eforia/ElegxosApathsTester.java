@@ -14,19 +14,19 @@ public class ElegxosApathsTester {
 	@Test
 	public void IpopsifiaApathIsaTester(){
 		//tha pairnei mia dhlwsh me tria parastatika 
-		Assert.assertTrue((e.Ipopsifiaapath(d)==0));
+		Assert.assertTrue((e.Ipopsifiaapath()==0));
 	}
 	
 	@Test
 	public void IpopsifiaApathNotTester(){
 		//tha pairnei mia dhlwsh me tria parastatika gia na leei oti iparxei kapoia anantistoixia 
-		Assert.assertTrue(!(e.Ipopsifiaapath(d)==0));
+		Assert.assertTrue(!(e.Ipopsifiaapath()==0));
 	}
 	
 	@Test 
 	public void EinaiApathTester(){
-		Assert.assertTrue((e.EinaiApath(e.Ipopsifiaapath(d))));
-		Assert.assertFalse(!(e.EinaiApath(e.Ipopsifiaapath(d))));
+		Assert.assertTrue((e.EinaiApath(e.Ipopsifiaapath())));
+		Assert.assertFalse(!(e.EinaiApath(e.Ipopsifiaapath())));
 	}
 	
 	@Test
@@ -39,7 +39,7 @@ public class ElegxosApathsTester {
 	@Test 
 	public void DhmiourgiaProstimouTest(){
 		//dio tria parastatika.
-		double actualprostimo= Math.abs(e.Ipopsifiaapath(d)*100);
+		double actualprostimo= Math.abs(e.Ipopsifiaapath()*100);
 		Assert.assertTrue((e.DhmiourgiaProstimou()==actualprostimo));
 	}
 }

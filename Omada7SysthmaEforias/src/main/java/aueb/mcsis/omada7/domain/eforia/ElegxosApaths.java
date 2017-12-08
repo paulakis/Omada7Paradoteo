@@ -1,16 +1,22 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
-/*@Entity
+@Entity
 @DiscriminatorValue("apath")
-*/
 public class ElegxosApaths extends AithmaElegxou {
 	
-	 double prostimo;
+	
+	@Column
+	double prostimo;
+	@Column
 	double soumaesodwneskodwn;
+	@Column
 	boolean apath;
+	@OneToOne
 	private  Dhlwsh d;
 	
 	
@@ -70,7 +76,7 @@ public void setApath(boolean apath) {
 
 
 
-	public double Ipopsifiaapath(Dhlwsh d){
+	public double Ipopsifiaapath(){
 		double souma=0;
 		for(Parastatiko p: d.getParastatika()){
 			souma =+ p.PareToPoso(p);
@@ -87,7 +93,7 @@ public void setApath(boolean apath) {
 	}
 	
 	public String GirnaeiToAfmThsApaths(){
-		if(EinaiApath(Ipopsifiaapath(d))){
+		if(EinaiApath(Ipopsifiaapath())){
 			return d.getEtairia().getAfm();
 		}else{
 		return null;
@@ -98,4 +104,5 @@ public void setApath(boolean apath) {
 		return prostimo=Math.abs(soumaesodwneskodwn*100);
 	}
 
+	//service elegxos apaths allages.
 }

@@ -2,16 +2,17 @@ package aueb.mcsis.omada7.domain.eforia;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
-/*@Entity
+@Entity
 @DiscriminatorValue("emprothesmh")
-*/
 public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	final double protimo=500;
 	//mipws prepei na figei?
 	private	double prostimoekprothesmis;
-
+	
+	@OneToOne
 	private Dhlwsh dh;
 	
 	// den xreiazontaii mallon 

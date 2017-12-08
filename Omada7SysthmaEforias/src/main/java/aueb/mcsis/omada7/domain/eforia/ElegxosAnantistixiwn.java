@@ -9,9 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 
-/*@Entity
+@Entity
 @DiscriminatorValue("anantistoixies")
-*/
 public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	double diaforaposou;
