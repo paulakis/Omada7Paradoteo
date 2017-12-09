@@ -14,7 +14,6 @@ public class TropopoihshDhlwshsService {
 	//EISAGWGH ESODWN EXODWN SE VAR KAI DIAXRAFONTAI OI PROIGOUMENES KATAXORISEIS
 	//(PERNEI THN TROPOISI APO TON ELEGXO)
 	private EntityManager em;
-	private Dhlwsh d;
 	
 	
 	public TropopoihshDhlwshsService(EntityManager em) {

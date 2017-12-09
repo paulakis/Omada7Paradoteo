@@ -8,7 +8,6 @@ import javax.persistence.NoResultException;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
-import aueb.mcsis.omada7.domain.eforia.Dhlwsh;;
 
 
 public class IpovolhDhlwshsService {
