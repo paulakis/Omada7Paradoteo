@@ -16,6 +16,7 @@ public class ParastatikoTest {
 		p.setArithmosparastatikou(1);
 		 Date a= new Date();
 p.setHmeromhniaparastatikou(a);
+Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 		Assert.assertTrue(p.isEidossinallaghs()&& p.getPoso() > 0 &&  p.PareToPoso(p) > 0);
 	}
 	
