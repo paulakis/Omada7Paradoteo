@@ -3,15 +3,14 @@ package aueb.mcsis.omada7.services.eforia;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+
+import aueb.mcsis.omada7.domain.eforia.AithmaElegxou;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 
 public class ElegxosGiaAnantistixoiesService {
-		//dexete set parastikwn
-		// kanei diplo for(px gia to an ta esoda ths A apo thn B antistixoun sta exoda ths B apo thn A)
-		//epistrofh boolean true kai mnm tropoisi an oxi -->epivoliprosimou
-
+		
 	private EntityManager em;
 
 	
@@ -57,11 +56,10 @@ public class ElegxosGiaAnantistixoiesService {
 		
 		//fernei apo ton pinaka elegxosana tis anantistoixies
 		@SuppressWarnings("unchecked")
-		public List<ElegxosAnantistixiwn> girnaTisAnantistoixies(){
-			
-			List<ElegxosAnantistixiwn> results = null;
-			results = em.createQuery("select e from elegxoi e where e.type= :type ").setParameter("type", "anantistoixies").getResultList();
-			return results;
+		public List<AithmaElegxou> girnaTisAnantistoixies(){
+			List<AithmaElegxou> results1 = null;
+			results1 = em.createQuery("select e from elegxoi e where e.type= :type ").setParameter("type", "anantistoixies").getResultList();
+			return results1;
 		}
 		
 		//tsekarei ama iparxoun anantistixoies

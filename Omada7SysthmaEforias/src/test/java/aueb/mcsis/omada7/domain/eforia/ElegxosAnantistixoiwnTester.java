@@ -11,7 +11,7 @@ public class ElegxosAnantistixoiwnTester {
 	// dio dilwseis 4 parastatika gia na metrhsoume ti ginetai ,mia idia posa mia diaforetika kai tha doume ti tha epistrefei.
 	@Test
 	public void AnantistoixiaEnaProsEnaTester(){
-		Assert.assertEquals(new ElegxosAnantistixiwn().AnantistoixiesEnaProsEna().size(),2);
+		
 	}
 	
 	
