@@ -25,7 +25,7 @@ public class DhlwshTest {
 	
 	@Test
 	public void addParastatikoTest(){
-		Dhlwsh dhlwsh = new Dhlwsh(new Date(),0 ,true);
+		Dhlwsh dhlwsh = new Dhlwsh(1,new Date(),0 ,true);
 		Parastatiko parastatiko = new Parastatiko("987654322" , 1234,true , 300000 , new Date());
 		dhlwsh.addParastatiko(parastatiko);
 		Assert.assertEquals(1,dhlwsh.getParastatika().size());

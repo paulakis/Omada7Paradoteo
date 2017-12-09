@@ -31,23 +31,10 @@ public class ElegxosGiaApathServiceTester {
 		
 	}
 	
-	@Test
-	public void DenIparxeiHSigekrimenhDhlwsh(){
-		ElegxosGiaApathService e=new ElegxosGiaApathService(em);
-		//Auth h dhlwsh den prepei na iparxei
-		Assert.assertFalse(e.findDhlwshById(15));
-	}
 	
-
-	@Test
-	public void IparxeiHSigekrimenhDhlwsh(){
-		ElegxosGiaApathService e=new ElegxosGiaApathService(em);
-		//Auth h dhlwsh  prepei na iparxei
-	    
-		//Assert.assertTrue(e.findDhlwshById(2));
-		Assert.assertNotNull(e.findDhlwshById(1));
-	}
 	
+	// prepei na doume ama exoume kapoia apath mesa ston pinaka 
+	// 
 	
 	
 	
