@@ -40,6 +40,7 @@ public class EgrafhStoSistimaService {
 
 	public LogariasmosEtairias VresEanExeiKsanakataxwrhtheiToAfm(String afm){
 		return em.find(LogariasmosEtairias.class, afm);
+		
 	}
 	
 	public boolean EgirosAfm(LogariasmosEtairias e){

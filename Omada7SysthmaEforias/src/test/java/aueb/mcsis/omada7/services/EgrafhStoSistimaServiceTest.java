@@ -11,18 +11,28 @@ import javax.persistence.EntityManager;
 
 import org.junit.Test;
 
-public class EgrafhStoSistimaServiceTest {
+public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 	
-	private EntityManager em;
-	Date ho = new Date(2017,12,17);
+	
+	Date ho = new Date();
 	private LogariasmosEtairias logEt = new LogariasmosEtairias(1, "KostasAE", ho , "123456678", "email@em.co", 2106547395,
 			true, false);
-	private LogariasmosEtairias logEtf = new LogariasmosEtairias(1, "KostasAE", ho , "12345667", "email@em.co", 2106547395,
+	private LogariasmosEtairias logEtf = new LogariasmosEtairias(2, "RostasAE", ho , "12345667", "email@semm.co", 2107647395,
 			true, false);
-	EgrafhStoSistimaService EgStoSys = new EgrafhStoSistimaService(em);
+	private EgrafhStoSistimaService EgStoSys = new EgrafhStoSistimaService(em);
 	
+	@SuppressWarnings("deprecation")
+	@Test
+	public void testVresEanExeiKsanakataxwrhtheiToAfm(){
+		
+		
+		Assert.assertNull(EgStoSys.VresEanExeiKsanakataxwrhtheiToAfm(logEt.getAfm()));
+	}
+	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testKaneNeaEggrafh(){
+		
 		
 		Assert.assertTrue(EgStoSys.KaneNeaEggrafh(logEt));
 		
