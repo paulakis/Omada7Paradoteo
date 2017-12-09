@@ -80,20 +80,27 @@ public LocalDate SePioTrimhnoEisai(){
 
 public int paremeres(){
 	  int days=0;
+	  int months=0;
 	  if (ela.isBefore(atrimhno)  && ela.isAfter(dtrimhno)){
 		  Period age = Period.between(dtrimhno, ela);
 		  days = age.getDays();
+		  months = age.getMonths();
 	  }else if (ela.isBefore(btrimhno) && ela.isAfter(atrimhno)) {
 		  Period age = Period.between(atrimhno, ela);
 		  days = age.getDays();
+		  months = age.getMonths();
 	}else if (ela.isAfter(btrimhno) && ela.isBefore(gtrimhno)) {
 		Period age = Period.between(btrimhno, ela);
 		  days = age.getDays();
+		  months = age.getMonths();
 	}else if (ela.isAfter(gtrimhno) && ela.isBefore(dtrimhno)) {
 		Period age = Period.between(gtrimhno, ela);
-		  days = age.getDays();
+		months = age.getMonths();  
+		days = age.getDays();
+		  
 	}
-	  return days;
+	  return months*30+days+1;
+	  
   }
   
 

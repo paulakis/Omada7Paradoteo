@@ -83,7 +83,8 @@ public void setApath(boolean apath) {
 //na valoume edw to ean exoun perasei oi 35 meres??
 public boolean ElegkseAnPerasan35Meres(Dhlwsh d){
 	Trimhno tr=new Trimhno(d.getTrimhno(), d.getSubmissiondate().getMonth(),d.getSubmissiondate().getYear() , d.getSubmissiondate().getDay());
-	if(tr.Einaiemprothesmh() && tr.paremeres()>35){
+	if(tr.paremeres()>=35){
+		System.out.println(tr.paremeres());
 		setEnhmerwsheforou(true);
 		return true;
 	}else{
