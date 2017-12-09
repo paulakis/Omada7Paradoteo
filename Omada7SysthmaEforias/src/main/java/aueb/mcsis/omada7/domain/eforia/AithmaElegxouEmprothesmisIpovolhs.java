@@ -25,6 +25,13 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 	@JoinColumn(name="dhlwshid")
 	public  Dhlwsh d;
 	
+	
+	
+	
+	public AithmaElegxouEmprothesmisIpovolhs() {
+		super();
+	}
+
 	// den xreiazontaii mallon 
 	public AithmaElegxouEmprothesmisIpovolhs(double prostimoekprothesmis) {
 		super();
