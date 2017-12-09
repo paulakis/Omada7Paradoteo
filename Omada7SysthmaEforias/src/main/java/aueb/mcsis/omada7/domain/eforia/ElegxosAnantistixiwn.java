@@ -1,9 +1,11 @@
 package aueb.mcsis.omada7.domain.eforia;
 
 
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 
 import javax.persistence.OneToOne;
@@ -12,6 +14,11 @@ import javax.persistence.OneToOne;
 @DiscriminatorValue("anantistoixies")
 public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
+	@Id
+	@Column
+	int id;
+	
+	@Column
 	double diaforaposou;
 	
 	@OneToOne(fetch=FetchType.LAZY)

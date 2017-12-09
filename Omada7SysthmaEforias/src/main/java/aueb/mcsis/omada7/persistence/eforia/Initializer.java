@@ -19,6 +19,7 @@ public class Initializer {
  // tha thn vgalw gia kopanima ston pano
  // oti leei sth h2
  // break panos;
+	public Dhlwsh d2;
  
   public  void eraseData(){
 	  
@@ -60,7 +61,7 @@ public class Initializer {
    
          
          	Dhlwsh d1 = new Dhlwsh(a,0 ,true);
-         	Dhlwsh d2 = new Dhlwsh(a,0,true);
+         	d2 = new Dhlwsh(a,0,true);
         	Dhlwsh d3 = new Dhlwsh(a,500000,false);
             
             

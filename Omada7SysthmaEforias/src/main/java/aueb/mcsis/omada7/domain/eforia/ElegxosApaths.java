@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
@@ -11,7 +12,9 @@ import javax.persistence.OneToOne;
 @DiscriminatorValue("apath")
 public class ElegxosApaths extends AithmaElegxou {
 	
-	
+	@Id
+	@Column
+	int id;
 	@Column
 	double prostimo;
 	@Column
@@ -79,33 +82,7 @@ public void setApath(boolean apath) {
 
 
 
-	public double Ipopsifiaapath(){
-		double souma=0;
-		for(Parastatiko p: d.getParastatika()){
-			souma =+ p.PareToPoso(p);
-		}
-		return souma;
-	}
-	
-	public boolean EinaiApath(double x){
-		if(x<-1000){
-			return true;
-		}else{
-			return false;
-		}
-	}
-	
-	public String GirnaeiToAfmThsApaths(){
-		if(EinaiApath(Ipopsifiaapath())){
-			return d.getEtairia().getAfm();
-		}else{
-		return null;
-		}
-	}
-	
-	public double DhmiourgiaProstimou(){
-		return prostimo=Math.abs(soumaesodwneskodwn*100);
-	}
+
 
 	//service elegxos apaths allages.
 	

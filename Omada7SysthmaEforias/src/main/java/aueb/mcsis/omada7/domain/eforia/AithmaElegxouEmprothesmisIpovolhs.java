@@ -1,8 +1,10 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
@@ -11,7 +13,12 @@ import javax.persistence.OneToOne;
 public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	final double protimo=500;
-	//mipws prepei na figei?
+	
+	@Id
+	@Column
+	int id;
+	
+	@Column
 	private	double prostimoekprothesmis;
 	
 	@OneToOne(fetch=FetchType.LAZY)

@@ -6,7 +6,7 @@ import org.junit.Test;
 public class ElegxosApathsTester {
 	//na valoume th dhlwsh pou theloume na kanoume gia na doume ta analoga apotelesmata
 	
-	ElegxosApaths e;
+	/*ElegxosApaths e;
 	//sto initializer na valoume kai kapoies akraies periptwseis
 	//mia dhlwsh polla parastatika
 	//otan den einai apath
@@ -40,5 +40,5 @@ public class ElegxosApathsTester {
 		//dio tria parastatika.
 		double actualprostimo= Math.abs(e.Ipopsifiaapath()*100);
 		Assert.assertTrue((e.DhmiourgiaProstimou()==actualprostimo));
-	}
+	}*/
 }
