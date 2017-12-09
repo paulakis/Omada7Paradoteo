@@ -30,11 +30,26 @@ public class ElegxosGiaApathServiceTester {
 		em = JPAUtil.getCurrentEntityManager();
 		
 	}
-	
-	
-	
 	// prepei na doume ama exoume kapoia apath mesa ston pinaka 
-	// 
+	 
+	
+	@Test
+	public void testFindElegxosApathsById()
+	{
+		
+	}
+	
+	@Test
+	public void testfindDhlwshById(){
+	
+	}
+	
+	@Test
+	public void testGirnaeiToAfmThsApaths(){
+		
+	}
+	
+	
 	
 	
 	

@@ -21,7 +21,7 @@ public class EgrafhStoSistimaService {
 	public boolean KaneNeaEggrafh(LogariasmosEtairias e){
 		
 		
-		if(VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm())!=null && e!=null && EgirosAfm(e)){
+		if(VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm()) !=null && e!=null && EgirosAfm(e)){
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			// vazei ena antikeimeno sthn vash

@@ -47,6 +47,9 @@ public class IpovolhDhlwshsService {
 	public Dhlwsh KaneNeaDhlwsh(int trimhno){
 		Dhlwsh d=null;
 		if(etairia!=null){
+			
+			//na valoume to mporei na kanei dilosi apo tin klasi 
+			//logariasmos etairias allios tsaba ftiaxtike
 		if (etairia.isExeiElefthei() && !etairia.isNeedCheck() ){
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
