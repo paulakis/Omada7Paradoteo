@@ -81,11 +81,15 @@ public void setApath(boolean apath) {
 }
 
 //na valoume edw to ean exoun perasei oi 35 meres??
-public void ElegkseAnPerasan35Meres(){
+public boolean ElegkseAnPerasan35Meres(Dhlwsh d){
 	Trimhno tr=new Trimhno(d.getTrimhno(), d.getSubmissiondate().getMonth(),d.getSubmissiondate().getYear() , d.getSubmissiondate().getDay());
 	if(tr.Einaiemprothesmh() && tr.paremeres()>35){
 		setEnhmerwsheforou(true);
+		return true;
+	}else{
+		return false;
 	}
+	
 }
 //to trimhno ths dhlwshs
 //tha paroume kai to submissiondate
