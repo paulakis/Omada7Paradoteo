@@ -3,7 +3,6 @@ package aueb.mcsis.omada7.services.eforia;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-
 import aueb.mcsis.omada7.domain.eforia.AithmaElegxou;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;

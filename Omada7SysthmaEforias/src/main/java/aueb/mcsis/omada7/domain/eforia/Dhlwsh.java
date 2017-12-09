@@ -31,6 +31,8 @@ public class Dhlwsh {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	
+	@Column
+	int trimhno;
 	
 	@Column()
 	Date submissiondate;
@@ -61,12 +63,22 @@ public class Dhlwsh {
 	}
 
 
-	public Dhlwsh( Date submissiondate, double sinoloprostimou, boolean emprothesmh) {
+	public Dhlwsh(int trimhno,Date submissiondate, double sinoloprostimou, boolean emprothesmh) {
 		super();
-		
+		this.trimhno = trimhno;
 		this.submissiondate = submissiondate;
 		this.sinoloprostimou = sinoloprostimou;
 		this.emprothesmh = emprothesmh;
+	}
+
+
+	public int getTrimhno() {
+		return trimhno;
+	}
+
+
+	public void setTrimhno(int trimhno) {
+		this.trimhno = trimhno;
 	}
 
 
@@ -160,8 +172,8 @@ public class Dhlwsh {
 		}
 	}
 	// den kserw an xreiazetai
-	public void EisagwghNeasDhlwshs( Date submissiondate, double sinoloprostimou, boolean emprothesmh){
-		new Dhlwsh(submissiondate,sinoloprostimou,emprothesmh);
+	public void EisagwghNeasDhlwshs(int tri, Date submissiondate, double sinoloprostimou, boolean emprothesmh){
+		new Dhlwsh(tri,submissiondate,sinoloprostimou,emprothesmh);
 	}
 	
 	

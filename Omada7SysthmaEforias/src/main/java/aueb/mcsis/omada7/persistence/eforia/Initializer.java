@@ -60,9 +60,9 @@ public class Initializer {
          
    
          
-         	Dhlwsh d1 = new Dhlwsh(a,0 ,true);
-         	d2 = new Dhlwsh(a,0,true);
-        	Dhlwsh d3 = new Dhlwsh(a,500000,false);
+         	Dhlwsh d1 = new Dhlwsh(1,a,0 ,true);
+         	d2 = new Dhlwsh(2,a,0,true);
+        	Dhlwsh d3 = new Dhlwsh(3,a,500000,false);
             
             
             

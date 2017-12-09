@@ -45,13 +45,14 @@ public class IpovolhDhlwshsService {
 	}
 	
 	//pragmnatopoiei th dhlwsh
-	public Dhlwsh KaneNeaDhlwsh(){
+	public Dhlwsh KaneNeaDhlwsh(int trimhno){
 		Dhlwsh d=null;
 		if(etairia!=null){
 		if (etairia.isExeiElefthei() && !etairia.isNeedCheck() ){
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			d=new Dhlwsh();
+			d.setTrimhno(trimhno);
 			d.setSinoloprostimou(0);
 			d.setSubmissiondate(new Date());
 			em.persist(d);

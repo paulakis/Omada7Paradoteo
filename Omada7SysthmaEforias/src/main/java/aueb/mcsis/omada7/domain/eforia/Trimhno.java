@@ -6,16 +6,24 @@ import java.time.Period;
 
 public class Trimhno {
 	//vohthitikh klash gia na mas dinei to pedio emmprothesmh.kai na kanoume kai allous elegxous
- int year=LocalDate.now().getYear();
- public  final LocalDate atrimhno = LocalDate.of(year, Month.APRIL, 1);
- public  final LocalDate btrimhno = LocalDate.of(year, Month.JULY, 1);
- public  final LocalDate gtrimhno = LocalDate.of(year, Month.OCTOBER, 1);
- public  final LocalDate dtrimhno = LocalDate.of(year+1, Month.JANUARY, 1);
-  
-  LocalDate ela;
-  int mhnas;
-  int etos;
-  int mera;
+	int year=LocalDate.now().getYear();
+	 public  final LocalDate atrimhno = LocalDate.of(year, Month.APRIL, 1);
+	 public  final LocalDate atrimhnoarxh = LocalDate.of(year, Month.APRIL, 1);
+	 public  final LocalDate atrimhnoperas = LocalDate.of(year, Month.APRIL, 20);
+	 public  final LocalDate btrimhno = LocalDate.of(year, Month.JULY, 1);
+	 public  final LocalDate btrimhnoarxh = LocalDate.of(year, Month.JULY, 1);
+	 public  final LocalDate btrimhnoperas = LocalDate.of(year, Month.JULY, 20);
+	 public  final LocalDate gtrimhno = LocalDate.of(year, Month.OCTOBER, 1);
+	 public  final LocalDate gtrimhnoarxh = LocalDate.of(year, Month.OCTOBER, 1);
+	 public  final LocalDate gtrimhnoperas = LocalDate.of(year, Month.OCTOBER, 20);
+	 public  final LocalDate dtrimhno = LocalDate.of(year+1, Month.JANUARY, 1);
+	 public  final LocalDate dtrimhnoarxh = LocalDate.of(year+1, Month.JANUARY, 1);
+	 public  final LocalDate dtrimhnoperas = LocalDate.of(year+1, Month.JANUARY, 20);
+	  LocalDate ela;
+	  int mhnas;
+	  int etos;
+	  int mera;
+	  int trimhno;
   
   
   public Trimhno() {
@@ -35,6 +43,14 @@ public Trimhno(int mhnas, int etos, int mera) {
 }
 
 
+public Trimhno(int trimhno,int mhnas, int etos, int mera) {
+	super();
+	this.mhnas = mhnas;
+	this.etos = etos;
+	this.mera = mera;
+	this.trimhno=trimhno;
+	this.ela = LocalDate.of(etos, mhnas, mera);
+}
 
 
 public LocalDate SePioTrimhnoEisai(){
@@ -77,5 +93,20 @@ public int paremeres(){
 	  return days;
   }
   
+
+public boolean Einaiemprothesmh(){
+	if(trimhno==1 && ela.isAfter(atrimhnoarxh) && ela.isBefore(atrimhnoperas)){
+		return true;
+	}else if (trimhno==2 && ela.isAfter(btrimhnoarxh) && ela.isBefore(btrimhnoperas)) {
+		return true;
+	}else if (trimhno==3 && ela.isAfter(gtrimhnoarxh) && ela.isBefore(gtrimhnoperas)) {
+		return true;
+	}else if (trimhno==4 && ela.isAfter(dtrimhnoarxh) && ela.isBefore(dtrimhnoperas)) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
   
 }
