@@ -2,8 +2,6 @@ package aueb.mcsis.omada7.services.eforia;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-
-import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 
 public class EgrafhStoSistimaService {

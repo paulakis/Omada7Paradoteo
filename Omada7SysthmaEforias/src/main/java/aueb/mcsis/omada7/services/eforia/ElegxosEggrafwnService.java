@@ -1,7 +1,6 @@
 package aueb.mcsis.omada7.services.eforia;
 
 import java.util.List;
-import java.util.Set;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;

@@ -93,6 +93,7 @@ public class ElegxosGiaApathService {
 	//h opoia tha tsekarei ean eimaste entos xronikou oriou
 	//tsekarei ean exoun perasei oi meres(35) gia na kanei ton elegxo apaths
 	//exei merikes deprecated methods
+	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
 		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
 		if(tr.paremeres()>35){
