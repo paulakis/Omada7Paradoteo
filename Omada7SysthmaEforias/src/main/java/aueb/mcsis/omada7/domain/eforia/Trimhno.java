@@ -30,7 +30,10 @@ public class Trimhno {
 	this.ela = LocalDate.now();
 }
   
-  
+  public Trimhno(int tri) {
+	  this.trimhno = tri;
+		this.ela = LocalDate.now();
+	}
 
 
 
