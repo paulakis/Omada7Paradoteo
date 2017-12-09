@@ -1,15 +1,11 @@
 package aueb.mcsis.omada7.services.eforia;
 
 import java.util.List;
-import java.util.Set;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-
-import aueb.mcsis.omada7.domain.eforia.Anantistoixia;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;
-import aueb.mcsis.omada7.domain.eforia.Trimhno;
+import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 
 public class ElegxosGiaAnantistixoiesService {
 		//dexete set parastikwn
@@ -25,7 +21,7 @@ public class ElegxosGiaAnantistixoiesService {
 		}
 	    
 		
-		//fere tis dhlwseis oles
+		//prepei na fernei  oles tis dhlwseis h mono autes pou aforoun to trexon trimhno?
 		@SuppressWarnings("unchecked")
 		public List<Dhlwsh> findAllDhlwseis(){
 			List<Dhlwsh> d=null;
@@ -38,19 +34,37 @@ public class ElegxosGiaAnantistixoiesService {
 			return d;
 		}
 		
-		//apothikeuse sti vash to set anantistoixiwn ean to anantisoixies ginei vash
-		
-		
-		// trekse to paketo elegxosAnantistoixeiwn gia na kaneis to set twn anantistoixiwn
-		//sto domain model exoume valei na pairnei ena sinolo dhlwsewn edw pws tis fernei einai to thema thelei querry?sti vash me kapoio tropo
-		//an den iparxei logos gia tis dhlwseis na figei h parapanw sinarthsh
-		public Set<Anantistoixia> girnaTisAnantistoixies(){
-			ElegxosAnantistixiwn ele=new ElegxosAnantistixiwn();
-			//an to anantistoixia einai pinakas na apothikeuoume tis anantistoixies edw.me persist
-			return ele.AnantistoixiesEnaProsEna();
+		//exoume lista me dhlwseis,tsekarei oles tis dhlwseis analitika gia anantistoixies
+		public void elegxosAnantistoixiwn(){
+			List<Dhlwsh> d=findAllDhlwseis();
+			for(Dhlwsh dilo:d){
+				for (Parastatiko p:dilo.getParastatika()){
+					String afmtolook=p.getAfmsimvalwmenoou();
+					int parastatikotollok=p.getArithmosparastatikou();
+					double prwto=p.getPoso();
+					for(Dhlwsh dilosi:d){
+						if(dilosi.getEtairia().getAfm()==afmtolook){
+							for (Parastatiko para:dilosi.getParastatika()){
+								if(para.getArithmosparastatikou()==parastatikotollok){
+									KaneEisagwghSthBash(prwto-para.getPoso());
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		
-		//trekse ena aplo elegxo na deis ama iparxoun h oxi
+		//fernei apo ton pinaka elegxosana tis anantistoixies
+		@SuppressWarnings("unchecked")
+		public List<ElegxosAnantistixiwn> girnaTisAnantistoixies(){
+			
+			List<ElegxosAnantistixiwn> results = null;
+			results = em.createQuery("select e from elegxoi e where e.type= :type ").setParameter("type", "anantistoixies").getResultList();
+			return results;
+		}
+		
+		//tsekarei ama iparxoun anantistixoies
 		public Boolean IparxounAnantistixoies(){
 			if(girnaTisAnantistoixies().size()>0){
 				return true;
@@ -59,7 +73,27 @@ public class ElegxosGiaAnantistixoiesService {
 			}
 		}
 		
-		// elegxos meta thn tropopoihsh twn anantistoixountwn parastatikwn?
+		//tsekarei ean prepein an thewrhthei anantistoixia to poso pou ipologizetai
+		public boolean EinaiAnantistoixia(double x){
+			if (x!=0){
+				return true;
+			}else{
+			return false;}
+			
+		}
 		
+		// vazei ta dedomena apo ton elegxo sth vash elegxoi anantistoixiwn.
+		public void KaneEisagwghSthBash(double teliko){
+			if(EinaiAnantistoixia(teliko)){
+				ElegxosAnantistixiwn e=new ElegxosAnantistixiwn(teliko);
+				// mas afhnei kai peritherio tropopoihsewn
+				e.setDinatothtatropo(true);
+				EntityTransaction tx = em.getTransaction();
+				tx.begin();
+				em.persist(e);
+				tx.commit();
+				em.close();
+			}
+		}
 		
 }

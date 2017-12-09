@@ -21,13 +21,24 @@ public class ElegxosGiaApathService {
 		this.em = em;
 	}
 	
-	
-
-	public  boolean findDhlwshById(int id){
+	public void FindElegxosApathsById(int id){
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		try {
-			d = em.find(Dhlwsh.class, id);
+			m = em.find(ElegxosApaths.class, id);
+			tx.commit();
+		} catch (NoResultException ex) {
+			m = null;
+			tx.rollback();
+		}
+	}
+	
+
+	public  boolean findDhlwshById(){
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		try {
+			d = em.find(Dhlwsh.class, m.d.getId());
 			tx.commit();
 		} catch (NoResultException ex) {
 			d = null;
@@ -80,6 +91,7 @@ public class ElegxosGiaApathService {
 	}
 	 
 	//h opoia tha tsekarei ean eimaste entos xronikou oriou
+	//tsekarei ean exoun perasei oi meres(35) gia na kanei ton elegxo apaths
 	//exei merikes deprecated methods
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
 		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
