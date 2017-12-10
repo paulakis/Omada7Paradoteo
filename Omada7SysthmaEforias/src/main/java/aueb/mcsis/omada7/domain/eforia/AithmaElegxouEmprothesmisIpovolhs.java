@@ -44,7 +44,7 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 		this.prostimoekprothesmis = prostimoekprothesmis;
 	}
 	//mallon prepei na figei
-	public void ElegkseGiaEkprothesmh(){
+	public void ElegkseGiaEkprothesmh(Dhlwsh d){
 		Trimhno ela=new Trimhno();
 		if (ela.paremeres()>20){
 			d.setEmprothesmh(true);
