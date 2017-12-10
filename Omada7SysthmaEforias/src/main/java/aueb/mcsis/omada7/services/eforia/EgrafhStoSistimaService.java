@@ -72,7 +72,7 @@ public class EgrafhStoSistimaService {
 	        else {return false;	}
 	        
 	}
-	
+	@SuppressWarnings("unchecked")
 	public int FerePosoiEinaiStoSysthma(){
 		int size=0;
 		EntityManager em = JPAUtil.getCurrentEntityManager();
