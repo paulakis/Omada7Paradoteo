@@ -8,20 +8,19 @@ import org.junit.Test;
 
 public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 	
-	
+
 	Date ho = new Date();
-	private LogariasmosEtairias logEt = new LogariasmosEtairias(1, "KostasAE", ho , "123456678", "email@em.co", 2106547395,
+	private LogariasmosEtairias logEt = new LogariasmosEtairias(20, "KostasAE", ho , "123456678", "email@em.co", 2106547395,
 			true, false);
-	private LogariasmosEtairias logEtf = new LogariasmosEtairias(2, "RostasAE", ho , "12345667", "email@semm.co", 2107647395,
+	private LogariasmosEtairias logEtf = new LogariasmosEtairias(50, "RostasAE", ho , "12345667", "email@semm.co", 2107647395,
 			true, false);
 	private EgrafhStoSistimaService EgStoSys = new EgrafhStoSistimaService(em);
 	
-	
+		
+
 	@Test
 	public void testVresEanExeiKsanakataxwrhtheiToAfm(){
-		
-		
-		Assert.assertNull(EgStoSys.VresEanExeiKsanakataxwrhtheiToAfm(logEt.getAfm()));
+		Assert.assertEquals(EgStoSys.VresEanExeiKsanakataxwrhtheiToAfm(logEt.getAfm()),null);
 	}
 	
 	

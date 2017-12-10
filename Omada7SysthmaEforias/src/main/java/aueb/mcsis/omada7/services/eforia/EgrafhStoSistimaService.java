@@ -3,6 +3,7 @@ package aueb.mcsis.omada7.services.eforia;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 
 public class EgrafhStoSistimaService {
 	 // to service auto elexgxei an uparxei allh etairia me to idio afm tik
@@ -21,7 +22,8 @@ public class EgrafhStoSistimaService {
 	public boolean KaneNeaEggrafh(LogariasmosEtairias e){
 		
 		
-		if(VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm()) !=null && e!=null && EgirosAfm(e)){
+		if(/*(VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm()) !=null) &&*/ e!=null && EgirosAfm(e)){
+			EntityManager em = JPAUtil.createEntityManager();
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			// vazei ena antikeimeno sthn vash
@@ -39,7 +41,8 @@ public class EgrafhStoSistimaService {
 	
 
 	public LogariasmosEtairias VresEanExeiKsanakataxwrhtheiToAfm(String afm){
-		return em.find(LogariasmosEtairias.class, afm);
+		EntityManager em = JPAUtil.createEntityManager();
+		return em.find(LogariasmosEtairias.class,afm);
 		
 	}
 	

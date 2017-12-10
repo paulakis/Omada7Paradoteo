@@ -1,6 +1,6 @@
 package aueb.mcsis.omada7.domain.eforia;
 
-import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 

@@ -52,7 +52,9 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 
 	
 	
+	
 	//ean exoun perasei oi 30 meres gia na ginei o prwtos elegxos
+	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
 		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
 		if(tr.paremeres()>30){

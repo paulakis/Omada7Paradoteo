@@ -1,7 +1,9 @@
 package aueb.mcsis.omada7.services;
 
+
 import org.junit.Test;
 
+import aueb.mcsis.omada7.services.GenikoServiceTest;
 
 public class ElegxosGiaApathServiceTester extends GenikoServiceTest{
 	
