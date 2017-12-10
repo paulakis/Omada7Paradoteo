@@ -26,14 +26,6 @@ public class EpivolhProstimouService {
 		return l; 
 	}
 	
-	//prostimo se anantistoxoia
-	public void ProstimoGiaAnantistoixies(){
-		//List<ElegxosAnantistixiwn> l=null;
-		//for(ElegxosAnantistixiwn e:l){
-			//na epivalei kapws ena prostimo
-		
-	}
-	
 	//koitaei kai tis apates 
 	
 	@SuppressWarnings("unchecked")
@@ -60,9 +52,7 @@ public class EpivolhProstimouService {
 			em.merge(e.d);
 			tx.commit();}
 		}
-			em.close();
 	}
 	
 	
 }
-
