@@ -45,6 +45,48 @@ public class DhlwshTest {
 		//etairia.setExeiElefthei(false);
 		}
 
+	@Test
+	public void testPedia()
+	{	Date ho =new Date();
+		Date ha =new Date();
+		Dhlwsh dhlwsh = new Dhlwsh(1,ho,0 ,false);
+		LogariasmosEtairias logEt = new LogariasmosEtairias();
+		
+		//dhlwsh.setSinoloprostimou(300000);
+		//Assert.assertEquals(dhlwsh.getSinoloprostimou(),dhlwsh.sinoloprostimou);
+		dhlwsh.setEmprothesmh(true);
+		dhlwsh.setTrimhno(2);
+		dhlwsh.setSubmissiondate(ha);
+		
+		dhlwsh.setId(20);
+		Assert.assertEquals(20, dhlwsh.getId());
+		Assert.assertEquals(2, dhlwsh.getTrimhno());
+		Assert.assertEquals(ha, dhlwsh.getSubmissiondate());
+		Assert.assertTrue(dhlwsh.isEmprothesmh());
+		
+		dhlwsh.setLogarismosEtairias(logEt);
+		Assert.assertEquals(logEt,dhlwsh.getEtairia());
+		
+		Assert.assertEquals(51, dhlwsh.hashCode());
+		
+		
+			
+	}
+	
+	@Test
+	public void testEquals(){
+		Dhlwsh dhlwsh = new Dhlwsh(1,new Date(),0 ,false);
+		Dhlwsh dhlwnot = null;
+		Assert.assertTrue(dhlwsh.equals(dhlwsh)); 
+		Assert.assertFalse(dhlwsh.equals(dhlwnot));
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	/*@Test//tha thelei diorthosi
