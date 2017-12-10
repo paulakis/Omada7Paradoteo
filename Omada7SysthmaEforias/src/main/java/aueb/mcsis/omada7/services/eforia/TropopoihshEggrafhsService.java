@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 
 public class TropopoihshEggrafhsService {
 	//BOOLEAN AN TO AFM EINAI TO IDIO
@@ -21,6 +22,7 @@ public class TropopoihshEggrafhsService {
 	
 	// elegxetai automata apo ton eforo.erwthsh(?)
 	public void TropopoihshLogariasmou(String afm,String epwnimia,String email,int thlefwno,Date hmeromhniasistashs){
+		EntityManager em = JPAUtil.getCurrentEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		LogariasmosEtairias eter = em.find(LogariasmosEtairias.class, afm);
@@ -35,6 +37,9 @@ public class TropopoihshEggrafhsService {
 			tx.commit();
 			em.close();
 		}
+		//else{ 
+		//	System.out.println("O logariasmos den vrethike");
+		//			}
 	}
 	
 
