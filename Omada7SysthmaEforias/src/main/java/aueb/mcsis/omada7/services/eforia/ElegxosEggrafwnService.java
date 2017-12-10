@@ -4,6 +4,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 
 
 
@@ -25,11 +26,10 @@ public class ElegxosEggrafwnService {
 	public List<LogariasmosEtairias> FerePendingLogariasmous(){
 		//fernei apo ton pinaka ths vashs tis eggrafes twn logariasmwn pou den exoun elegthei
 		List<LogariasmosEtairias> results = null;
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
 		results=em.
-		createQuery("select e from LogariasmoEtairias e where e.elegxos=false && e.theleielegxo=true").getResultList();
+		createQuery("select e from LogariasmosEtairias e where e.exeiElefthei=FALSE AND e.needCheck=TRUE").getResultList();
 		return results;	
+	
 		
 	}
 	
@@ -39,7 +39,13 @@ public class ElegxosEggrafwnService {
 		List<LogariasmosEtairias> lista=FerePendingLogariasmous();
 		for(LogariasmosEtairias e: lista){
 			e.setExeiElefthei(true);
-			e.setNeedCheck(false);
+			e.setNeedCheck(true);
+			EntityManager em = JPAUtil.getCurrentEntityManager();
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			//apothikeush sth vash gia tis allages
+			em.persist(e);
+			tx.commit();
 			
 		}
 	}
