@@ -50,7 +50,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 
 	
 	
-	
+	//AFTO EINAI LATHOS -- METRAME APO TIN ARXI TOU EKSAMINOU OXI APO TIN IMERA POU EGINE SUBMISION H DILOSI -FILTI
 	//ean exoun perasei oi 30 meres gia na ginei o prwtos elegxos
 	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
