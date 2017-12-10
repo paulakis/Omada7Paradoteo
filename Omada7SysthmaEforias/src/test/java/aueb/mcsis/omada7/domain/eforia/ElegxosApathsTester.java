@@ -15,24 +15,16 @@ public class ElegxosApathsTester {
 		//trexoun apla kanoun mia vlakia
 		Assert.assertEquals(elegxosApaths1.ElegkseAnPerasan35Meres(d1),true);
 		Assert.assertEquals(elegxosApaths2.ElegkseAnPerasan35Meres(d2),false);
-		
-		/*elegxosApaths1.setApath(true);
-		elegxosApaths1.setProstimo(3000000);
-		elegxosApaths1.setSoumaesodwneskodwn(20000);
-		Assert.assertEquals(3000000,elegxosApaths1.getProstimo());
-		Assert.assertEquals(20000,elegxosApaths1.getSoumaesodwneskodwn());
-		Assert.assertEquals(true, elegxosApaths1.isApath()); */
-		
-		
+			
 	}
 	@Test
 	public void GenikaTest(){
-		ElegxosApaths elegxosApaths2=new ElegxosApaths(3000000,20000,false);
+		ElegxosApaths elegxosApaths2=new ElegxosApaths(40000,20000,false);
 		elegxosApaths2.setApath(true);
-		//elegxosApaths2.setProstimo(3000000);
-		//elegxosApaths2.setSoumaesodwneskodwn(20000);
-		//Assert.assertEquals(3000000,elegxosApaths2.getProstimo());
-		//Assert.assertEquals(20000,elegxosApaths2.getSoumaesodwneskodwn());
+		elegxosApaths2.setProstimo(30000);
+		elegxosApaths2.setSoumaesodwneskodwn(20000);
+		Assert.assertEquals(30000.0,elegxosApaths2.getProstimo(),0.01);
+		Assert.assertEquals(20000,elegxosApaths2.getSoumaesodwneskodwn(),0.01);
 		Assert.assertEquals(true, elegxosApaths2.isApath()); 
 		
 	}
