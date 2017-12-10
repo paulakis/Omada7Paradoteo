@@ -35,11 +35,17 @@ public class DhlwshTest {
 	
 	@Test
 	public void mporeiNaKaneiTropopoihshTest(){
-		LogariasmosEtairias etairia = new LogariasmosEtairias();
-		etairia.setExeiElefthei(true);
-		Assert.assertTrue(etairia.isExeiElefthei());
+		
+		Date ho = new Date();
+		LogariasmosEtairias logEt = new LogariasmosEtairias(20, "KostasAE", ho  , "123456678", "email@em.co", 2106547395,true, false);
+		Dhlwsh dhlwsh = new Dhlwsh();
+		Assert.assertTrue(dhlwsh.MporeiNaKaneiTropopoihsh(logEt));
+		logEt.setExeiElefthei(false);
+		Assert.assertFalse(dhlwsh.MporeiNaKaneiTropopoihsh(logEt));
+		//etairia.setExeiElefthei(false);
 		}
 
+	
 	
 	/*@Test//tha thelei diorthosi
 	public void IparxeiHdhStaParastatika(){

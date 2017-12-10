@@ -164,7 +164,7 @@ public class Dhlwsh {
 	}
 	
 	
-	public boolean MporeiNaKaneiTropopoihsh(){
+	public boolean MporeiNaKaneiTropopoihsh(LogariasmosEtairias etairia){
 		if (etairia.isExeiElefthei()){
 			return true;
 		}else{
