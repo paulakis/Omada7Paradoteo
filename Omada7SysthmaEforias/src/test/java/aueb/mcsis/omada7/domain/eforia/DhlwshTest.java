@@ -52,8 +52,8 @@ public class DhlwshTest {
 		Dhlwsh dhlwsh = new Dhlwsh(1,ho,0 ,false);
 		LogariasmosEtairias logEt = new LogariasmosEtairias();
 		
-		//dhlwsh.setSinoloprostimou(300000);
-		//Assert.assertEquals(dhlwsh.getSinoloprostimou(),dhlwsh.sinoloprostimou);
+		dhlwsh.setSinoloprostimou(300000);
+		Assert.assertEquals(dhlwsh.getSinoloprostimou(),dhlwsh.getSinoloprostimou(), 0.01);
 		dhlwsh.setEmprothesmh(true);
 		dhlwsh.setTrimhno(2);
 		dhlwsh.setSubmissiondate(ha);
