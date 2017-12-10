@@ -2,13 +2,8 @@ package aueb.mcsis.omada7.services;
 
 import aueb.mcsis.omada7.services.eforia.EgrafhStoSistimaService;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
-import junit.framework.Assert;
-import static org.junit.Assert.assertTrue;
-
 import java.util.Date;
-
-import javax.persistence.EntityManager;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
@@ -21,7 +16,7 @@ public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 			true, false);
 	private EgrafhStoSistimaService EgStoSys = new EgrafhStoSistimaService(em);
 	
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void testVresEanExeiKsanakataxwrhtheiToAfm(){
 		
@@ -29,7 +24,7 @@ public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 		Assert.assertNull(EgStoSys.VresEanExeiKsanakataxwrhtheiToAfm(logEt.getAfm()));
 	}
 	
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void testKaneNeaEggrafh(){
 		
