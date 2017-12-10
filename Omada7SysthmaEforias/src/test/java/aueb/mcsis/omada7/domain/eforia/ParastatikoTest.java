@@ -60,7 +60,7 @@ Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 		Assert.assertFalse(p1.equals(p2));
 		Assert.assertFalse(p1.equals(p3));
 		Assert.assertFalse(p1.equals(a));
-			
+		
 		
 }
     

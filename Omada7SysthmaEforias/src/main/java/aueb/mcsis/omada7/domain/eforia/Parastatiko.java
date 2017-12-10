@@ -50,7 +50,6 @@ public class Parastatiko {
 	}
 	
 	
-
 	
 	public Parastatiko( String afmsimvalwmenoou, int arithmosparastatikou, boolean eidossinallaghs, double poso,
 			Date hmeromhniaparastatikou) {
