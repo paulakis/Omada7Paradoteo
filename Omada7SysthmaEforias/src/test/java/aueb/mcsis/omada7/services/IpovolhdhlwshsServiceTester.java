@@ -34,12 +34,19 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 	}
 	
 	@Test
-	public void TestNaMhnThnVazei(){
+	public void TestNaMhnThnVazeiThNeaDhlwsh(){
 		ipo = new IpovolhDhlwshsService(em);
 		ipo.VresEtairia("987654321");
 		ipo.KaneNeaDhlwsh(3);
+		Assert.assertNull(ipo.KaneNeaDhlwsh(3));
 		Assert.assertEquals(ipo.fereArDhlwsewn(), 3);
 	}
+	
+	@Test
+	public void TestVresDhlwshById(){
+		
+	}
+	
 	
 	
 	
