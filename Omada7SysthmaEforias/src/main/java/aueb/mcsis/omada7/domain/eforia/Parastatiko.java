@@ -121,7 +121,7 @@ public class Parastatiko {
 		this.hmeromhniaparastatikou = hmeromhniaparastatikou;
 	}
 	
-	
+	//pou xrisimopioume to hashcode??-filti
 	
 	@Override
 	public int hashCode() {
@@ -133,7 +133,7 @@ public class Parastatiko {
 		return result;
 	}
 	
-	
+//na aferesoume merika if gt den mpenei pote se afta me to coverage test -filti	
 	
 	@Override
 	public boolean equals(Object obj) {
@@ -157,8 +157,7 @@ public class Parastatiko {
 	}
 	
 	
-	
-	
+		
 	// epistrefei to poso analoga me to ti einai kaii pairnei ws orisma ena parastaiko apo to set parastikwn pou diathetei h dhlwsh
 	public double PareToPoso(Parastatiko p){
 		if (p.isEidossinallaghs())

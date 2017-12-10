@@ -33,8 +33,35 @@ Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 	public void pareToPosoNullTest(){
 		Parastatiko p = new Parastatiko();
 		Assert.assertTrue(p.getPoso()==0 && p.PareToPoso(p)==0);
-}
-}
-
-    
+	}
 	
+	@Test
+	public void miscellaniousTest(){
+		Date a =new Date();
+		Parastatiko p= new Parastatiko("987654322" ,3,true ,300000 ,a);
+		p.setId(20);
+		Assert.assertEquals(20,p.getId());
+		Assert.assertEquals(3,p.getArithmosparastatikou());
+		Assert.assertEquals(a,p.getHmeromhniaparastatikou());
+		Assert.assertEquals(-1434666362,p.hashCode());
+		
+			
+	}
+
+		@Test
+		public void testEquals(){
+		Date a =new Date();
+		Parastatiko p1= new Parastatiko("987654322" ,1234,true ,300000 ,a);
+		Parastatiko p2= new Parastatiko("987654323" ,2341,true ,250000 ,a);
+		Parastatiko p3= null;
+		Parastatiko p4= new Parastatiko();
+		Parastatiko p5= new Parastatiko();
+		Assert.assertTrue(p1.equals(p1));
+		Assert.assertFalse(p1.equals(p2));
+		Assert.assertFalse(p1.equals(p3));
+		Assert.assertFalse(p1.equals(a));
+			
+		
+}
+    
+}
