@@ -15,4 +15,9 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 		Assert.assertEquals(s.findAllDhlwseis().size(), 3);
 	}
 
+	
+	@Test
+	public void TestElegxosAnantistoixiwn(){
+		
+	}
 }

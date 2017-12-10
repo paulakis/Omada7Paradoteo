@@ -26,9 +26,8 @@ public class ElegxosGiaAnantistixoiesService {
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			d=em.
-					createQuery("select * from Dhlwsh").getResultList();
+					createQuery("select d from Dhlwsh d").getResultList();
 			tx.commit();
-			em.close();
 			return d;
 		}
 		
