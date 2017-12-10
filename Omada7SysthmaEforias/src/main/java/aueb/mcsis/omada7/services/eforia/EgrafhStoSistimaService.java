@@ -22,14 +22,13 @@ public class EgrafhStoSistimaService {
 	public boolean KaneNeaEggrafh(LogariasmosEtairias e){
 		
 		
-		if(/*(VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm()) !=null) &&*/ e!=null && EgirosAfm(e)){
-			EntityManager em = JPAUtil.createEntityManager();
+		if((VresEanExeiKsanakataxwrhtheiToAfm(e.getAfm())==null) && e!=null && EgirosAfm(e)){
+			EntityManager em = JPAUtil.getCurrentEntityManager();
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			// vazei ena antikeimeno sthn vash
 			em.persist(e);
 			tx.commit();
-			em.close();
 			return true;
 		}
 		else
@@ -41,7 +40,7 @@ public class EgrafhStoSistimaService {
 	
 
 	public LogariasmosEtairias VresEanExeiKsanakataxwrhtheiToAfm(String afm){
-		EntityManager em = JPAUtil.createEntityManager();
+		EntityManager em = JPAUtil.getCurrentEntityManager();
 		return em.find(LogariasmosEtairias.class,afm);
 		
 	}

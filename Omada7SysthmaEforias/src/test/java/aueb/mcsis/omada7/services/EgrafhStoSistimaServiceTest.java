@@ -27,8 +27,7 @@ public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 	@Test
 	public void testKaneNeaEggrafh(){
 		
-		
-		Assert.assertTrue(EgStoSys.KaneNeaEggrafh(logEt));
+		Assert.assertEquals(EgStoSys.KaneNeaEggrafh(logEt),true);
 		
 		
 		//Assert.assertTrue();
@@ -49,6 +48,8 @@ public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 		
 		
 	}
+	
+	
 	
 	
 }
