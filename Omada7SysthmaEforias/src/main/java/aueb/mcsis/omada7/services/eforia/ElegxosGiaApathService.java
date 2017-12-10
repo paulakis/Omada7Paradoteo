@@ -36,11 +36,19 @@ public class ElegxosGiaApathService {
 			return false;
 		}
 	}
+	//voithitiko
+	public void EkteleseElegxo(){
+		ElegxosApaths e=new ElegxosApaths();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(e);
+		tx.commit();
+	}
 	//na to dw .den kanei elegxoi is not mapped
 	@SuppressWarnings("unchecked")
 	public int ferePosesEggrafes(){
 		int poses=0;
-		List<AithmaElegxou> l = em.createQuery("select e from AithmaElegxou e where e.type = apath",AithmaElegxou.class).getResultList();
+		List<AithmaElegxou> l = em.createQuery("select e from AithmaElegxou e where e.type = apath").getResultList();
 		if(l.size()==0){
 			return poses;
 		}else{
@@ -69,9 +77,9 @@ public class ElegxosGiaApathService {
 	}
 	//koitaei gia mia dhlwsh ean ekane apath kai thn apothikeuei sth vash ean einai ipopsifia
 	//xrhsimopoiei tis parakatw sinarthseis
-	public void ipologismosApaths(){
-			if(tsekareEanEntosXronikouOriou(m.d)){
-				m = new ElegxosApaths(DhmiourgiaProstimou(Ipopsifiaapath()),Ipopsifiaapath(),EinaiApath(Ipopsifiaapath()));
+	public void ipologismosApaths(Dhlwsh a){
+			if(tsekareEanEntosXronikouOriou(a)){
+				m = new ElegxosApaths(DhmiourgiaProstimou(Ipopsifiaapath(a)),Ipopsifiaapath(a),EinaiApath(Ipopsifiaapath(a)));
 				EntityTransaction tx = em.getTransaction();
 				tx.begin();
 				em.persist(m);
@@ -81,9 +89,9 @@ public class ElegxosGiaApathService {
 	}
 	
 	
-	public double Ipopsifiaapath(){
+	public double Ipopsifiaapath(Dhlwsh a){
 		double souma=0;
-		for(Parastatiko p: dil.getParastatika()){
+		for(Parastatiko p: a.getParastatika()){
 			souma =+ p.PareToPoso(p);
 		}
 		return souma;
