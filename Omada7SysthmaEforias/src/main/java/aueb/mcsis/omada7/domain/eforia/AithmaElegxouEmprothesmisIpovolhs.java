@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
@@ -14,9 +13,8 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 
 	final double protimo=500;
 	
-	@Id
-	@Column
-	int id;
+	
+	
 	
 	@Column
 	private	double prostimoekprothesmis;

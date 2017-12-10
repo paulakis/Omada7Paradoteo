@@ -1,6 +1,7 @@
 package aueb.mcsis.omada7.services.eforia;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -59,7 +60,7 @@ public class IpovolhDhlwshsService {
 			d.setSubmissiondate(new Date());
 			em.persist(d);
 			tx.commit();
-			em.close();
+			
 		}
 		}
 		
@@ -98,6 +99,18 @@ public class IpovolhDhlwshsService {
 		}
 		//metaa vazei sth dhlwsh to kataallhlo parastatiko.
 	
+	} 
+	 
+	public int fereArDhlwsewn(){
+		int ar=0;
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		List<Dhlwsh> l= em.createQuery("select d from Dhlwsh d").getResultList();
+		if(l.size()!=0){
+			return l.size();
+		}else{
+			return ar;
+		}
 	}
 	
 	
