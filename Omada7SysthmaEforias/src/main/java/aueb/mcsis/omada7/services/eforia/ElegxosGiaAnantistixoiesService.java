@@ -57,7 +57,7 @@ public class ElegxosGiaAnantistixoiesService {
 		@SuppressWarnings("unchecked")
 		public List<AithmaElegxou> girnaTisAnantistoixies(){
 			List<AithmaElegxou> results1 = null;
-			results1 = em.createQuery("select e from elegxoi e where e.type= :type ").setParameter("type", "anantistoixies").getResultList();
+			results1 = em.createQuery("select e from AithmaElegxou e where e.type= :type ").setParameter("type", "anantistoixies").getResultList();
 			return results1;
 		}
 		

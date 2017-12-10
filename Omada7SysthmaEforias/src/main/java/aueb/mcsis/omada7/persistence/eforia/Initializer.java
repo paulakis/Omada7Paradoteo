@@ -47,7 +47,7 @@ public class Initializer {
      public void prepareData() {
          // ���� ��������� �� �������� ����������� ��� �������
          eraseData();  
-        Date a= new Date();
+        Date a= new Date(2017, 10, 2);
          
          LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321", "veropoulos@ver.gr",2102574575,
         true, true);
@@ -60,8 +60,8 @@ public class Initializer {
          
    
          
-         	Dhlwsh d1 = new Dhlwsh(1,a,0 ,true);
-         	d2 = new Dhlwsh(2,a,0,true);
+         	Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
+         	d2 = new Dhlwsh(3,a,0,true);
         	Dhlwsh d3 = new Dhlwsh(3,a,500000,false);
             
             

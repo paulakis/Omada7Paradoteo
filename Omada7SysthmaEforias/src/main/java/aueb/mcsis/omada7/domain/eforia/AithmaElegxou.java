@@ -24,7 +24,8 @@ public class AithmaElegxou {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
-	
+	@Column(name="type")
+	String type;
 	
 	@Column(nullable = false, unique = true)
 	boolean oloklhrwshelegxwn;

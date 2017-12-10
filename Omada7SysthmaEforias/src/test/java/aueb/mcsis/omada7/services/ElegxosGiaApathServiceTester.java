@@ -34,7 +34,7 @@ public class ElegxosGiaApathServiceTester extends GenikoServiceTest{
 		tx.commit();
 		Assert.assertTrue(natos.FindElegxosApathsById(e.getId()));
 		//gia kapoio logo den paizei
-		//Assert.assertEquals(natos.ferePosesEggrafes(), 1);
+		Assert.assertEquals(natos.ferePosesEggrafes(), 1);
 	}
 	
 	
