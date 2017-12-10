@@ -82,16 +82,17 @@ public class IpovolhDhlwshsService {
 	}
 	
 	
-	
+	//prepei na to doume
 	//vazoume kai ta parastatika afou exoume kanei nea dhlwsh
-	public boolean ValeNeoParastatiko(int id){
+	public boolean ValeNeoParastatiko(int did/*,String afmsimba,int arpara,boolean eidos,double poso,Date a*/){
 		
-		Dhlwsh d=VresDhlwshById(id);
+		Dhlwsh d=VresDhlwshById(did);
 		if(d==null){
 			return false;
 		}else{
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
+			para=new Parastatiko("", 135, true, 10000, new Date());
 			// arxikopoihsh tou parastaikou diamorfwsh antikeimenou para.
 			em.persist(para);
 			tx.commit();
@@ -100,8 +101,8 @@ public class IpovolhDhlwshsService {
 		//metaa vazei sth dhlwsh to kataallhlo parastatiko.
 	
 	} 
-	 
-	public int fereArDhlwsewn(){
+	 @SuppressWarnings("unchecked")
+	public int fereArithmoDhlwsewn(){
 		int ar=0;
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -112,7 +113,18 @@ public class IpovolhDhlwshsService {
 			return ar;
 		}
 	}
-	
+	@SuppressWarnings("unchecked")
+	 public int fereTaParastatika(){
+		 int a=0;
+		 EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			List<Parastatiko> l= em.createQuery("select d from Parastatiko d").getResultList();
+			if(l.size()!=0){
+				return l.size();
+			}else{
+				return a;
+			}
+	 }
 	
 	
 	
