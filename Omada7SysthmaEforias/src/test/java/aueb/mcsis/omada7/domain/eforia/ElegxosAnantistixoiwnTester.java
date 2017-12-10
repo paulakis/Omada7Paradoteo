@@ -14,7 +14,7 @@ public class ElegxosAnantistixoiwnTester {
 	// dio dilwseis 4 parastatika gia na metrhsoume ti ginetai ,mia idia posa mia diaforetika kai tha doume ti tha epistrefei.
 	@Test
 	public void AnantistoixiaEnaProsEnaTester(){
-		ElegxosAnantistixiwn ele = new ElegxosAnantistixiwn();
+		ElegxosAnantistixiwn ele = new ElegxosAnantistixiwn(20000);
 		//Dhlwsh d = new Dhlwsh();
 		ele.setDiaforaposou(30000);
 		Assert.assertEquals(ele.getDiaforaposou(), 30000.0);
