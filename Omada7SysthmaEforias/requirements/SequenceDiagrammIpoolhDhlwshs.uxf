@@ -26,60 +26,26 @@
 // This text will be stored with each diagram;  use it for notes.</help_text>
   <zoom_level>10</zoom_level>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>280</x>
-      <y>150</y>
-      <w>30</w>
-      <h>270</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>230</x>
-      <y>130</y>
-      <w>130</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_:IpovoliUI_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>400</x>
-      <y>130</y>
+      <x>200</x>
+      <y>140</y>
       <w>180</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>_:IpovoliController_</panel_attributes>
+    <panel_attributes>_:IpovolhDhlwshsService_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>610</x>
-      <y>130</y>
+      <x>410</x>
+      <y>140</y>
       <w>160</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>_:LogariasmosEtairias_</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>80</x>
-      <y>190</y>
-      <w>230</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-KaneNeaDhlswsh(trimhno)</panel_attributes>
-    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>
@@ -106,8 +72,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
-      <y>150</y>
+      <x>270</x>
+      <y>160</y>
       <w>30</w>
       <h>270</h>
     </coordinates>
@@ -117,20 +83,20 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>200</y>
-      <w>220</w>
+      <x>80</x>
+      <y>210</y>
+      <w>210</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 KaneNeaDhlswsh(trimhno)</panel_attributes>
-    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>470</x>
-      <y>180</y>
+      <x>270</x>
+      <y>190</y>
       <w>20</w>
       <h>200</h>
     </coordinates>
@@ -140,8 +106,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>810</x>
-      <y>130</y>
+      <x>610</x>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -151,8 +117,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
-      <y>150</y>
+      <x>470</x>
+      <y>160</y>
       <w>30</w>
       <h>270</h>
     </coordinates>
@@ -162,8 +128,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
-      <y>150</y>
+      <x>640</x>
+      <y>160</y>
       <w>30</w>
       <h>260</h>
     </coordinates>
@@ -173,8 +139,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>670</x>
-      <y>170</y>
+      <x>470</x>
+      <y>180</y>
       <w>20</w>
       <h>210</h>
     </coordinates>
@@ -184,8 +150,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>840</x>
-      <y>170</y>
+      <x>640</x>
+      <y>180</y>
       <w>20</w>
       <h>210</h>
     </coordinates>
@@ -195,8 +161,8 @@ KaneNeaDhlswsh(trimhno)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>290</y>
+      <x>480</x>
+      <y>300</y>
       <w>180</w>
       <h>40</h>
     </coordinates>
@@ -207,8 +173,8 @@ EisagwghNeasDhlwshs</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>210</y>
+      <x>280</x>
+      <y>220</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -219,8 +185,8 @@ ExeiElegxei</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>230</y>
+      <x>480</x>
+      <y>240</y>
       <w>110</w>
       <h>80</h>
     </coordinates>
@@ -234,8 +200,8 @@ Dhlwsh
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>350</y>
+      <x>480</x>
+      <y>360</y>
       <w>180</w>
       <h>40</h>
     </coordinates>
