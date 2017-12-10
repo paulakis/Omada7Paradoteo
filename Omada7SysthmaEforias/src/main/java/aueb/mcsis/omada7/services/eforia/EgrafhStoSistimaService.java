@@ -1,5 +1,7 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
@@ -71,6 +73,16 @@ public class EgrafhStoSistimaService {
 	        
 	}
 	
+	public int FerePosoiEinaiStoSysthma(){
+		int size=0;
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		List<LogariasmosEtairias> l = em.createQuery("select e from LogariasmosEtairias e").getResultList();
+		if(l.isEmpty()){
+			return size;
+		}else{
+			return l.size();
+		}
+	}
 	
 	
 	
