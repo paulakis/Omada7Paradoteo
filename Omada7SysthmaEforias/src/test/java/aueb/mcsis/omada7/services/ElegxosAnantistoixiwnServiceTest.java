@@ -12,6 +12,13 @@ import aueb.mcsis.omada7.services.eforia.ElegxosGiaAnantistixoiesService;
 public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 	
 	ElegxosGiaAnantistixoiesService s;
+
+	@Test
+	public void TestKaneEisagwghSthBash(){
+		s=new ElegxosGiaAnantistixoiesService(em);
+		s.KaneEisagwghSthBash(1000);
+		Assert.assertEquals(s.girnaTisAnantistoixies().size(),1);
+	}
 	
 	@Test
 	public void TestfindallDhlwseis(){
@@ -38,10 +45,5 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 		Assert.assertEquals(s.girnaTisAnantistoixies().size(), 1);
 	}
 	
-	@Test
-	public void TestKaneEisagwghSthBash(){
-		s=new ElegxosGiaAnantistixoiesService(em);
-		s.KaneEisagwghSthBash(1000);
-		Assert.assertEquals(s.girnaTisAnantistoixies().size(),1);
-	}
+	
 }
