@@ -44,9 +44,11 @@ public class TropopoihshDhlwshsServiceTest {
 	
 	@Test
 	public void TestTropopoihshDhlwshs(){
+		EntityManager em = JPAUtil.getCurrentEntityManager();
 		TropopoihshDhlwshsService tds = new TropopoihshDhlwshsService(em);
 		Date a = new Date();
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
+		
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(d1);
