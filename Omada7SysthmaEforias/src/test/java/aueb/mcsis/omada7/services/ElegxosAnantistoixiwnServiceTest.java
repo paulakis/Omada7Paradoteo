@@ -35,7 +35,7 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 	@Test
 	public void TestGirnaTisAnantistoixies(){
 		s=new ElegxosGiaAnantistixoiesService(em);
-		Assert.assertEquals(s.girnaTisAnantistoixies().size(), 0);
+		Assert.assertEquals(s.girnaTisAnantistoixies().size(), 1);
 	}
 	
 	@Test

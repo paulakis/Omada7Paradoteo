@@ -75,7 +75,7 @@ public class Initializer {
            Parastatiko p7= new Parastatiko("987654322" ,1432,true ,270000 ,a);
            Parastatiko p8= new Parastatiko("987654323" ,2134,true ,550000 ,a);
            Parastatiko p9= new Parastatiko("987654322" ,3142,false ,60000 ,a);
-         
+         //
            VEROPOULOS.addDhlwsh(d1);
            SKLAVENITIS.addDhlwsh(d2);
            JUMBO.addDhlwsh(d3);

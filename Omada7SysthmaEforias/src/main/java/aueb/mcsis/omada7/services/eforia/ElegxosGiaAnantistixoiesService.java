@@ -30,7 +30,7 @@ public class ElegxosGiaAnantistixoiesService {
 			tx.commit();
 			return d;
 		}
-		
+		//
 		//exoume lista me dhlwseis,tsekarei oles tis dhlwseis analitika gia anantistoixies
 		public void elegxosAnantistoixiwn(){
 			List<Dhlwsh> d=findAllDhlwseis();
