@@ -56,18 +56,10 @@ public class ElegxosGiaAnantistixoiesService {
 		@SuppressWarnings("unchecked")
 		public List<AithmaElegxou> girnaTisAnantistoixies(){
 			List<AithmaElegxou> results1 = null;
-			results1 = em.createQuery("select e from AithmaElegxou e where e.type= :type ").setParameter("type", "anantistoixies").getResultList();
+			results1 = em.createQuery("select e from ElegxosAnantistixiwn e").getResultList();
 			return results1;
 		}
 		
-		//tsekarei ama iparxoun anantistixoies
-		public Boolean IparxounAnantistixoies(){
-			if(girnaTisAnantistoixies().size()>0){
-				return true;
-			}else{
-				return false;
-			}
-		}
 		
 		//tsekarei ean prepein an thewrhthei anantistoixia to poso pou ipologizetai
 		public boolean EinaiAnantistoixia(double x){
@@ -88,7 +80,7 @@ public class ElegxosGiaAnantistixoiesService {
 				tx.begin();
 				em.persist(e);
 				tx.commit();
-				em.close();
+				
 			}
 		}
 		
