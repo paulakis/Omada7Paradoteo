@@ -18,7 +18,7 @@ import javax.persistence.Table;
 discriminatorType = DiscriminatorType.STRING
 )
 
-public abstract class AithmaElegxou {
+public  class AithmaElegxou {
 	
 	
 	@Id
@@ -37,6 +37,21 @@ public abstract class AithmaElegxou {
 		
 	
 	
+
+
+
+	public AithmaElegxou() {
+		super();
+	}
+
+	
+
+	public AithmaElegxou(boolean oloklhrwshelegxwn, boolean enhmerwsheforou, boolean dinatothtatropo) {
+		super();
+		this.oloklhrwshelegxwn = oloklhrwshelegxwn;
+		this.enhmerwsheforou = enhmerwsheforou;
+		this.dinatothtatropo = dinatothtatropo;
+	}
 
 
 

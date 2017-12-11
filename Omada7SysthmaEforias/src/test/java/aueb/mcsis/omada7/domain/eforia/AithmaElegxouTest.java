@@ -1,8 +1,9 @@
 package aueb.mcsis.omada7.domain.eforia;
+import org.junit.Assert;
 import org.junit.Test;
 
 import aueb.mcsis.omada7.domain.eforia.AithmaElegxou;
-import junit.framework.Assert;
+
 
 public class AithmaElegxouTest {
 
