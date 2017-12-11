@@ -29,7 +29,8 @@ public class DhlwshTest {
 		Parastatiko parastatiko = new Parastatiko("987654322" , 1234,true , 300000 , new Date());
 		dhlwsh.addParastatiko(parastatiko);
 		Assert.assertEquals(1,dhlwsh.getParastatika().size());
-		//Assert.assertTrue(dhlwsh.getParastatika().contains(parastatiko));
+		Assert.assertTrue(dhlwsh.getParastatika().contains(parastatiko));
+		Assert.assertFalse(dhlwsh.SinoloParastatikwn()==2);
 		
 	}
 	
@@ -70,6 +71,7 @@ public class DhlwshTest {
 		Assert.assertEquals(51, dhlwsh.hashCode());
 		
 		
+		
 			
 	}
 	
@@ -79,7 +81,13 @@ public class DhlwshTest {
 		Dhlwsh dhlwnot = null;
 		Assert.assertTrue(dhlwsh.equals(dhlwsh)); 
 		Assert.assertFalse(dhlwsh.equals(dhlwnot));
+		Assert.assertFalse(dhlwsh.equals(dhlwsh.getClass()));
+		Dhlwsh other = (Dhlwsh) dhlwsh;
+		Assert.assertTrue((other.id)==(dhlwsh.id));
+		Assert.assertFalse((other.id)!=(dhlwsh.id));
+
 	}
+	
 	
 	
 	

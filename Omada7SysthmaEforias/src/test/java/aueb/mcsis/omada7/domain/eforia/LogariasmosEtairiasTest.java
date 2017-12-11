@@ -1,6 +1,9 @@
 package aueb.mcsis.omada7.domain.eforia;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 import org.junit.*;
 
@@ -68,16 +71,57 @@ public class LogariasmosEtairiasTest {
 				  Dhlwsh dhlwsh = new Dhlwsh();
 				  dhlwsh.setLogarismosEtairias(logariasmos);
 				  logariasmos.addDhlwsh(dhlwsh);
+				  Set<Dhlwsh> dhlwseis=new HashSet<>();
+				  dhlwseis.add(dhlwsh);
+				  logariasmos.setDhlwseis(dhlwseis);
 	        Assert.assertTrue(logariasmos.getDhlwseis().contains(dhlwsh));
-	        
+	        Assert.assertEquals(1, dhlwseis.size());
 	        LogariasmosEtairias newlogariasmos = new  LogariasmosEtairias();
 	        dhlwsh.setLogarismosEtairias(newlogariasmos);
 	        newlogariasmos.addDhlwsh(dhlwsh);
-	        
+	        Date a= new Date(2017, 10, 2);
+	         LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321", "veropoulos@ver.gr",2102574575,true,true);
+	         Assert.assertTrue(VEROPOULOS.getEpwnimia().equals("veropoulos"));
 	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 1);
 	                
 	        Assert.assertTrue(newlogariasmos.getDhlwseis().size() == 1);
 	        Assert.assertTrue(newlogariasmos.getDhlwseis().contains(dhlwsh));
 	        
+	        LogariasmosEtairias log =new LogariasmosEtairias();
+	        log.setEpwnimia("kostas");
+	        Assert.assertTrue(VEROPOULOS.getHmeromhniasistashs().equals(a));
+	        Assert.assertTrue(VEROPOULOS.getEmail().equals( "veropoulos@ver.gr"));
+	        
 	    }
+
+//-769680559
+@Test
+public void miscellaniousTest(){
+	Date a= new Date(2017, 10, 2);
+	LogariasmosEtairias JUMBO = new LogariasmosEtairias(3, "jumbo",a, "987654323", "jumbo@jum.gr",2102579574,
+	        false, true);
+	Assert.assertEquals(-769680559,JUMBO.hashCode());
+	
 }
+
+@Test
+public void testEquals(){
+	Date a =new Date();
+	LogariasmosEtairias JUMBO = new LogariasmosEtairias(3, "jumbo",a, "987654323", "jumbo@jum.gr",2102579574,
+	        false, true);
+	LogariasmosEtairias XAITOGLOU = new LogariasmosEtairias(4, "xaitoglou",a, "987654324", "xaitoglou@xai.gr",2102584575,
+	        false, false);
+	LogariasmosEtairias l3=new LogariasmosEtairias();
+	LogariasmosEtairias l4=new LogariasmosEtairias();
+	LogariasmosEtairias l5=null;
+	
+	Assert.assertTrue(JUMBO.equals(JUMBO));
+	Assert.assertFalse(JUMBO.equals(XAITOGLOU));
+	Assert.assertFalse(JUMBO.equals(l3));
+	Assert.assertFalse(JUMBO.equals(a));
+}
+	
+	
+}
+
+	
