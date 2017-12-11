@@ -6,6 +6,7 @@ import java.util.HashSet;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 
 public class TropopoihshDhlwshsService {
@@ -25,6 +26,7 @@ public class TropopoihshDhlwshsService {
 	// xronologika na to kanoume h oxi?
 	//elegxos gi ahdh iparxousa
 	public Dhlwsh VresThnTeleutaiaDhlwsh(int id){
+		EntityManager em = JPAUtil.getCurrentEntityManager();//afto malon prepei na mpei se polla
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		Dhlwsh dhlwsh = em.find(Dhlwsh.class, id);

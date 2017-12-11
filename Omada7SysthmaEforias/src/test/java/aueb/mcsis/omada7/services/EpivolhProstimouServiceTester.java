@@ -4,9 +4,10 @@ import org.junit.Test;
 
 import aueb.mcsis.omada7.services.eforia.EpivolhProstimouService;
 
+
 public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 
-	EpivolhProstimouService ep;
+	private EpivolhProstimouService ep= new EpivolhProstimouService(em) ;
 
 	public EpivolhProstimouServiceTester() {
 		super();
@@ -14,8 +15,8 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 	
 	@Test
 	public void TestFereTisApates(){
-		//kane mia nea apath 
-		// vale sth vash
+		
+		
 	}
 	
 	
