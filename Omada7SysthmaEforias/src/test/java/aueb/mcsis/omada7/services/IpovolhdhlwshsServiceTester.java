@@ -2,11 +2,15 @@ package aueb.mcsis.omada7.services;
 
 import java.util.Date;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 import aueb.mcsis.omada7.services.eforia.IpovolhDhlwshsService;
 
 public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
@@ -47,7 +51,12 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 	public void TestVresDhlwshById(){
 		ipo=new IpovolhDhlwshsService(em);
 		//kane mia nea dhlwsh prwta kai meta koita
-		Dhlwsh d=ipo.KaneNeaDhlwsh(5);
+		Dhlwsh d=new Dhlwsh();
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(d);
+		tx.commit();
 		Assert.assertNotNull(ipo.VresDhlwshById(d.getId()));
 		
 	}
@@ -67,5 +76,16 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 		Assert.assertEquals(ipo.fereTaParastatika(),9);
 	}
 	
+	@Test
+	public void TestValeNeoParastatikoSec(){
+		ipo=new IpovolhDhlwshsService(em);
+		Dhlwsh d=new Dhlwsh();
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(d);
+		tx.commit();
+		Assert.assertTrue(ipo.ValeNeoParastatiko(d.getId()));
+	}
 	
 }
