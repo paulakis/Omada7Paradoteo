@@ -48,7 +48,7 @@ public class ElegxosGiaApathService {
 	@SuppressWarnings("unchecked")
 	public int ferePosesEggrafes(){
 		int poses=0;
-		List<AithmaElegxou> l = em.createQuery("select e from AithmaElegxou e where e.type = apath").getResultList();
+		List<AithmaElegxou> l = em.createQuery("select e from ElegxosApaths e").getResultList();
 		if(l.size()==0){
 			return poses;
 		}else{

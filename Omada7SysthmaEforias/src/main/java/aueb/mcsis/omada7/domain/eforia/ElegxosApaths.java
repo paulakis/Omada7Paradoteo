@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-@DiscriminatorValue("apath")
+@DiscriminatorValue(value="ElegxosApaths")
 public class ElegxosApaths extends AithmaElegxou {
 	
 	

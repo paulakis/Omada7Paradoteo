@@ -12,20 +12,18 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="elegxoi")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name="AithmaElegxou")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type",
 discriminatorType = DiscriminatorType.STRING
 )
 
-public class AithmaElegxou {
+public abstract class AithmaElegxou {
 	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
-	@Column(name="type")
-	String type;
 	
 	@Column(nullable = false, unique = true)
 	boolean oloklhrwshelegxwn;
@@ -36,36 +34,9 @@ public class AithmaElegxou {
 	@Column(nullable = false, unique = true)
 	boolean dinatothtatropo;
 
+		
 	
 	
-	
-	
-	public AithmaElegxou() {
-		super();
-	}
-
-	
-
-	public AithmaElegxou(boolean oloklhrwshelegxwn, boolean enhmerwsheforou, boolean dinatothtatropo) {
-		super();
-		this.oloklhrwshelegxwn = oloklhrwshelegxwn;
-		this.enhmerwsheforou = enhmerwsheforou;
-		this.dinatothtatropo = dinatothtatropo;
-	}
-
-
-	
-	
-	
-	public String getType() {
-		return type;
-	}
-
-
-
-	public void setType(String type) {
-		this.type = type;
-	}
 
 
 

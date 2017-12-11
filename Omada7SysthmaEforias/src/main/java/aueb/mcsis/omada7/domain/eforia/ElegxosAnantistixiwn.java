@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-@DiscriminatorValue("anantistoixies")
+@DiscriminatorValue(value="ElegxosAnantistixiwn")
 public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	
