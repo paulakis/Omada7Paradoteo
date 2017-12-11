@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.1.0">
-  <zoom_level>2</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
-      <y>196</y>
-      <w>136</w>
-      <h>124</h>
+      <x>1070</x>
+      <y>135</y>
+      <w>340</w>
+      <h>310</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::Dhlwsh
+    <panel_attributes>Dhlwsh
 --
 -parastatika = new HashSet&lt;Parastatiko&gt;(): Set&lt;Parastatiko&gt;
 ~id: int
@@ -52,12 +52,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>344</y>
-      <w>96</w>
-      <h>46</h>
+      <x>495</x>
+      <y>505</y>
+      <w>240</w>
+      <h>115</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::AithmaElegxouEmprothesmisIpovolhs
+    <panel_attributes>AithmaElegxouEmprothesmisIpovolhs
 --
 ~protimo = 500: double
 ~id: int
@@ -77,12 +77,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
-      <y>358</y>
-      <w>132</w>
-      <h>58</h>
+      <x>0</x>
+      <y>540</y>
+      <w>330</w>
+      <h>145</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::AithmaElegxou
+    <panel_attributes>AithmaElegxou
 --
 ~id: int
 ~oloklhrwshelegxwn: boolean
@@ -106,12 +106,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>142</y>
-      <w>200</w>
-      <h>120</h>
+      <x>270</x>
+      <y>0</y>
+      <w>500</w>
+      <h>300</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::LogariasmosEtairias
+    <panel_attributes>LogariasmosEtairias
 --
 -dhlwseis = new HashSet&lt;Dhlwsh&gt;(): Set&lt;Dhlwsh&gt;
 ~id: int
@@ -153,12 +153,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>314</x>
-      <y>452</y>
-      <w>112</w>
-      <h>58</h>
+      <x>505</x>
+      <y>775</y>
+      <w>280</w>
+      <h>145</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::ElegxosApaths
+    <panel_attributes>ElegxosApaths
 --
 ~id: int
 ~prostimo: double
@@ -182,12 +182,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>552</x>
-      <y>446</y>
-      <w>178</w>
-      <h>96</h>
+      <x>1100</x>
+      <y>760</y>
+      <w>445</w>
+      <h>240</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::Parastatiko
+    <panel_attributes>Parastatiko
 --
 ~id: int
 ~afmsimvalwmenoou: String
@@ -222,12 +222,12 @@ boolean
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>332</x>
-      <y>284</y>
-      <w>74</w>
-      <h>38</h>
+      <x>550</x>
+      <y>355</y>
+      <w>185</w>
+      <h>95</h>
     </coordinates>
-    <panel_attributes>aueb.mcsis.omada7.domain.eforia::ElegxosAnantistixiwn
+    <panel_attributes>ElegxosAnantistixiwn
 --
 ~id: int
 ~diaforaposou: double
@@ -245,10 +245,10 @@ boolean
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>418</x>
-      <y>190</y>
-      <w>126</w>
-      <h>60</h>
+      <x>765</x>
+      <y>120</y>
+      <w>315</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;-&gt;
 m1=*
@@ -259,10 +259,10 @@ kanei</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>608</x>
-      <y>318</y>
-      <w>16</w>
-      <h>132</h>
+      <x>1240</x>
+      <y>440</y>
+      <w>40</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
@@ -273,10 +273,10 @@ exei </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>422</x>
-      <y>312</y>
-      <w>122</w>
-      <h>144</h>
+      <x>775</x>
+      <y>425</y>
+      <w>305</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=1
@@ -287,10 +287,10 @@ ginetai</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>404</x>
-      <y>278</y>
-      <w>140</w>
-      <h>84</h>
+      <x>730</x>
+      <y>340</y>
+      <w>350</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -301,10 +301,10 @@ elegxetai</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>404</x>
-      <y>262</y>
-      <w>140</w>
-      <h>40</h>
+      <x>730</x>
+      <y>300</y>
+      <w>350</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -315,10 +315,10 @@ pragmatopoieitai stis</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>242</x>
-      <y>298</y>
-      <w>94</w>
-      <h>76</h>
+      <x>325</x>
+      <y>390</y>
+      <w>235</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;360.0;450.0;10.0</additional_attributes>
@@ -326,10 +326,10 @@ pragmatopoieitai stis</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>242</x>
-      <y>370</y>
-      <w>70</w>
-      <h>20</h>
+      <x>325</x>
+      <y>570</y>
+      <w>175</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;80.0;330.0;10.0</additional_attributes>
@@ -337,10 +337,10 @@ pragmatopoieitai stis</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>230</x>
-      <y>414</y>
-      <w>90</w>
-      <h>64</h>
+      <x>295</x>
+      <y>680</y>
+      <w>225</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;430.0;300.0</additional_attributes>
