@@ -54,8 +54,9 @@ public class TropopoihshDhlwshsService {
 	
 	// kai tropopoihsh parastatikwn
 	
-	public void TropopoihshParastatikwn(int id,int arithmospara, double poso, boolean eidos){
+	public boolean TropopoihshParastatikwn(int id,int arithmospara, double poso, boolean eidos){
 		Dhlwsh d= VresThnTeleutaiaDhlwsh(id);
+		boolean a=false;
 		HashSet<Parastatiko> pa = d.getParastatika();
 		for(Parastatiko p:pa){
 			if(p.getArithmosparastatikou()==arithmospara){
@@ -65,9 +66,10 @@ public class TropopoihshDhlwshsService {
 				tx.begin();
 				em.persist(p);
 				tx.commit();
-				em.close();
+				a=true;
 			}
 		}
+		return a;
 	}
 	
 	

@@ -58,7 +58,19 @@ public class TropopoihshDhlwshsServiceTest {
 	
 	@Test
 	public void TestTropopoihshParastatikwn(){
-		
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		TropopoihshDhlwshsService tds = new TropopoihshDhlwshsService(em);
+		Date a = new Date();
+		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(d1);
+		tx.commit();
+		Parastatiko p1= new Parastatiko("987654322" ,1234,true ,300000 ,a);
+        Parastatiko p2= new Parastatiko("987654323" ,2341,true ,250000 ,a);
+		d1.addParastatiko(p1);
+		d1.addParastatiko(p2);
+		Assert.assertTrue(tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true));
 	}
 	
 }
