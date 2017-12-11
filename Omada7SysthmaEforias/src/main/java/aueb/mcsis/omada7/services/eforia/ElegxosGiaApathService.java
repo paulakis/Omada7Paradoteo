@@ -11,6 +11,7 @@ import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosApaths;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 import aueb.mcsis.omada7.domain.eforia.Trimhno;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 
 public class ElegxosGiaApathService {
 	
@@ -36,14 +37,6 @@ public class ElegxosGiaApathService {
 			return false;
 		}
 	}
-	//voithitiko
-	public void EkteleseElegxo(){
-		ElegxosApaths e=new ElegxosApaths();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		em.persist(e);
-		tx.commit();
-	}
 	//na to dw .den kanei elegxoi is not mapped
 	@SuppressWarnings("unchecked")
 	public int ferePosesEggrafes(){
@@ -55,42 +48,27 @@ public class ElegxosGiaApathService {
 		return l.size();
 		}
 	}
-	//na ton vazoume na kanei enan elegxo apaths gia mia dhlwsh?
-	public void KaneElegxoApathsGiaTisdhlwseis(){
-		
-		
-	}
 	
-	//auto mallon dne xreiazetai
-	public  boolean findDhlwshById(){
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		try {
-			dil = em.find(Dhlwsh.class, m.d.getId());
-			tx.commit();
-		} catch (NoResultException ex) {
-			dil = null;
-			tx.rollback();
-		}
 
-		return dil != null;
-	}
 	//koitaei gia mia dhlwsh ean ekane apath kai thn apothikeuei sth vash ean einai ipopsifia
 	//xrhsimopoiei tis parakatw sinarthseis
-	public void ipologismosApaths(Dhlwsh a){
-			if(tsekareEanEntosXronikouOriou(a)){
+	public int ipologismosApaths(Dhlwsh a){
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		if(tsekareEanEntosXronikouOriou(a)){
 				m = new ElegxosApaths(DhmiourgiaProstimou(Ipopsifiaapath(a)),Ipopsifiaapath(a),EinaiApath(Ipopsifiaapath(a)));
 				EntityTransaction tx = em.getTransaction();
 				tx.begin();
 				em.persist(m);
 				tx.commit();
-				em.close();
-		}
+				return m.getId();
+		}else{
+		return 0;}
 	}
 	
 	
 	public double Ipopsifiaapath(Dhlwsh a){
 		double souma=0;
+	
 		for(Parastatiko p: a.getParastatika()){
 			souma =+ p.PareToPoso(p);
 		}
@@ -104,16 +82,7 @@ public class ElegxosGiaApathService {
 			return false;
 		}
 	}
-	//den nomizw oti xreiazetai
-	/*
-	public String GirnaeiToAfmThsApaths(){
-		if(EinaiApath(Ipopsifiaapath())){
-			return d.getEtairia().getAfm();
-		}else{
-		return null;
-		}
-	}*/
-	
+
 
 	public double DhmiourgiaProstimou(double souma){
 		return Math.abs(souma*100);
@@ -125,9 +94,11 @@ public class ElegxosGiaApathService {
 	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
 		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
-		if(tr.paremeres()>35){
+		if(tr.paremeres()>=35){
+			System.out.println(tr.paremeres());
 			return true;
 		}else{
+			System.out.println(tr.paremeres());
 		return false;}
 		
 	}
