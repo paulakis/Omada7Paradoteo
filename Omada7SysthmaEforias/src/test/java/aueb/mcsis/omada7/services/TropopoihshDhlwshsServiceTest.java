@@ -55,4 +55,10 @@ public class TropopoihshDhlwshsServiceTest {
 		tx.commit();
 		Assert.assertTrue(tds.TropopoihshDhlwshs(d1.getId(), new Date()));
 	}
+	
+	@Test
+	public void TestTropopoihshParastatikwn(){
+		
+	}
+	
 }
