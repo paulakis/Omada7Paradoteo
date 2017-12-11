@@ -26,11 +26,8 @@ public class TropopoihshDhlwshsService {
 	// xronologika na to kanoume h oxi?
 	//elegxos gi ahdh iparxousa
 	public Dhlwsh VresThnTeleutaiaDhlwsh(int id){
-		EntityManager em = JPAUtil.getCurrentEntityManager();//afto malon prepei na mpei se polla
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
+		//afto malon prepei na mpei se polla
 		Dhlwsh dhlwsh = em.find(Dhlwsh.class, id);
-		em.close();
 		if(dhlwsh.isEmprothesmh()){
 			return dhlwsh;
 		}else{
@@ -39,14 +36,19 @@ public class TropopoihshDhlwshsService {
 		}
 			}
 	
-	public void TropopoihshDhlwshs(int id, Date neasubmisiondate){
+	public boolean TropopoihshDhlwshs(int id, Date neasubmisiondate){
 		Dhlwsh d= VresThnTeleutaiaDhlwsh(id);
+		if(d!=null){
 		d.setSubmissiondate(neasubmisiondate);
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(d);
 		tx.commit();
-		em.close();
+		return true;
+		}else{
+			return false;
+		}
+		
 		
 	}
 	
