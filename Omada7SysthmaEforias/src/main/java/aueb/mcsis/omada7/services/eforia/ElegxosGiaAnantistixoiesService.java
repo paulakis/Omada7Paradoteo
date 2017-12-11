@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.util.HashSet;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -34,6 +35,7 @@ public class ElegxosGiaAnantistixoiesService {
 		//exoume lista me dhlwseis,tsekarei oles tis dhlwseis analitika gia anantistoixies
 		public void elegxosAnantistoixiwn(){
 			List<Dhlwsh> d=findAllDhlwseis();
+			System.out.println(d.size());
 			for(Dhlwsh dilo:d){
 				for (Parastatiko p:dilo.getParastatika()){
 					String afmtolook=p.getAfmsimvalwmenoou();

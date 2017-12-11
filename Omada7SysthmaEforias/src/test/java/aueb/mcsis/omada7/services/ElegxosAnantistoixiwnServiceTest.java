@@ -2,6 +2,7 @@ package aueb.mcsis.omada7.services;
 
 import java.util.Date;
 
+import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import org.junit.Assert;
@@ -9,6 +10,7 @@ import org.junit.Test;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 import aueb.mcsis.omada7.services.eforia.ElegxosGiaAnantistixoiesService;
 
 public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
@@ -31,8 +33,8 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 	
 	@Test
 	public void TestElegxosAnantistoixiwn(){
+		EntityManager em = JPAUtil.getCurrentEntityManager();
 		s=new ElegxosGiaAnantistixoiesService(em);
-		s.elegxosAnantistoixiwn();
 		Dhlwsh d=new Dhlwsh(3,new Date(2017, 11, 28), 0, true);
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -44,6 +46,7 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 		d.addParastatiko(p1);
 		d.addParastatiko(p2);
 		tx.commit();
+		s.elegxosAnantistoixiwn();
 		Assert.assertTrue(s.girnaTisAnantistoixies().size()!=0);
 	}
 	
