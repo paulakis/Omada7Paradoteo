@@ -157,10 +157,10 @@ public class Dhlwsh {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Dhlwsh other = (Dhlwsh) obj;
-		if (id != other.id)
-			return false;
-		return true;
+//		Dhlwsh other = (Dhlwsh) obj;   //einai unreachable
+//		if (id != other.id)
+//			return false;
+		return true; 
 	}
 	
 	
