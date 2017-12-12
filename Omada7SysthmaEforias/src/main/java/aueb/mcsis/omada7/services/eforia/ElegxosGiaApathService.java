@@ -57,6 +57,10 @@ public class ElegxosGiaApathService {
 		if(tsekareEanEntosXronikouOriou(a)){
 				m = new ElegxosApaths(DhmiourgiaProstimou(Ipopsifiaapath(a)),Ipopsifiaapath(a),EinaiApath(Ipopsifiaapath(a)));
 				EntityTransaction tx = em.getTransaction();
+				m.setEnhmerwsheforou(true);
+				// me karfwmenh dhlwsh paizei
+				//to testupdateprostimougiathnkathedhlwsh
+				//m.setD(a);
 				tx.begin();
 				em.persist(m);
 				tx.commit();

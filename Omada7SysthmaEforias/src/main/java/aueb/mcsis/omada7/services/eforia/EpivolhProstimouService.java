@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;
 import aueb.mcsis.omada7.domain.eforia.ElegxosApaths;
+import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 
 public class EpivolhProstimouService {
 	
@@ -45,11 +46,12 @@ public class EpivolhProstimouService {
 		List<ElegxosApaths> listaapatwn=FereTisApates();
 		for(ElegxosApaths e:listaapatwn){
 			//na dei ean hrthe h wra na tou epivalei to prostimo
+			System.out.println(e.getD());
 			if(e.isEnhmerwsheforou()){
 			e.d.setSinoloprostimou(e.d.getSinoloprostimou()+e.getProstimo());
 			//prepei na to valoume kai sthn vash
 			EntityTransaction tx = em.getTransaction();
-			tx.begin();
+			//tx.begin();
 			em.merge(e.d);
 			tx.commit();
 			}		

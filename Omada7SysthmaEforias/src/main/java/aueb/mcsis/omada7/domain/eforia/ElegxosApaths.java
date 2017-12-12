@@ -78,6 +78,22 @@ public void setApath(boolean apath) {
 	this.apath = apath;
 }
 
+
+
+
+
+public Dhlwsh getD() {
+	return d;
+}
+
+
+
+public void setD(Dhlwsh d) {
+	this.d = d;
+}
+
+
+
 //na valoume edw to ean exoun perasei oi 35 meres??
 @SuppressWarnings("deprecation")
 public boolean ElegkseAnPerasan35Meres(Dhlwsh d){

@@ -1,14 +1,19 @@
 package aueb.mcsis.omada7.services;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import org.junit.Assert;
 import org.junit.Test;
 
+import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.ElegxosAnantistixiwn;
 import aueb.mcsis.omada7.domain.eforia.ElegxosApaths;
+import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
+import aueb.mcsis.omada7.services.eforia.ElegxosGiaApathService;
 import aueb.mcsis.omada7.services.eforia.EpivolhProstimouService;
 
 
@@ -16,6 +21,7 @@ import aueb.mcsis.omada7.services.eforia.EpivolhProstimouService;
 public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 
 	private EpivolhProstimouService ep;
+	private ElegxosGiaApathService natos;
 	
 	public EpivolhProstimouServiceTester() {
 		super();
@@ -52,6 +58,7 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 	
 	@Test
 	public void Testupdatesinoloprostimogiathnkathedhlwsh(){
+		/*
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		ep=new EpivolhProstimouService(em);
 		ElegxosApaths e=new ElegxosApaths(150, 1500, true);
@@ -61,6 +68,23 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 		em.persist(e);
 		tx.commit();
 		Assert.assertEquals(ep.updateSinolikoProstimoGiathnkatheDhlwsh(),false);
+	*/
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		natos=new ElegxosGiaApathService(em);
+		Dhlwsh d=new Dhlwsh(3,new Date(2017, 11, 28), 0, true);
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(d);
+		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000, new Date());
+		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, new Date());
+		em.persist(p1);
+		em.persist(p2);
+		d.addParastatiko(p1);
+		d.addParastatiko(p2);
+		tx.commit();
+		natos.ipologismosApaths(d);
+		ep=new EpivolhProstimouService(em);
+		Assert.assertEquals(ep.updateSinolikoProstimoGiathnkatheDhlwsh(),true);
 	}
 	
 }
