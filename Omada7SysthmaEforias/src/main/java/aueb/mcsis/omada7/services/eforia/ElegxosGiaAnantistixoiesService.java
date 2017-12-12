@@ -41,6 +41,7 @@ public class ElegxosGiaAnantistixoiesService {
 					String afmtolook=p.getAfmsimvalwmenoou();
 					int parastatikotollok=p.getArithmosparastatikou();
 					double prwto=p.getPoso();
+					System.out.println(afmtolook);
 					for(Dhlwsh dilosi:d){
 						if(dilosi.getEtairia().getAfm()==afmtolook){
 							for (Parastatiko para:dilosi.getParastatika()){

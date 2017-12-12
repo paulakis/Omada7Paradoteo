@@ -36,15 +36,23 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		s=new ElegxosGiaAnantistixoiesService(em);
 		Dhlwsh d=new Dhlwsh(3,new Date(2017, 11, 28), 0, true);
+		Dhlwsh d2=new Dhlwsh(3,new Date(2017, 11, 27), 0, true);
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(d);
+		em.persist(d2);
 		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000, new Date());
 		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, new Date());
+		Parastatiko p3=new Parastatiko("252525252", 102,true, 10000, new Date());
+		Parastatiko p4=new Parastatiko("102030405", 103,false, 100, new Date());
 		em.persist(p1);
 		em.persist(p2);
+		em.persist(p3);
+		em.persist(p4);
 		d.addParastatiko(p1);
 		d.addParastatiko(p2);
+		d2.addParastatiko(p3);
+		d2.addParastatiko(p4);
 		tx.commit();
 		s.elegxosAnantistoixiwn();
 		Assert.assertTrue(s.girnaTisAnantistoixies().size()!=0);
@@ -53,7 +61,7 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 	@Test
 	public void TestGirnaTisAnantistoixies(){
 		s=new ElegxosGiaAnantistixoiesService(em);
-		Assert.assertEquals(s.girnaTisAnantistoixies().size(), 1);
+		Assert.assertEquals(s.girnaTisAnantistoixies().size(), 0);
 	}
 	
 	

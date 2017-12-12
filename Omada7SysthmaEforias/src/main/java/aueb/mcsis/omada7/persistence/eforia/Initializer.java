@@ -34,7 +34,10 @@ public class Initializer {
       query = em.createNativeQuery("delete from Dhlwsh");
       query.executeUpdate(); 
       query = em.createNativeQuery("delete from LogariasmosEtairias");
-      query.executeUpdate(); 
+      query.executeUpdate();
+      query = em.createNativeQuery("delete from AithmaElegxou");
+      query.executeUpdate();
+      
       tx.commit();
       em.close();
       

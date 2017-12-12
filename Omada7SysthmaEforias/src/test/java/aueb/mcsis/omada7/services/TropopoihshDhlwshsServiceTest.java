@@ -70,6 +70,7 @@ public class TropopoihshDhlwshsServiceTest {
         Parastatiko p2= new Parastatiko("987654323" ,2341,true ,250000 ,a);
 		d1.addParastatiko(p1);
 		d1.addParastatiko(p2);
+		//tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true);
 		Assert.assertTrue(tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true));
 	}
 	

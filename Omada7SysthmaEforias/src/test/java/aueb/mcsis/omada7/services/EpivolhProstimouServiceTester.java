@@ -15,7 +15,7 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 	
 	@Test
 	public void TestFereTisApates(){
-		
+	//vazw mia apath 	
 		
 	}
 	
