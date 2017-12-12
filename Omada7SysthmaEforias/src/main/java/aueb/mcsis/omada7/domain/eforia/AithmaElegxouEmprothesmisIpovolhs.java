@@ -51,12 +51,12 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 			
 		}else{
 			d.setEmprothesmh(false);
-			updatesinolopros();
+			updatesinolopros(d);
 		}
 		}
 	
 	
-	public void updatesinolopros(){
+	public void updatesinolopros(Dhlwsh d){
 		// mporei na ginei kai xwris prosthesh
 		d.setSinoloprostimou(protimo+d.getSinoloprostimou());
 	}

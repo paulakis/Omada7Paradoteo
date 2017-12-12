@@ -29,6 +29,16 @@ public class AithmaEleEmproIpoTest {
 	d1.setEmprothesmh(false);
 
 	Assert.assertFalse(d1.isEmprothesmh());
+
+	
+	}
+	
+	@Test
+	public void updatesinoloprosTest(){
+		Dhlwsh d = new Dhlwsh(1,new Date(),0 ,true);
+		AithmaElegxouEmprothesmisIpovolhs aempI = new AithmaElegxouEmprothesmisIpovolhs();
+		aempI.updatesinolopros(d);
+		Assert.assertEquals(500,d.getSinoloprostimou(),0.01);
 	}
 	
 	
