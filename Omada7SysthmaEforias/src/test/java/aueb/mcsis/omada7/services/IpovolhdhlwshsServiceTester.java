@@ -67,7 +67,7 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 		Assert.assertNull(ipo.VresDhlwshById(2569));
 	}
 	
-	//exoume ena provlimataki.den vazei t parastatiko
+	
 	@Test
 	public void TestValeNeoParastatiko(){
 		//kane nea dhlwsh kai vale kai ena parastatiko alla den mporw na ta valw swsta

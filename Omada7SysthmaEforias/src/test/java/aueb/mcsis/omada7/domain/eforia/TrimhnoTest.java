@@ -12,10 +12,10 @@ public class TrimhnoTest {
 	//an douleuei gia to shemra
 	@Test
 	public void ElegxosGiaSystemDate(){
-		//thelei thn analogh diorthwsh sto deutero orisma
+
 		Trimhno shmera= new Trimhno();
 		LocalDate a = shmera.SePioTrimhnoEisai();
-		//mikro lathaki
+		
 		Period periodos= Period.between(a,shmera.ela); 
 		int daysipo= periodos.getDays()+1+periodos.getMonths()*30;
 		int days=shmera.paremeres();

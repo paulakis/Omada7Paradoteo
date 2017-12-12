@@ -28,7 +28,7 @@ public class TropopoihshDhlwshsServiceTest {
 		        true, false); //ftiaxno adikimeno logariasmo
 		//IpovolhDhlwshsService ids = new IpovolhDhlwshsService(em); //kano adikimeno apo tin klasi gia na kano dilosi
 		//ids.KaneNeaDhlwsh(1); //ftiaxno dilosi kai tin kano persist
-		//THA SINEXISTEI OTAN VRW POS VRISKEIS TO ID TIS DILOSIS GIA NA TO XRISIMOPIISO GIA NA TO GIRISO-FILTI
+		
 		
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
 		Dhlwsh d2 = new Dhlwsh(1,a,0 ,false);

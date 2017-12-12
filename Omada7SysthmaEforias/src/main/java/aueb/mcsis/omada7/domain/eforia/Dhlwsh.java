@@ -124,13 +124,13 @@ public class Dhlwsh {
 
 	
 	
-	//den exw valei setter gia n mhn mporei kapoios na peiraksei ena parastatiko
+	//den exoume valei setter gia na mhn mporei kapoios na peiraksei ena parastatiko
 	public HashSet<Parastatiko> getParastatika() {
 		return new HashSet<Parastatiko>(parastatika);
 	}
 
 
-	//no setter gia na mhn mporei kapoiow na peiraksei thn etairia
+	//no setter gia na mhn mporei kapoios na peiraksei thn etairia
 	public LogariasmosEtairias getEtairia() {
 		return etairia;
 	}
@@ -158,9 +158,6 @@ public class Dhlwsh {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-//		Dhlwsh other = (Dhlwsh) obj;   //einai unreachable
-//		if (id != other.id)
-//			return false;
 		return true; 
 	}
 	
@@ -172,10 +169,10 @@ public class Dhlwsh {
 			return false;
 		}
 	}
-	// den kserw an xreiazetai
-	public void EisagwghNeasDhlwshs(int tri, Date submissiondate, double sinoloprostimou, boolean emprothesmh){
-		new Dhlwsh(tri,submissiondate,sinoloprostimou,emprothesmh);
-	}
+
+//	public void EisagwghNeasDhlwshs(int tri, Date submissiondate, double sinoloprostimou, boolean emprothesmh){
+//		new Dhlwsh(tri,submissiondate,sinoloprostimou,emprothesmh);
+//	}
 	
 	
 	
@@ -191,24 +188,15 @@ public class Dhlwsh {
 		}
 	}
 
-	
-	//diorwthwnei hddh iparxon parastatiko mono ean einai emprothesmh kai den exw kseperasei tis meres pou mporw na kanw thn allagh
-	//pithanon na thelei kai allo orisma
-	//anloga me to id tha prepei na vriskw to parastaiko x kai na tou allazw to aparaithta pedia
-	public void diorthwseParastatiko(int id ){
-		//na mpei sta service
-	}
-	
-	//elegxos ean iparxei sta parastatika.used by correctParastatiko
-	public  boolean IparxeiHdhStaParastatika(Parastatiko p){
-		if(parastatika.contains(p)){
-			return true;	
-		}else{
-			return false;
-		}
+	//den to exoume xrisimopoihsei akoma stin ulopoihsh
+//	public  boolean IparxeiHdhStaParastatika(Parastatiko p){
+//		if(parastatika.contains(p)){
+//			return true;	
+//		}else{
+//			return false;
+//		}
 		
-		
-	}
+//	}
 	
 
 }

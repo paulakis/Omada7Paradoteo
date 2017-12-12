@@ -20,7 +20,7 @@ public class TropopoihshEggrafhsService {
 		this.em = em;
 	}
 	
-	// elegxetai automata apo ton eforo.erwthsh(?)
+
 	public void TropopoihshLogariasmou(String afm,String epwnimia,String email,int thlefwno,Date hmeromhniasistashs){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		EntityTransaction tx = em.getTransaction();

@@ -29,7 +29,7 @@ public class Parastatiko {
 	int arithmosparastatikou;
 	
 	@Column(name="eidos")
-	//gia esoda tha einai 1,gia eksoda tha einai 0
+
 	boolean eidossinallaghs;
 	
 	@Column(name="poso")
@@ -39,7 +39,7 @@ public class Parastatiko {
 	Date hmeromhniaparastatikou;
 	
 	
-	//ean einai monodromh telika tote den xreiazetai 
+
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="dhlwshid")
 	private Dhlwsh d;
@@ -61,17 +61,6 @@ public class Parastatiko {
 		this.poso = poso;
 		this.hmeromhniaparastatikou = hmeromhniaparastatikou;
 	}
-
-
-
-
-
-
-
-
-
-
-
 
 	public int getId() {
 		return id;
@@ -120,8 +109,6 @@ public class Parastatiko {
 		this.hmeromhniaparastatikou = hmeromhniaparastatikou;
 	}
 	
-	//pou xrisimopioume to hashcode??-filti
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -143,21 +130,21 @@ public class Parastatiko {
 		if (getClass() != obj.getClass())
 			return false;
 		Parastatiko other = (Parastatiko) obj;
-		if (afmsimvalwmenoou == null) {
-			if (other.afmsimvalwmenoou != null)
-				return false;
-		} else if (!afmsimvalwmenoou.equals(other.afmsimvalwmenoou))
-			return false;
-		if (arithmosparastatikou != other.arithmosparastatikou)
-			return false;
-		if (id != other.id)
-			return false;
+//		if (afmsimvalwmenoou == null) {
+//			if (other.afmsimvalwmenoou != null)
+	//			return false;
+	//	} else if (!afmsimvalwmenoou.equals(other.afmsimvalwmenoou))
+	//		return false;
+	//	if (arithmosparastatikou != other.arithmosparastatikou)
+	//		return false;
+	//	if (id != other.id)
+	//		return false;
 		return true;
 	}
 	
 	
 		
-	// epistrefei to poso analoga me to ti einai kaii pairnei ws orisma ena parastaiko apo to set parastikwn pou diathetei h dhlwsh
+	// epistrefei to poso analoga me to ti einai kai pairnei ws orisma ena parastaiko apo to set parastikwn pou diathetei h dhlwsh
 	public double PareToPoso(Parastatiko p){
 		if (p.isEidossinallaghs())
 		{return p.getPoso();}

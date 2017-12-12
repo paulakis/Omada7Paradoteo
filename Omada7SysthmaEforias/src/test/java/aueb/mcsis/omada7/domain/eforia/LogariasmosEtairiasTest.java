@@ -94,7 +94,7 @@ public class LogariasmosEtairiasTest {
 	        
 	    }
 
-//-769680559
+
 @Test
 public void miscellaniousTest(){
 	Date a= new Date(2017, 10, 2);

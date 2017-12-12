@@ -49,9 +49,6 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 
 	
-	
-	//AFTO EINAI LATHOS -- METRAME APO TIN ARXI TOU TRIMINOU OXI APO TIN IMERA POU EGINE SUBMISION H DILOSI -FILTI
-	//ean exoun perasei oi 30 meres gia na ginei o prwtos elegxos
 	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
 		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
@@ -62,7 +59,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 		
 	}
 	
-	//na eksetasoume kai ton elegxo meta apo tis 35 meres.ti tha ginetai
+
 	
 	
 }

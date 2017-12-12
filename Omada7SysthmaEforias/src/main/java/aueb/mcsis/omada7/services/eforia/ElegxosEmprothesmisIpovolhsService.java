@@ -49,8 +49,7 @@ public class ElegxosEmprothesmisIpovolhsService {
 				dil.setEmprothesmh(true);
 				em.persist(dil);
 				tx.commit();	
-				/*em.persist(ait);
-				tx.commit();*/		
+	
 			}else{
 				dil.setEmprothesmh(false);
 				ait.setProstimoekprothesmis(100);

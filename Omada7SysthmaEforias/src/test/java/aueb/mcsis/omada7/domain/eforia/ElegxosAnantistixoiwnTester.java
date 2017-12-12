@@ -12,8 +12,7 @@ import aueb.mcsis.omada7.domain.eforia.Trimhno;
 public class ElegxosAnantistixoiwnTester {
 
 	@Before
-	//na kanei arxikopoihsh me ton initializer
-	// dio dilwseis 4 parastatika gia na metrhsoume ti ginetai ,mia idia posa mia diaforetika kai tha doume ti tha epistrefei.
+	
 	@Test
 	public void AnantistoixiaEnaProsEnaTester(){
 		ElegxosAnantistixiwn ele = new ElegxosAnantistixiwn(20000);

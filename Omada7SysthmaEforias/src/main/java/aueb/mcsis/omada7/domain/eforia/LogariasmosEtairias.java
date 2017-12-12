@@ -61,18 +61,6 @@ public class LogariasmosEtairias  {
 	
 
 	
-
-
-
-
-
-
-
-
-
-
-
-
 	public LogariasmosEtairias(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
 			boolean exeiElefthei, boolean needCheck) {
 		super();
@@ -171,13 +159,6 @@ public class LogariasmosEtairias  {
 
 
 
-
-
-
-
-
-
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -211,9 +192,6 @@ public class LogariasmosEtairias  {
 	}
 
 
-
-
-	
 	public boolean MporeiNaKaneiDhlwsh(LogariasmosEtairias e ){
 		
 		if (e.exeiElefthei && !e.needCheck){

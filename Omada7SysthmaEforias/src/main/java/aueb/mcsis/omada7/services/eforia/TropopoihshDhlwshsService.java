@@ -23,10 +23,9 @@ public class TropopoihshDhlwshsService {
 		
 	}
 	
-	// xronologika na to kanoume h oxi?
-	//elegxos gi ahdh iparxousa
+
 	public Dhlwsh VresThnTeleutaiaDhlwsh(int id){
-		//afto malon prepei na mpei se polla
+
 		Dhlwsh dhlwsh = em.find(Dhlwsh.class, id);
 		if(dhlwsh.isEmprothesmh()){
 			return dhlwsh;

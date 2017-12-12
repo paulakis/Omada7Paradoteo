@@ -94,7 +94,7 @@ public void setD(Dhlwsh d) {
 
 
 
-//na valoume edw to ean exoun perasei oi 35 meres??
+
 @SuppressWarnings("deprecation")
 public boolean ElegkseAnPerasan35Meres(Dhlwsh d){
 	Trimhno tr=new Trimhno(d.getTrimhno(), d.getSubmissiondate().getMonth(),d.getSubmissiondate().getYear() , d.getSubmissiondate().getDay());
@@ -107,19 +107,5 @@ public boolean ElegkseAnPerasan35Meres(Dhlwsh d){
 	}
 	
 }
-//to trimhno ths dhlwshs
-//tha paroume kai to submissiondate
-//kai tha doume >=35 meres
-
-
-
-
-
-	//service elegxos apaths allages.
-	
-	//ena add na valoume ena antikeimeno.
-	
-	
-	
 	
 }

@@ -33,7 +33,7 @@ public class ElegxosEggrafwnService {
 		
 	}
 	
-	//kai kala oti tous exei elegksei.
+
 
 	public void TropopoihseKatastashLogariasmwn(){
 		List<LogariasmosEtairias> lista=FerePendingLogariasmous();

@@ -12,13 +12,7 @@ import aueb.mcsis.omada7.domain.eforia.*;
 
 
 public class Initializer {
-	//ftiaxnei adikimena gia na petame mesa stin vasi.afta ta adikeimena tha xeiristoume kathos trexoume tin efarmogi
- //tha dimiourgoume to prepare data : 3 logarisomous diafoterous apo mia dhlwsh  ka8enas apo 3 parastatika gia ka8e dilswsh 
-// susxetisies logarismos-dilosi - parastatiko
- // mitsuko pano!!! 
- // tha thn vgalw gia kopanima ston pano
- // oti leei sth h2
- // break panos;
+
 	public Dhlwsh d2;
  
   public  void eraseData(){
