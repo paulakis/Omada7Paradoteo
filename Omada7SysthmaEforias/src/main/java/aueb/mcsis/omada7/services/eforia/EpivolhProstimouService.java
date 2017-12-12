@@ -22,7 +22,7 @@ public class EpivolhProstimouService {
 		List<ElegxosAnantistixiwn> l=null;
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		l=em.createQuery("select from ElegxosAnantistixiwn").getResultList();
+		l=em.createQuery("select e from ElegxosAnantistixiwn e").getResultList();
 		return l; 
 	}
 	
@@ -33,7 +33,7 @@ public class EpivolhProstimouService {
 		List<ElegxosApaths> l=null;
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		l=em.createQuery("select from elegxoi ElegxosApath").getResultList();
+		l=em.createQuery("select e from ElegxosApaths e").getResultList();
 		return l; 
 	}
 	
