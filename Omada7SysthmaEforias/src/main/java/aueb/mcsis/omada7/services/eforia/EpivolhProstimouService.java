@@ -48,6 +48,7 @@ public class EpivolhProstimouService {
 			//na dei ean hrthe h wra na tou epivalei to prostimo
 			System.out.println(e.getD());
 			if(e.isEnhmerwsheforou()){
+				//den exei parei ton deikth ths dhlwshs
 			e.d.setSinoloprostimou(e.d.getSinoloprostimou()+e.getProstimo());
 			//prepei na to valoume kai sthn vash
 			EntityTransaction tx = em.getTransaction();

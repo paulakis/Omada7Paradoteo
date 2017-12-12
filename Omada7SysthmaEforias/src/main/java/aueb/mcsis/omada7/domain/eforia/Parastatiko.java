@@ -25,7 +25,7 @@ public class Parastatiko {
 	@Column(name="afmmsimvalwmenou")
 	String afmsimvalwmenoou;
 	
-	@Column(name="arithmosparastatikou",nullable = false, unique = true)
+	@Column(name="arithmosparastatikou",nullable = false)
 	int arithmosparastatikou;
 	
 	@Column(name="eidos")

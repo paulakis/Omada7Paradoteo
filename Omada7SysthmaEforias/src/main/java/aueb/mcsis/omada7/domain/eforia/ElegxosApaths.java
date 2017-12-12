@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -19,7 +20,7 @@ public class ElegxosApaths extends AithmaElegxou {
 	double soumaesodwneskodwn;
 	@Column
 	boolean apath;
-	@OneToOne(fetch=FetchType.LAZY)
+	@OneToOne(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	@JoinColumn(name="dhlwshid")
 	public  Dhlwsh d;
 	
