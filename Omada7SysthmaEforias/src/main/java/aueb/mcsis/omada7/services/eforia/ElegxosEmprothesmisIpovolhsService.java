@@ -54,7 +54,7 @@ public class ElegxosEmprothesmisIpovolhsService {
 			}else{
 				dil.setEmprothesmh(false);
 				ait.setProstimoekprothesmis(100);
-				ait.updatesinolopros();
+				ait.updatesinolopros(dil);
 				ait.setDinatothtatropo(true);
 				em.persist(dil);
 				em.persist(ait);
