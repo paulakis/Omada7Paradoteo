@@ -40,7 +40,8 @@ public class EpivolhProstimouService {
 	
 	
 	//enhmerwnei ta sinolika prostima epixeirhsewvn
-	public void updateSinolikoProstimoGiathnkatheDhlwsh(){
+	public boolean updateSinolikoProstimoGiathnkatheDhlwsh(){
+		boolean a=false;
 		List<ElegxosApaths> listaapatwn=FereTisApates();
 		for(ElegxosApaths e:listaapatwn){
 			//na dei ean hrthe h wra na tou epivalei to prostimo
@@ -50,8 +51,11 @@ public class EpivolhProstimouService {
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			em.merge(e.d);
-			tx.commit();}
+			tx.commit();
+			}		
+			a=true;
 		}
+		return a;
 	}
 	
 	

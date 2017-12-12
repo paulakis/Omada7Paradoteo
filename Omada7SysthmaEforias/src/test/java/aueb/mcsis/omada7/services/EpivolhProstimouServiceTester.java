@@ -52,7 +52,15 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 	
 	@Test
 	public void Testupdatesinoloprostimogiathnkathedhlwsh(){
-		//vazw sthn apath kati neo na dw ama allazei h eggrafh  dhwlsh sto pedio prostimo
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		ep=new EpivolhProstimouService(em);
+		ElegxosApaths e=new ElegxosApaths(150, 1500, true);
+		e.setEnhmerwsheforou(true);
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(e);
+		tx.commit();
+		Assert.assertEquals(ep.updateSinolikoProstimoGiathnkatheDhlwsh(),false);
 	}
 	
 }
