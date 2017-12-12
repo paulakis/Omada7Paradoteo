@@ -23,6 +23,12 @@ public class AithmaEleEmproIpoTest {
 	aempI.ElegkseGiaEkprothesmh(d);
 	Assert.assertTrue(d.isEmprothesmh());
 
+	AithmaElegxouEmprothesmisIpovolhs aempI2 = new AithmaElegxouEmprothesmisIpovolhs(30000);
+	Dhlwsh d1=new Dhlwsh();
+	aempI2.ElegkseGiaEkprothesmh(d1);
+	d1.setEmprothesmh(false);
+
+	Assert.assertFalse(d1.isEmprothesmh());
 	}
 	
 	
