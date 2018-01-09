@@ -2,7 +2,9 @@ package aueb.mcsis.omada7.resource.eforia;
 
 import java.util.List;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.services.eforia.*;
 
+import javax.persistence.EntityManager;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -19,6 +21,15 @@ public class EggrafhResource extends AbstractResource {
 	@Produces("application/xml")
 	public List<LogariasmosEtairias> DwseOlousTousLogariasmous(){
 		return null;
+	}
+	
+	@GET
+	@Path("oloi")
+	@Produces("application/xml")
+	public int GirnaToSinoloTwnLogariasmwn(){
+		EntityManager em = getEntityManager();
+		EgrafhStoSistimaService e= new EgrafhStoSistimaService(em);
+		return e.FerePosoiEinaiStoSysthma();
 	}
 	
 	
