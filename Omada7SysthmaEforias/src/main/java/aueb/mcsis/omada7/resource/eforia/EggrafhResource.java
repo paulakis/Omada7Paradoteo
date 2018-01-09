@@ -17,14 +17,9 @@ public class EggrafhResource extends AbstractResource {
 	@Context
 	UriInfo uriInfo;
 	
-	@GET
-	@Produces("application/xml")
-	public List<LogariasmosEtairias> DwseOlousTousLogariasmous(){
-		return null;
-	}
+	
 	
 	@GET
-	@Path("oloi")
 	@Produces("application/xml")
 	public int GirnaToSinoloTwnLogariasmwn(){
 		EntityManager em = getEntityManager();
