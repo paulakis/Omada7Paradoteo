@@ -1,7 +1,6 @@
 package aueb.mcsis.omada7.resources;
 
 import javax.ws.rs.core.Application;
-import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
 
 import org.glassfish.jersey.server.ResourceConfig;

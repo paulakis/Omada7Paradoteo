@@ -13,13 +13,6 @@ public class EforiaResourceTest extends JerseyTest {
 
 	Initializer dataHelper; 
 	
-	
-	
-	@Override
-	protected Application configure() {
-		// TODO Auto-generated method stub
-		return super.configure();
-	}
 
 	public EforiaResourceTest() {
 		super();
