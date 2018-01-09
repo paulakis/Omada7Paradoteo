@@ -10,6 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.core.MediaType;
 
 @Path("Logariasmos")
 public class EggrafhResource extends AbstractResource {
@@ -20,7 +21,7 @@ public class EggrafhResource extends AbstractResource {
 	
 	
 	@GET
-	@Produces("application/xml")
+	@Produces(MediaType.APPLICATION_JSON)
 	public int GirnaToSinoloTwnLogariasmwn(){
 		EntityManager em = getEntityManager();
 		EgrafhStoSistimaService e= new EgrafhStoSistimaService(em);
