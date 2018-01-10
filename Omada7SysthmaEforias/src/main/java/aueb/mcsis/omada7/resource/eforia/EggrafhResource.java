@@ -1,11 +1,14 @@
 package aueb.mcsis.omada7.resource.eforia;
 
+import java.util.Date;
 import java.util.List;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 import aueb.mcsis.omada7.services.eforia.*;
 
 import javax.persistence.EntityManager;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
@@ -28,6 +31,12 @@ public class EggrafhResource extends AbstractResource {
 		return e.FerePosoiEinaiStoSysthma();
 	}
 	
-	
+	@POST
+	@Consumes()
+	public void KaneNeaEggraghLogariasmou(LogariasmosEtairias log){
+		EntityManager em = getEntityManager();
+		EgrafhStoSistimaService e= new EgrafhStoSistimaService(em);
+		e.KaneNeaEggrafh(log);			
+	}
 	
 }
