@@ -36,4 +36,12 @@ public class DhlwshResource extends AbstractResource {
 		return ipo.KaneNeaDhlwsh(tri);
 	}
 	
+	@GET
+	@Path("/{id}/neoparastatiko")
+	@Produces
+	public boolean ValeNeoParastatiko(@PathParam("id") int id){
+		EntityManager em = getEntityManager();
+		IpovolhDhlwshsService ipo=new IpovolhDhlwshsService(em);
+		return ipo.ValeNeoParastatiko(id);
+	}
 }

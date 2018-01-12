@@ -11,6 +11,7 @@ import org.glassfish.jersey.test.spi.TestContainerFactory;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 import aueb.mcsis.omada7.persistence.eforia.Initializer;
 import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 
@@ -47,6 +48,7 @@ public class EforiaResourceTest extends JerseyTest {
 	public List<LogariasmosEtairias> FereOlousTousLog(){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		 List<LogariasmosEtairias> l = em.createQuery("select e from LogariasmosEtairias e").getResultList();
+		 em.close();
 		 return l;
 	}
 	
@@ -61,5 +63,16 @@ public class EforiaResourceTest extends JerseyTest {
 			return l;
 			}
 	
+	 
+		@SuppressWarnings("unchecked")
+		 public List<Parastatiko>fereTaParastatika(){
+			EntityManager em = JPAUtil.getCurrentEntityManager(); 
+			EntityTransaction tx = em.getTransaction();
+				tx.begin();
+				List<Parastatiko> l= em.createQuery("select d from Parastatiko d").getResultList();
+			em.close();
+			return l;
+		 }
+		
 	
 }

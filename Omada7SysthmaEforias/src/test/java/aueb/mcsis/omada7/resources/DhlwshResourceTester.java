@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.Response;
 
 import org.eclipse.persistence.oxm.MediaType;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -39,5 +40,14 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		//metra twra tis dhwlseis na einai 4 prepei
 		Assert.assertEquals(4, fereOlestisDhlwseis().size());
 		
+	}
+	
+	
+	@Test
+	public void valeNeoParastatiko(){
+		List<Dhlwsh> l =fereOlestisDhlwseis();
+		Response b=target("dhlwsh/"+l.get(0).getId()+"/neoparastatiko").request().get();
+		System.out.println(b);
+		Assert.assertEquals(10, fereTaParastatika().size());
 	}
 }
