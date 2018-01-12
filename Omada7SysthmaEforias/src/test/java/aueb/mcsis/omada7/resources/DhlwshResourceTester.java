@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.resources;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.client.Entity;
@@ -49,5 +50,12 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		Response b=target("dhlwsh/"+l.get(0).getId()+"/neoparastatiko").request().get();
 		System.out.println(b);
 		Assert.assertEquals(10, fereTaParastatika().size());
+	}
+	
+	@Test
+	public void kanetropopoihshdhlwshsTester(){
+		List<Dhlwsh> l =fereOlestisDhlwseis();
+		Response r=target("dhlwsh/"+l.get(0).getId()+"/date").request().get();
+		Assert.assertEquals(200,r.getStatus());
 	}
 }

@@ -1,17 +1,22 @@
 package aueb.mcsis.omada7.resource.eforia;
 
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 import aueb.mcsis.omada7.services.eforia.IpovolhDhlwshsService;
+import aueb.mcsis.omada7.services.eforia.TropopoihshDhlwshsService;
 
 @Path("dhlwsh")
 public class DhlwshResource extends AbstractResource {
@@ -44,4 +49,14 @@ public class DhlwshResource extends AbstractResource {
 		IpovolhDhlwshsService ipo=new IpovolhDhlwshsService(em);
 		return ipo.ValeNeoParastatiko(id);
 	}
+	
+	@GET
+	@Path("/{id}/date")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public boolean KaneTropopoihshDhlwshs(@PathParam("id") int id){
+		EntityManager em = getEntityManager();
+		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
+		return tr.TropopoihshDhlwshs(id, new Date());
+	}
+	
 }
