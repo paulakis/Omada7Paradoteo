@@ -1,8 +1,12 @@
 package aueb.mcsis.omada7.resources;
 
 import java.util.List;
+
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericType;
+
+import org.eclipse.persistence.oxm.MediaType;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.junit.Assert;
 import org.junit.Test;
@@ -25,4 +29,15 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		Assert.assertEquals(l.get(0), d);
 	}
 	
+	
+	
+	@Test
+	public void kaneneadhlwshtester(){
+		//den douleuei me post auto prepei na kanw
+		Dhlwsh d= target("dhlwsh/trimhno/3/etairia/987654322").request().get(new GenericType<Dhlwsh>(){});
+		Assert.assertNotEquals(null, d);
+		//metra twra tis dhwlseis na einai 4 prepei
+		Assert.assertEquals(4, fereOlestisDhlwseis().size());
+		
+	}
 }

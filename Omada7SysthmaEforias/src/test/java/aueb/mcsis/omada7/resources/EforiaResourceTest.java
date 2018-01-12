@@ -41,6 +41,8 @@ public class EforiaResourceTest extends JerseyTest {
 	}
 
 	
+	
+
 	@SuppressWarnings("unchecked")
 	public List<LogariasmosEtairias> FereOlousTousLog(){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
@@ -55,6 +57,7 @@ public class EforiaResourceTest extends JerseyTest {
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
 			List<Dhlwsh> l= em.createQuery("select d from Dhlwsh d").getResultList();
+			em.close();
 			return l;
 			}
 	
