@@ -28,7 +28,6 @@ public class EggrafhResourceTester extends EforiaResourceTest {
 
 
 @Test
-//den paizei kai gamietai
 public void GirnaToSinoloTwnLogariasmwnTest(){
 	//int x = target("Logariasmos").request().get(Integer.class);
 	//Assert.assertEquals(4, x);
@@ -47,5 +46,17 @@ public void GirnaToSinoloTwnLogariasmwnTest(){
 		List <LogariasmosEtairias> l = FereOlousTousLog();
 		Assert.assertEquals(5, l.size());
  	}
+	
+	
+	
+	@Test
+	public void vreseaniparxeiTester(){
+		//na deite kai ta alla afm
+		//auto sigoura den iparxei gia auto evala kai to null
+		String afm1="149187741";
+		LogariasmosEtairias l=target("Logariasmos/vres/"+afm1).request().get(new GenericType<LogariasmosEtairias>(){});
+		Assert.assertEquals(null, l);
+		
+	}
 
 }
