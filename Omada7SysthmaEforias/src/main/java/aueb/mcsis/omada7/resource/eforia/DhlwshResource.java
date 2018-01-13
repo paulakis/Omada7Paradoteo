@@ -59,4 +59,18 @@ public class DhlwshResource extends AbstractResource {
 		return tr.TropopoihshDhlwshs(id, new Date());
 	}
 	
+	@GET
+	@Path("/{id}/arpara/{arpar}/poso/{poso}/eidos/{eidos}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public boolean kantropopoihshparastatikou(
+			@PathParam("id") int id,
+			@PathParam("arpar") int arithmospara,
+			@PathParam("poso") double poso,
+			@PathParam("eidos") boolean eidos
+			){
+		EntityManager em = getEntityManager();
+		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
+		return tr.TropopoihshParastatikwn(id, arithmospara, poso, eidos);		
+	}
+	
 }

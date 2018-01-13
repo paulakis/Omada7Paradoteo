@@ -109,6 +109,20 @@ public class Parastatiko {
 		this.hmeromhniaparastatikou = hmeromhniaparastatikou;
 	}
 	
+	
+	
+	public Dhlwsh getD() {
+		return d;
+	}
+
+
+
+	public void setD(Dhlwsh d) {
+		this.d = d;
+	}
+
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

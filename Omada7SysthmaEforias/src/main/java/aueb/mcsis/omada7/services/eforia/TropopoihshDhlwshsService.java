@@ -2,6 +2,7 @@ package aueb.mcsis.omada7.services.eforia;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -57,6 +58,7 @@ public class TropopoihshDhlwshsService {
 		Dhlwsh d= VresThnTeleutaiaDhlwsh(id);
 		boolean a=false;
 		HashSet<Parastatiko> pa = d.getParastatika();
+		System.out.println(pa.size()+"parastatika");
 		for(Parastatiko p:pa){
 			if(p.getArithmosparastatikou()==arithmospara){
 				p.setPoso(poso);
@@ -69,6 +71,10 @@ public class TropopoihshDhlwshsService {
 			}
 		}
 		return a;
+	}
+	
+	public List<Parastatiko> fertagiathntadedhlwsh(){
+		return null;
 	}
 	
 	
