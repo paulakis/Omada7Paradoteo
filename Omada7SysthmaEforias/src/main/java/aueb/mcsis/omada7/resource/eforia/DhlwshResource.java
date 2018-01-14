@@ -79,7 +79,9 @@ public class DhlwshResource extends AbstractResource {
 	public Response tropodhl(Dhlwsh d){
 		EntityManager em = getEntityManager();
 		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
-		if(tr.troponea(d)){
+		System.out.println(d.getId());
+		boolean ela = tr.troponea(d);
+		if(ela){
 			return Response.ok().build();
 		}else{
 			return Response.status(400).build();
