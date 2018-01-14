@@ -1,6 +1,7 @@
 package aueb.mcsis.omada7.services;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -72,6 +73,20 @@ public class TropopoihshDhlwshsServiceTest {
 		d1.addParastatiko(p2);
 		//tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true);
 		Assert.assertTrue(tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true));
+	}
+	
+	@Test
+	public void troponeadhlwshtester(){
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		TropopoihshDhlwshsService tds = new TropopoihshDhlwshsService(em);
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		List<Dhlwsh> l= em.createQuery("select d from Dhlwsh d").getResultList();
+		tx.commit();
+		Date a = new Date();
+		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
+		d1.setId(l.get(0).getId());
+		Assert.assertEquals(true, tds.troponea(d1));
 	}
 	
 }
