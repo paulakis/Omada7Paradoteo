@@ -52,7 +52,26 @@ public class TropopoihshDhlwshsService {
 		
 	}
 	
+	public Dhlwsh tropodhlpx(Dhlwsh d){
+		Dhlwsh defere= VresThnTeleutaiaDhlwsh(d.getId());
+		if(defere!=null){
+		defere.setSubmissiondate(d.getSubmissiondate());
+		defere.setSinoloprostimou(d.getSinoloprostimou());
+		defere.setEmprothesmh(d.isEmprothesmh());
+		defere.setTrimhno(d.getTrimhno());
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(defere);
+		tx.commit();
+		return defere;}
+		else{
+			return null;
+		}
+		
+	}
+	
 	// kai tropopoihsh parastatikwn
+	
 	
 	public boolean TropopoihshParastatikwn(int id,int arithmospara, double poso, boolean eidos){
 		Dhlwsh d= VresThnTeleutaiaDhlwsh(id);

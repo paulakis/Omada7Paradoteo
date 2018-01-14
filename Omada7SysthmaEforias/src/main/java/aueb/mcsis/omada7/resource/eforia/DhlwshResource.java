@@ -73,4 +73,13 @@ public class DhlwshResource extends AbstractResource {
 		return tr.TropopoihshParastatikwn(id, arithmospara, poso, eidos);		
 	}
 	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Dhlwsh tropopx(Dhlwsh d){
+		EntityManager em = getEntityManager();
+		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
+		return tr.tropodhlpx(d);
+	}
+	
+	
 }

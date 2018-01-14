@@ -84,4 +84,13 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		
 		
 	}
+	
+	@Test
+	public void tropx(){
+		List<Dhlwsh> l =fereOlestisDhlwseis();
+		Dhlwsh nead= new Dhlwsh(l.get(0).getTrimhno(), l.get(0).getSubmissiondate(), 1500000, true);
+		
+		
+	}
+	
 }
