@@ -92,7 +92,7 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		Dhlwsh d = new Dhlwsh(1, l.get(0).getSubmissiondate(), 1000000, true);
 		d.setId(l.get(0).getId());
 		Response r =target("dhlwsh").request().post(Entity.entity(d,MediaType.APPLICATION_JSON));
-		Assert.assertEquals(Response.ok(), r);
+		Assert.assertEquals(200, r.getStatus());
 	}
 
 	
