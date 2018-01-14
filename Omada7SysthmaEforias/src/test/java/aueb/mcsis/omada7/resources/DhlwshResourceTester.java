@@ -11,7 +11,7 @@ import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
 
-import org.eclipse.persistence.oxm.MediaType;
+import javax.ws.rs.core.MediaType;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.junit.Assert;
 import org.junit.Test;
@@ -85,6 +85,12 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		
 	}
 	
+	@Test
+	public void tropoTest(){
+		Dhlwsh d = new Dhlwsh();
+		Response r =target("dhlwsh").request().post(Entity.entity(d,MediaType.APPLICATION_JSON));
+		Assert.assertEquals(null, r);
+	}
 
 	
 }
