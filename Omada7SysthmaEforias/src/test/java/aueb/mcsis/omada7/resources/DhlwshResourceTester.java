@@ -41,9 +41,8 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 	
 	@Test
 	public void kaneneadhlwshtester(){
-		//den douleuei me post auto prepei na kanw
 		Response r= target("dhlwsh/trimhno/3/etairia/987654322").request().post(null);
-		//metra twra tis dhwlseis na einai 4 prepei
+		//metra twra tis dhwlseis na einai 4 prepei afou evlaes nea dhlwsh
 		Assert.assertEquals(4, fereOlestisDhlwseis().size());
 		
 	}
@@ -52,7 +51,7 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 	@Test
 	public void valeNeoParastatiko(){
 		List<Dhlwsh> l =fereOlestisDhlwseis();
-		Response b=target("dhlwsh/"+l.get(0).getId()+"/neoparastatiko").request().get();
+		Response b=target("dhlwsh/"+l.get(0).getId()+"/neoparastatiko").request().post(null);
 		System.out.println(b);
 		Assert.assertEquals(10, fereTaParastatika().size());
 	}
@@ -78,7 +77,7 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 		em.persist(p1);
 		tx.commit();
 		//prepei na valw kapoia stoixeia mesa mia dhwlsh kai ena parastatiko
-		Response r=target("dhlwsh/"+d1.getId()+"/arpara/1234/poso/600/eidos/false").request().get();
+		Response r=target("dhlwsh/"+d1.getId()+"/arpara/1234/poso/600/eidos/false").request().post(null);
 		Assert.assertEquals(200, r.getStatus());
 		
 		

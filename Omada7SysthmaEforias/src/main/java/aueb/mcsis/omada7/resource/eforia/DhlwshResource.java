@@ -47,13 +47,17 @@ public class DhlwshResource extends AbstractResource {
 		}
 	}
 	
-	@GET
+	@POST
 	@Path("/{id}/neoparastatiko")
 	@Produces
-	public boolean ValeNeoParastatiko(@PathParam("id") int id){
+	public Response ValeNeoParastatiko(@PathParam("id") int id){
 		EntityManager em = getEntityManager();
 		IpovolhDhlwshsService ipo=new IpovolhDhlwshsService(em);
-		return ipo.ValeNeoParastatiko(id);
+		if( ipo.ValeNeoParastatiko(id)){
+			return Response.ok().build();
+		}else{
+			return null;
+		}
 	}
 	
 	@GET
@@ -65,10 +69,10 @@ public class DhlwshResource extends AbstractResource {
 		return tr.TropopoihshDhlwshs(id, new Date());
 	}
 	
-	@GET
+	@POST
 	@Path("/{id}/arpara/{arpar}/poso/{poso}/eidos/{eidos}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public boolean kantropopoihshparastatikou(
+	public Response kantropopoihshparastatikou(
 			@PathParam("id") int id,
 			@PathParam("arpar") int arithmospara,
 			@PathParam("poso") double poso,
@@ -76,7 +80,12 @@ public class DhlwshResource extends AbstractResource {
 			){
 		EntityManager em = getEntityManager();
 		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
-		return tr.TropopoihshParastatikwn(id, arithmospara, poso, eidos);		
+		boolean sin= tr.TropopoihshParastatikwn(id, arithmospara, poso, eidos);
+		if(sin){
+			return Response.ok().build() ;		
+		}else{
+			return null;	
+		}
 	}
 	
 	@POST
