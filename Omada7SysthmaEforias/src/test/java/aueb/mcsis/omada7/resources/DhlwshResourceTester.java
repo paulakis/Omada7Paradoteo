@@ -42,8 +42,7 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 	@Test
 	public void kaneneadhlwshtester(){
 		//den douleuei me post auto prepei na kanw
-		Dhlwsh d= target("dhlwsh/trimhno/3/etairia/987654322").request().get(new GenericType<Dhlwsh>(){});
-		Assert.assertNotEquals(null, d);
+		Response r= target("dhlwsh/trimhno/3/etairia/987654322").request().post(null);
 		//metra twra tis dhwlseis na einai 4 prepei
 		Assert.assertEquals(4, fereOlestisDhlwseis().size());
 		

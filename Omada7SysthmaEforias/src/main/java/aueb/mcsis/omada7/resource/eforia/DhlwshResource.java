@@ -32,14 +32,19 @@ public class DhlwshResource extends AbstractResource {
 	}
 	
 	
-	@GET
+	@POST
 	@Path("/trimhno/{trimhno}/etairia/{afm}")
 	@Produces
-	public Dhlwsh KaneNEaDhlwsh(@PathParam("trimhno") int tri,@PathParam("afm") String afm){
+	public Response KaneNEaDhlwsh(@PathParam("trimhno") int tri,@PathParam("afm") String afm){
 		EntityManager em = getEntityManager();
 		IpovolhDhlwshsService ipo=new IpovolhDhlwshsService(em);
 		ipo.VresEtairia(afm);
-		return ipo.KaneNeaDhlwsh(tri);
+		if(ipo.KaneNeaDhlwsh(tri)!=null){
+		
+			return Response.ok().build(); }
+		else{
+			return null;
+		}
 	}
 	
 	@GET
