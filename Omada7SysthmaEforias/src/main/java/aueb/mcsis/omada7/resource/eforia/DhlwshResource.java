@@ -77,7 +77,14 @@ public class DhlwshResource extends AbstractResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response tropodhl(Dhlwsh d){
-		return null;
+		EntityManager em = getEntityManager();
+		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
+		if(tr.troponea(d)){
+			return Response.ok().build();
+		}else{
+			return Response.status(400).build();
+		}
+
 	}
 	
 }

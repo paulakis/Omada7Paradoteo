@@ -52,6 +52,23 @@ public class TropopoihshDhlwshsService {
 		
 	}
 	
+	public boolean troponea(Dhlwsh d){
+		Dhlwsh dil= VresThnTeleutaiaDhlwsh(d.getId());
+		if(dil!=null){
+			dil.setSubmissiondate(d.getSubmissiondate());
+			dil.setSinoloprostimou(d.getSinoloprostimou());
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			em.persist(dil);
+			tx.commit();
+			return true;
+			}else{
+				return false;
+			}
+			
+
+	}
+	
 
 	// kai tropopoihsh parastatikwn
 	

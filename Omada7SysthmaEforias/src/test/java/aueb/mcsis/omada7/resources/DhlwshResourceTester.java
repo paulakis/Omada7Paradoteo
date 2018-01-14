@@ -87,9 +87,10 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 	
 	@Test
 	public void tropoTest(){
-		Dhlwsh d = new Dhlwsh();
+		List<Dhlwsh> l =fereOlestisDhlwseis();
+		Dhlwsh d = new Dhlwsh(1, l.get(0).getSubmissiondate(), 1000000, true);
 		Response r =target("dhlwsh").request().post(Entity.entity(d,MediaType.APPLICATION_JSON));
-		Assert.assertEquals(null, r);
+		Assert.assertEquals(Response.ok(), r);
 	}
 
 	
