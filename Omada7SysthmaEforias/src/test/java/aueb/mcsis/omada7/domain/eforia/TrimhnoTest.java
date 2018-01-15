@@ -20,7 +20,7 @@ public class TrimhnoTest {
 	//	int daysipo= periodos.getDays()+1+periodos.getMonths()*30;
 		int days=shmera.paremeres();
 		System.out.println(days);
-		Assert.assertEquals(days,76);
+		Assert.assertEquals(days,75);
 	}
 	
 	
