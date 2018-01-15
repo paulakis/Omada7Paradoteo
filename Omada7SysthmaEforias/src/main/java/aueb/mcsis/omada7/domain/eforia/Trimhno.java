@@ -107,7 +107,7 @@ public int paremeres(){
 	}
 	  int malakas= months*30+days+1;
 	  System.out.println("asdasdasdasd"+malakas);
-	  return months*30+days+1;
+	  return Math.abs(months*30+days+1);
 	  
   }
   

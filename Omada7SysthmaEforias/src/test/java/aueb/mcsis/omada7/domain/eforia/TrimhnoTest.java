@@ -16,18 +16,19 @@ public class TrimhnoTest {
 		Trimhno shmera= new Trimhno();
 		LocalDate a = shmera.SePioTrimhnoEisai();
 		
-		Period periodos= Period.between(a,shmera.ela); 
-		int daysipo= periodos.getDays()+1+periodos.getMonths()*30;
+		//Period periodos= Period.between(a,shmera.ela); 
+	//	int daysipo= periodos.getDays()+1+periodos.getMonths()*30;
 		int days=shmera.paremeres();
-		Assert.assertEquals(days,daysipo);
+		System.out.println(days);
+		Assert.assertEquals(days,76);
 	}
 	
 	
 	
 	@Test
 	public void TixaiaHmeromhnia(){
-		Trimhno tote=new Trimhno(12, 2017, 6);
-		Assert.assertEquals(tote.paremeres(),66);
+		Trimhno tote=new Trimhno(1, 2018, 20);
+		Assert.assertEquals(tote.paremeres(),71);
 		
 	}
 	
@@ -43,16 +44,16 @@ public class TrimhnoTest {
 	@Test
 	public void ElegxosGiaTrimhno(){
 		//deutero trimhno ento xronou
-		Trimhno a=new Trimhno(2, 7, 2017, 2);
+		Trimhno a=new Trimhno(2, 7, 2018, 2);
 		Assert.assertEquals(a.Einaiemprothesmh(),true);
 		//deutero trimhno apo prohgoumeno
-		Trimhno a1=new Trimhno(2, 6, 2017, 2);
+		Trimhno a1=new Trimhno(2, 6, 2018, 2);
 		Assert.assertEquals(a1.Einaiemprothesmh(),false);
 		//deutero trimhno ektos apo xrono
-		Trimhno a2=new Trimhno(2, 7, 2017, 21);
+		Trimhno a2=new Trimhno(2, 7, 2018, 21);
 		Assert.assertEquals(a2.Einaiemprothesmh(),false);
 		//lathos trimhno
-		Trimhno a3=new Trimhno(1, 7, 2017, 2);
+		Trimhno a3=new Trimhno(1, 7, 2018, 2);
 		Assert.assertEquals(a3.Einaiemprothesmh(),false);
 		
 	}
