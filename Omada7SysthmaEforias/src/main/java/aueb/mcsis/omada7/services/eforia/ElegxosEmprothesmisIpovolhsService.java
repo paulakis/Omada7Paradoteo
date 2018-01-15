@@ -36,6 +36,7 @@ public class ElegxosEmprothesmisIpovolhsService {
 	public int ApothikeusePoioiDikaiountaitropopoihsh(){
 		int ar=0;
 		List<Dhlwsh> d=FereOlesTisDhlwseis();
+		System.out.println(d.size());
 		for(Dhlwsh dil:d){
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();

@@ -44,7 +44,7 @@ public class Initializer {
      public void prepareData() {
          // ���� ��������� �� �������� ����������� ��� �������
          eraseData();  
-        LocalDate a= LocalDate.of(2017, 10, 2);
+        LocalDate a= LocalDate.of(2018, 10, 2);
          
          LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321", "veropoulos@ver.gr",2102574575,
         true, true);
