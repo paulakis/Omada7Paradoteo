@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -71,12 +72,12 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 	*/
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		natos=new ElegxosGiaApathService(em);
-		Dhlwsh d=new Dhlwsh(3,new Date(2017, 11, 28), 0, true);
+		Dhlwsh d=new Dhlwsh(3, LocalDate.of(2017, 11, 28), 0, true);
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(d);
-		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000, new Date());
-		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, new Date());
+		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000, LocalDate.now());
+		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, LocalDate.now());
 		em.persist(p1);
 		em.persist(p2);
 		d.addParastatiko(p1);

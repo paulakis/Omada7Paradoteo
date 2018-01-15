@@ -51,7 +51,7 @@ public class ElegxosAnantistixiwn extends AithmaElegxou {
 	
 	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
-		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
+		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonthValue(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDayOfMonth());
 		if(tr.paremeres()>30){
 			return true;
 		}else{

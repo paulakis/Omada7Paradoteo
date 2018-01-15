@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +22,7 @@ public class LogariasmosEtairiasTest {
 	
 	@Test
 	public void MporeiNaKaneiDhlwshTester(){
-		e=new LogariasmosEtairias(5,"aek", new Date(), "123456879", "aek@aek.com", 2105689745, true, true);
+		e=new LogariasmosEtairias(5,"aek", LocalDate.now(), "123456879", "aek@aek.com", 2105689745, true, true);
 		Assert.assertFalse(e.MporeiNaKaneiDhlwsh(e));
 		e.setNeedCheck(false);
 		Assert.assertTrue(e.MporeiNaKaneiDhlwsh(e));
@@ -79,7 +80,7 @@ public class LogariasmosEtairiasTest {
 	        LogariasmosEtairias newlogariasmos = new  LogariasmosEtairias();
 	        dhlwsh.setLogarismosEtairias(newlogariasmos);
 	        newlogariasmos.addDhlwsh(dhlwsh);
-	        Date a= new Date(2017, 10, 2);
+	        LocalDate a=  LocalDate.of(2017, 10, 2);
 	         LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321", "veropoulos@ver.gr",2102574575,true,true);
 	         Assert.assertTrue(VEROPOULOS.getEpwnimia().equals("veropoulos"));
 	        Assert.assertTrue(logariasmos.getDhlwseis().size() == 1);
@@ -97,7 +98,7 @@ public class LogariasmosEtairiasTest {
 
 @Test
 public void miscellaniousTest(){
-	Date a= new Date(2017, 10, 2);
+	LocalDate a= LocalDate.of(2017, 10, 2);
 	LogariasmosEtairias JUMBO = new LogariasmosEtairias(3, "jumbo",a, "987654323", "jumbo@jum.gr",2102579574,
 	        false, true);
 	Assert.assertEquals(-769680559,JUMBO.hashCode());
@@ -106,7 +107,7 @@ public void miscellaniousTest(){
 
 @Test
 public void testEquals(){
-	Date a =new Date();
+	LocalDate a = LocalDate.now();
 	LogariasmosEtairias JUMBO = new LogariasmosEtairias(3, "jumbo",a, "987654323", "jumbo@jum.gr",2102579574,
 	        false, true);
 	LogariasmosEtairias XAITOGLOU = new LogariasmosEtairias(4, "xaitoglou",a, "987654324", "xaitoglou@xai.gr",2102584575,

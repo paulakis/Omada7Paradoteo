@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -37,7 +38,7 @@ public class Dhlwsh {
 	int trimhno;
 	
 	@Column()
-	Date submissiondate;
+	LocalDate submissiondate;
 	
 	@Column()
 	double sinoloprostimou;
@@ -65,7 +66,7 @@ public class Dhlwsh {
 	}
 
 
-	public Dhlwsh(int trimhno,Date submissiondate, double sinoloprostimou, boolean emprothesmh) {
+	public Dhlwsh(int trimhno,LocalDate submissiondate, double sinoloprostimou, boolean emprothesmh) {
 		super();
 		this.trimhno = trimhno;
 		this.submissiondate = submissiondate;
@@ -94,12 +95,12 @@ public class Dhlwsh {
 	}
 
 
-	public Date getSubmissiondate() {
+	public LocalDate getSubmissiondate() {
 		return submissiondate;
 	}
 
 
-	public void setSubmissiondate(Date submissiondate) {
+	public void setSubmissiondate(LocalDate submissiondate) {
 		this.submissiondate = submissiondate;
 	}
 

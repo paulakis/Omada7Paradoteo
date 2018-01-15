@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.resources;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import javax.ws.rs.client.Entity;
@@ -39,7 +40,7 @@ public void GirnaToSinoloTwnLogariasmwnTest(){
 		//ftiaxnw logariasmo
 		//ftiaxnw to uri pou prepei na steilw
 		// kai koitaw meta ama evale neo logariasmo
-		LogariasmosEtairias log=new LogariasmosEtairias(21, "aek", new Date(), "149187741", "aek@gmail.com", 2015012217, false, true);
+		LogariasmosEtairias log=new LogariasmosEtairias(21, "aek", LocalDate.now(), "149187741", "aek@gmail.com", 2015012217, false, true);
 		Response response = target("Logariasmos").request().post(Entity.entity(log, MediaType.APPLICATION_JSON));
 		//epeidh einai void den girnaei tipota
 		Assert.assertEquals(204, response.getStatus());

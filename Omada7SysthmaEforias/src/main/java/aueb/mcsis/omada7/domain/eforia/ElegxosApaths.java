@@ -97,7 +97,7 @@ public void setD(Dhlwsh d) {
 
 @SuppressWarnings("deprecation")
 public boolean ElegkseAnPerasan35Meres(Dhlwsh d){
-	Trimhno tr=new Trimhno(d.getTrimhno(), d.getSubmissiondate().getMonth(),d.getSubmissiondate().getYear() , d.getSubmissiondate().getDay());
+	Trimhno tr=new Trimhno(d.getTrimhno(), d.getSubmissiondate().getMonthValue(),d.getSubmissiondate().getYear() , d.getSubmissiondate().getDayOfMonth());
 	if(tr.paremeres()>=35){
 		System.out.println(tr.paremeres());
 		setEnhmerwsheforou(true);

@@ -97,7 +97,7 @@ public class ElegxosGiaApathService {
 	//exei merikes deprecated methods
 	@SuppressWarnings("deprecation")
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
-		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonth(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDay());
+		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonthValue(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDayOfMonth());
 		if(tr.paremeres()>=35){
 			System.out.println(tr.paremeres());
 			return true;

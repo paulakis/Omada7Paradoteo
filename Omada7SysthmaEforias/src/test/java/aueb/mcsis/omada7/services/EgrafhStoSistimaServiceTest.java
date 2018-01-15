@@ -2,6 +2,8 @@ package aueb.mcsis.omada7.services;
 
 import aueb.mcsis.omada7.services.eforia.EgrafhStoSistimaService;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
+
+import java.time.LocalDate;
 import java.util.Date;
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,7 +11,7 @@ import org.junit.Test;
 public class EgrafhStoSistimaServiceTest extends GenikoServiceTest {
 	
 
-	Date ho = new Date();
+	LocalDate ho =  LocalDate.now();
 	private LogariasmosEtairias logEt = new LogariasmosEtairias(20, "KostasAE", ho , "123456678", "email@em.co", 2106547395,
 			true, false);
 	private LogariasmosEtairias logEtf = new LogariasmosEtairias(50, "RostasAE", ho , "12345667", "email@semm.co", 2107647395,

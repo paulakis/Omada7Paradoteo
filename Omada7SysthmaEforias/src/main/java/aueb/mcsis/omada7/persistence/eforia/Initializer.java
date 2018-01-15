@@ -1,7 +1,7 @@
 package aueb.mcsis.omada7.persistence.eforia;
 
 
-import java.util.Date;
+import java.time.LocalDate;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -44,7 +44,7 @@ public class Initializer {
      public void prepareData() {
          // ���� ��������� �� �������� ����������� ��� �������
          eraseData();  
-        Date a= new Date(2017, 10, 2);
+        LocalDate a= LocalDate.of(2017, 10, 2);
          
          LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321", "veropoulos@ver.gr",2102574575,
         true, true);

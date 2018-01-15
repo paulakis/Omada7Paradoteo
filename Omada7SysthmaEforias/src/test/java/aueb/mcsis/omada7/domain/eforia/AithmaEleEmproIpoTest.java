@@ -1,4 +1,5 @@
 package aueb.mcsis.omada7.domain.eforia;
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.junit.Assert;
@@ -19,7 +20,7 @@ public class AithmaEleEmproIpoTest {
 	@Test
 	public void ElegkseGiaEkprothesmh(){
 	AithmaElegxouEmprothesmisIpovolhs aempI = new AithmaElegxouEmprothesmisIpovolhs(30000);
-	Dhlwsh d = new Dhlwsh(1,new Date(),0 ,true);
+	Dhlwsh d = new Dhlwsh(1,LocalDate.now(),0 ,true);
 	aempI.ElegkseGiaEkprothesmh(d);
 	Assert.assertTrue(d.isEmprothesmh());
 
@@ -35,7 +36,7 @@ public class AithmaEleEmproIpoTest {
 	
 	@Test
 	public void updatesinoloprosTest(){
-		Dhlwsh d = new Dhlwsh(1,new Date(),0 ,true);
+		Dhlwsh d = new Dhlwsh(1,LocalDate.now(),0 ,true);
 		AithmaElegxouEmprothesmisIpovolhs aempI = new AithmaElegxouEmprothesmisIpovolhs();
 		aempI.updatesinolopros(d);
 		Assert.assertEquals(500,d.getSinoloprostimou(),0.01);

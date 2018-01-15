@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.domain.eforia;
 
+import java.time.LocalDate;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,7 +37,7 @@ public class Parastatiko {
 	double poso;
 	
 	@Column(name="hmeromhniaparas")
-	Date hmeromhniaparastatikou;
+	LocalDate hmeromhniaparastatikou;
 	
 	
 
@@ -52,7 +53,7 @@ public class Parastatiko {
 	
 	
 	public Parastatiko( String afmsimvalwmenoou, int arithmosparastatikou, boolean eidossinallaghs, double poso,
-			Date hmeromhniaparastatikou) {
+			LocalDate hmeromhniaparastatikou) {
 		super();
 	
 		this.afmsimvalwmenoou = afmsimvalwmenoou;
@@ -102,10 +103,10 @@ public class Parastatiko {
 	}
 	
 	
-	public Date getHmeromhniaparastatikou() {
+	public LocalDate getHmeromhniaparastatikou() {
 		return hmeromhniaparastatikou;
 	}
-	public void setHmeromhniaparastatikou(Date hmeromhniaparastatikou) {
+	public void setHmeromhniaparastatikou(LocalDate hmeromhniaparastatikou) {
 		this.hmeromhniaparastatikou = hmeromhniaparastatikou;
 	}
 	

@@ -2,6 +2,7 @@ package aueb.mcsis.omada7.domain.eforia;
 
 
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -33,7 +34,7 @@ public class LogariasmosEtairias  {
 	private String epwnimia;
 	
 	@Column(name="hmeromhniasistashs")
-	private Date hmeromhniasistashs;
+	private LocalDate hmeromhniasistashs;
 	
 	@Id
 	@Column(name="afmprwteuontos",nullable = false, unique = true)
@@ -62,7 +63,7 @@ public class LogariasmosEtairias  {
 	
 
 	
-	public LogariasmosEtairias(int id, String epwnimia, Date hmeromhniasistashs, String afm, String email, int thlefwno,
+	public LogariasmosEtairias(int id, String epwnimia, LocalDate hmeromhniasistashs, String afm, String email, int thlefwno,
 			boolean exeiElefthei, boolean needCheck) {
 		super();
 		this.id = id;
@@ -117,10 +118,10 @@ public class LogariasmosEtairias  {
 		this.epwnimia = epwnimia;
 	}
 	
-	public Date getHmeromhniasistashs() {
+	public LocalDate getHmeromhniasistashs() {
 		return hmeromhniasistashs;
 	}
-	public void setHmeromhniasistashs(Date hmeromhniasistashs) {
+	public void setHmeromhniasistashs(LocalDate hmeromhniasistashs) {
 		this.hmeromhniasistashs = hmeromhniasistashs;
 	}
 	

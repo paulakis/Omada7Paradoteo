@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.resources;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -67,7 +68,7 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 	@Test
 	public void kanetropopoihshparastatikou(){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
-		Date a = new Date();
+		LocalDate a = LocalDate.now();
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
 		Parastatiko p1= new Parastatiko("987654322" ,1234,true ,300000 ,a);
 		p1.setD(d1);

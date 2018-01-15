@@ -1,4 +1,5 @@
 package aueb.mcsis.omada7.services;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -23,7 +24,7 @@ public class TropopoihshDhlwshsServiceTest {
 	
 	@Test
 	public void VresThnTeleutaiaDhlwshTest(){
-		Date a = new Date();
+		LocalDate a =  LocalDate.now();
 		LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321",
 				"veropoulos@ver.gr",2102574575,
 		        true, false); //ftiaxno adikimeno logariasmo
@@ -47,21 +48,21 @@ public class TropopoihshDhlwshsServiceTest {
 	public void TestTropopoihshDhlwshs(){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		TropopoihshDhlwshsService tds = new TropopoihshDhlwshsService(em);
-		Date a = new Date();
+		LocalDate a = LocalDate.now();
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
 		
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(d1);
 		tx.commit();
-		Assert.assertTrue(tds.TropopoihshDhlwshs(d1.getId(), new Date()));
+		Assert.assertTrue(tds.TropopoihshDhlwshs(d1.getId(), LocalDate.now()));
 	}
 	
 	@Test
 	public void TestTropopoihshParastatikwn(){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		TropopoihshDhlwshsService tds = new TropopoihshDhlwshsService(em);
-		Date a = new Date();
+		LocalDate a = LocalDate.now();
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -83,7 +84,7 @@ public class TropopoihshDhlwshsServiceTest {
 		tx.begin();
 		List<Dhlwsh> l= em.createQuery("select d from Dhlwsh d").getResultList();
 		tx.commit();
-		Date a = new Date();
+		LocalDate a = LocalDate.now();
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
 		d1.setId(l.get(0).getId());
 		Assert.assertEquals(true, tds.troponea(d1));

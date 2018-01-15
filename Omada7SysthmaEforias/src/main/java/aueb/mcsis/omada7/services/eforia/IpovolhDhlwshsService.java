@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -57,7 +58,7 @@ public class IpovolhDhlwshsService {
 			d=new Dhlwsh();
 			d.setTrimhno(trimhno);
 			d.setSinoloprostimou(0);
-			d.setSubmissiondate(new Date());
+			d.setSubmissiondate(LocalDate.now());
 			em.persist(d);
 			tx.commit();
 			
@@ -92,7 +93,7 @@ public class IpovolhDhlwshsService {
 		}else{
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
-			para=new Parastatiko("", 135, true, 10000, new Date());
+			para=new Parastatiko("", 135, true, 10000, LocalDate.now());
 			// arxikopoihsh tou parastaikou diamorfwsh antikeimenou para.
 			em.persist(para);
 			tx.commit();

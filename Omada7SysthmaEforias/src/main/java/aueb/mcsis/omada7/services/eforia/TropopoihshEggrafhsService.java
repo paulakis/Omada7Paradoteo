@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -21,7 +22,7 @@ public class TropopoihshEggrafhsService {
 	}
 	
 
-	public void TropopoihshLogariasmou(String afm,String epwnimia,String email,int thlefwno,Date hmeromhniasistashs){
+	public void TropopoihshLogariasmou(String afm,String epwnimia,String email,int thlefwno,LocalDate hmeromhniasistashs){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();

@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -23,7 +24,7 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 	public void VresEtairiaTester(){
 		ipo=new IpovolhDhlwshsService(em);
 		String afmhdhentos="987654321";
-		 LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",new Date(), "987654321", "veropoulos@ver.gr",2102574575,
+		 LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",LocalDate.now(), "987654321", "veropoulos@ver.gr",2102574575,
 			        true, true);
 		Assert.assertEquals(ipo.VresEtairia(afmhdhentos),VEROPOULOS);
 		Assert.assertNull(ipo.VresEtairia(""));

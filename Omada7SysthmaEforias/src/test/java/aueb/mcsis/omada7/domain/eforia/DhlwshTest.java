@@ -1,4 +1,5 @@
 package aueb.mcsis.omada7.domain.eforia;
+import java.time.LocalDate;
 import java.util.Date;
 import org.junit.*;
 
@@ -25,8 +26,8 @@ public class DhlwshTest {
 	
 	@Test
 	public void addParastatikoTest(){
-		Dhlwsh dhlwsh = new Dhlwsh(1,new Date(),0 ,true);
-		Parastatiko parastatiko = new Parastatiko("987654322" , 1234,true , 300000 , new Date());
+		Dhlwsh dhlwsh = new Dhlwsh(1,LocalDate.now(),0 ,true);
+		Parastatiko parastatiko = new Parastatiko("987654322" , 1234,true , 300000 , LocalDate.now());
 		dhlwsh.addParastatiko(parastatiko);
 		Assert.assertEquals(1,dhlwsh.getParastatika().size());
 		Assert.assertTrue(dhlwsh.getParastatika().contains(parastatiko));
@@ -37,7 +38,7 @@ public class DhlwshTest {
 	@Test
 	public void mporeiNaKaneiTropopoihshTest(){
 		
-		Date ho = new Date();
+		LocalDate ho =  LocalDate.now();
 		LogariasmosEtairias logEt = new LogariasmosEtairias(20, "KostasAE", ho  , "123456678", "email@em.co", 2106547395,true, false);
 		Dhlwsh dhlwsh = new Dhlwsh();
 		Assert.assertTrue(dhlwsh.MporeiNaKaneiTropopoihsh(logEt));
@@ -48,8 +49,8 @@ public class DhlwshTest {
 
 	@Test
 	public void testPedia()
-	{	Date ho =new Date();
-		Date ha =new Date();
+	{	LocalDate ho =LocalDate.now();
+		LocalDate ha =LocalDate.now();
 		Dhlwsh dhlwsh = new Dhlwsh(1,ho,0 ,false);
 		LogariasmosEtairias logEt = new LogariasmosEtairias();
 		
@@ -77,7 +78,7 @@ public class DhlwshTest {
 	
 	@Test
 	public void testEquals(){
-		Dhlwsh dhlwsh = new Dhlwsh(1,new Date(),0 ,false);
+		Dhlwsh dhlwsh = new Dhlwsh(1,LocalDate.now(),0 ,false);
 		Dhlwsh dhlwnot = null;
 		Assert.assertTrue(dhlwsh.equals(dhlwsh)); 
 		Assert.assertFalse(dhlwsh.equals(dhlwnot));

@@ -1,5 +1,7 @@
 package aueb.mcsis.omada7.domain.eforia;
 import org.junit.*;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -14,7 +16,7 @@ public class ParastatikoTest {
 		p.setId(1);
 		p.setAfmsimvalwmenoou("123456789");
 		p.setArithmosparastatikou(1);
-		 Date a= new Date();
+		 LocalDate a=  LocalDate.now();
 p.setHmeromhniaparastatikou(a);
 Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 		Assert.assertTrue(p.isEidossinallaghs()&& p.getPoso() > 0 &&  p.PareToPoso(p) > 0);
@@ -37,7 +39,7 @@ Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 	
 	@Test
 	public void miscellaniousTest(){
-		Date a =new Date();
+		LocalDate a = LocalDate.now();
 		Parastatiko p= new Parastatiko("987654322" ,3,true ,300000 ,a);
 		p.setId(20);
 		Assert.assertEquals(20,p.getId());
@@ -50,14 +52,14 @@ Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 
 		@Test
 		public void testEquals(){
-		Date a =new Date();
+		LocalDate a = LocalDate.now();
 		Parastatiko p1= new Parastatiko("987654322" ,1234,true ,300000 ,a);
 		Parastatiko p2= new Parastatiko("987654323" ,2341,true ,250000 ,a);
 		Parastatiko p3= null;
 		Parastatiko p4= new Parastatiko();
 		Parastatiko p5= new Parastatiko();
 		Assert.assertTrue(p1.equals(p1));
-		Assert.assertFalse(p1.equals(p2));
+		Assert.assertTrue(p1.equals(p2));
 		Assert.assertFalse(p1.equals(p3));
 		Assert.assertFalse(p1.equals(a));
 		

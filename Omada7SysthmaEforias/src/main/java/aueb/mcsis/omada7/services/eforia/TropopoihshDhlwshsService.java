@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services.eforia;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -36,7 +37,7 @@ public class TropopoihshDhlwshsService {
 		}
 			}
 	
-	public boolean TropopoihshDhlwshs(int id, Date neasubmisiondate){
+	public boolean TropopoihshDhlwshs(int id, LocalDate neasubmisiondate){
 		Dhlwsh d= VresThnTeleutaiaDhlwsh(id);
 		if(d!=null){
 		d.setSubmissiondate(neasubmisiondate);

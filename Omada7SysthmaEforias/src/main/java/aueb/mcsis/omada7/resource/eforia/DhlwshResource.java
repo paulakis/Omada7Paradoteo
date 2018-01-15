@@ -1,6 +1,7 @@
 package aueb.mcsis.omada7.resource.eforia;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -66,7 +67,7 @@ public class DhlwshResource extends AbstractResource {
 	public boolean KaneTropopoihshDhlwshs(@PathParam("id") int id){
 		EntityManager em = getEntityManager();
 		TropopoihshDhlwshsService tr=new TropopoihshDhlwshsService(em);
-		return tr.TropopoihshDhlwshs(id, new Date());
+		return tr.TropopoihshDhlwshs(id, LocalDate.now());
 	}
 	
 	@POST

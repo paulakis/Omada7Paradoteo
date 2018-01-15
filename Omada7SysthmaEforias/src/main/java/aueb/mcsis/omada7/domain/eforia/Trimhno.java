@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 
+
+
 public class Trimhno {
 	//vohthitikh klash gia na mas dinei to pedio emmprothesmh.kai na kanoume kai allous elegxous
 	int year=LocalDate.now().getYear();
@@ -52,6 +54,10 @@ public Trimhno(int trimhno,int mhnas, int etos, int mera) {
 	this.etos = etos;
 	this.mera = mera;
 	this.trimhno=trimhno;
+	System.out.println(year+this.etos+this.mhnas+this.mera);
+	System.out.println(this.etos);
+	System.out.println(this.mhnas);
+	System.out.println(this.mera);
 	this.ela = LocalDate.of(etos, mhnas, mera);
 }
 
@@ -81,8 +87,8 @@ public LocalDate SePioTrimhnoEisai(){
 public int paremeres(){
 	  int days=0;
 	  int months=0;
-	  if (ela.isBefore(atrimhno)  && ela.isAfter(dtrimhno)){
-		  Period age = Period.between(dtrimhno, ela);
+	  if (ela.isBefore(atrimhno)  /*&& ela.isAfter(dtrimhno)*/){
+		  Period age = Period.between(atrimhno, ela);
 		  days = age.getDays();
 		  months = age.getMonths();
 	  }else if (ela.isBefore(btrimhno) && ela.isAfter(atrimhno)) {
@@ -99,6 +105,8 @@ public int paremeres(){
 		days = age.getDays();
 		  
 	}
+	  int malakas= months*30+days+1;
+	  System.out.println("asdasdasdasd"+malakas);
 	  return months*30+days+1;
 	  
   }

@@ -1,5 +1,6 @@
 package aueb.mcsis.omada7.services;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
@@ -35,16 +36,17 @@ public class ElegxosAnantistoixiwnServiceTest extends GenikoServiceTest {
 	public void TestElegxosAnantistoixiwn(){
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		s=new ElegxosGiaAnantistixoiesService(em);
-		Dhlwsh d=new Dhlwsh(3,new Date(2017, 11, 28), 0, true);
-		Dhlwsh d2=new Dhlwsh(3,new Date(2017, 11, 27), 0, true);
+		Dhlwsh d=new Dhlwsh(3, LocalDate.of(2017, 11, 28), 0, true);
+		Dhlwsh d2=new Dhlwsh(3,LocalDate.of(2017, 11, 27), 0, true);
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(d);
 		em.persist(d2);
-		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000, new Date());
-		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, new Date());
-		Parastatiko p3=new Parastatiko("252525252", 102,true, 10000, new Date());
-		Parastatiko p4=new Parastatiko("102030405", 103,false, 100, new Date());
+		LocalDate a= LocalDate.now();
+		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000,a);
+		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, a);
+		Parastatiko p3=new Parastatiko("252525252", 102,true, 10000, a);
+		Parastatiko p4=new Parastatiko("102030405", 103,false, 100, a);
 		em.persist(p1);
 		em.persist(p2);
 		em.persist(p3);

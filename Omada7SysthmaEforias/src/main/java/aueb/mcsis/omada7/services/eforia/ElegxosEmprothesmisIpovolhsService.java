@@ -39,7 +39,7 @@ public class ElegxosEmprothesmisIpovolhsService {
 		for(Dhlwsh dil:d){
 			EntityTransaction tx = em.getTransaction();
 			tx.begin();
-			if(new Trimhno(dil.getTrimhno(), dil.getSubmissiondate().getMonth(), dil.getSubmissiondate().getYear(), dil.getSubmissiondate().getDay()).Einaiemprothesmh()){
+			if(new Trimhno(dil.getTrimhno(), dil.getSubmissiondate().getMonthValue(), dil.getSubmissiondate().getYear(), dil.getSubmissiondate().getDayOfMonth()).Einaiemprothesmh()){
 				ar++;
 				ait = new AithmaElegxouEmprothesmisIpovolhs();
 				ait.setDinatothtatropo(true);
