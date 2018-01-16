@@ -78,6 +78,8 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 		em.persist(d);
 		Parastatiko p1=new Parastatiko("252525252", 100,true, 10000, LocalDate.now());
 		Parastatiko p2=new Parastatiko("102030405", 101,false, 100, LocalDate.now());
+		p1.setD(d);
+		p2.setD(d);
 		em.persist(p1);
 		em.persist(p2);
 		d.addParastatiko(p1);

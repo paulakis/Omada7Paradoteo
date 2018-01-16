@@ -44,6 +44,7 @@ public class EpivolhProstimouService {
 	public boolean updateSinolikoProstimoGiathnkatheDhlwsh(){
 		boolean a=false;
 		List<ElegxosApaths> listaapatwn=FereTisApates();
+		System.out.println(listaapatwn.size()+ "edw");
 		for(ElegxosApaths e:listaapatwn){
 			//na dei ean hrthe h wra na tou epivalei to prostimo
 			System.out.println(e.getD());

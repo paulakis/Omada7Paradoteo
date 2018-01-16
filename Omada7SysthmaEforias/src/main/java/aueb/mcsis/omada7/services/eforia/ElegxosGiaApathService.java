@@ -56,6 +56,7 @@ public class ElegxosGiaApathService {
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		if(tsekareEanEntosXronikouOriou(a)){
 				m = new ElegxosApaths(DhmiourgiaProstimou(Ipopsifiaapath(a)),Ipopsifiaapath(a),EinaiApath(Ipopsifiaapath(a)));
+				//m.setD(a);
 				EntityTransaction tx = em.getTransaction();
 				m.setEnhmerwsheforou(true);
 				// me karfwmenh dhlwsh paizei
