@@ -28,17 +28,14 @@ public class TropoEgrafhsServTest  {
 		
 		LogariasmosEtairias logEt = new LogariasmosEtairias(20, "KostasAE", ho , "123456678", "email@em.co", 2106547395,
 				true, false);
-		//LogariasmosEtairias logEt3 = new LogariasmosEtairias(20, "ParisAE", ho , "123456678", "emailo@em.co", 2103547395,
-		//		true, false);
+		
 		Assert.assertTrue(EgStoSys.KaneNeaEggrafh(logEt));
 		
 		
 		service.TropopoihshLogariasmou("123456678", "ParisAE", "emailo@em.co", 2103547395, ho);
 		Assert.assertEquals(EgStoSys.VresEanExeiKsanakataxwrhtheiToAfm("123456678").getThlefwno(), 2103547395);
 		
-		//service.TropopoihshLogariasmou("123456672", "test", "test", 2102222222, he);
-		
-		//service.TropopoihshLogariasmou(logEt.getAfm(), logEt.getEpwnimia(), logEt.getEmail(), logEt.getThlefwno(), logEt.getHmeromhniasistashs())
+	
 		
 	}
 	

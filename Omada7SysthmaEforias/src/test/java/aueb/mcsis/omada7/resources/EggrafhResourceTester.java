@@ -32,8 +32,7 @@ public class EggrafhResourceTester extends EforiaResourceTest {
 public void GirnaToSinoloTwnLogariasmwnTest(){
 	List<LogariasmosEtairias> x = target("Logariasmos").request().get(new GenericType<List<LogariasmosEtairias>>(){});
 	Assert.assertEquals(4, x.size());
-	//Response r=target("Logariasmos").request().get();
-	//Assert.assertEquals(200, r.getStatus());
+
 }
 	@Test
 	public void KaneNeaEggLogTest(){
@@ -42,7 +41,7 @@ public void GirnaToSinoloTwnLogariasmwnTest(){
 		// kai koitaw meta ama evale neo logariasmo
 		LogariasmosEtairias log=new LogariasmosEtairias(21, "aek", LocalDate.now(), "149187741", "aek@gmail.com", 2015012217, false, true);
 		Response response = target("Logariasmos").request().post(Entity.entity(log, MediaType.APPLICATION_JSON));
-		//epeidh einai void den girnaei tipota
+
 		Assert.assertEquals(204, response.getStatus());
 		List <LogariasmosEtairias> l = FereOlousTousLog();
 		Assert.assertEquals(5, l.size());
@@ -52,8 +51,7 @@ public void GirnaToSinoloTwnLogariasmwnTest(){
 	
 	@Test
 	public void vreseaniparxeiTester(){
-		//na deite kai ta alla afm
-		//auto sigoura den iparxei gia auto evala kai to null
+
 		String afm1="149187741";
 		LogariasmosEtairias l=target("Logariasmos/vres/"+afm1).request().get(new GenericType<LogariasmosEtairias>(){});
 		Assert.assertEquals(null, l);

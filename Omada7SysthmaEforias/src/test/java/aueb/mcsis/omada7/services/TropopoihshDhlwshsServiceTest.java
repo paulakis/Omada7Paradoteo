@@ -28,8 +28,7 @@ public class TropopoihshDhlwshsServiceTest {
 		LogariasmosEtairias VEROPOULOS = new LogariasmosEtairias(1, "veropoulos",a, "987654321",
 				"veropoulos@ver.gr",2102574575,
 		        true, false); //ftiaxno adikimeno logariasmo
-		//IpovolhDhlwshsService ids = new IpovolhDhlwshsService(em); //kano adikimeno apo tin klasi gia na kano dilosi
-		//ids.KaneNeaDhlwsh(1); //ftiaxno dilosi kai tin kano persist
+
 		
 		
 		Dhlwsh d1 = new Dhlwsh(3,a,0 ,true);
@@ -41,7 +40,7 @@ public class TropopoihshDhlwshsServiceTest {
 		tx.commit();
 		TropopoihshDhlwshsService tds = new TropopoihshDhlwshsService(em);
 		Assert.assertEquals(d1, tds.VresThnTeleutaiaDhlwsh(d1.getId()));
-		//Assert.assertNull(tds.VresThnTeleutaiaDhlwsh(2));
+
 	}
 	
 	@Test
@@ -72,7 +71,7 @@ public class TropopoihshDhlwshsServiceTest {
         Parastatiko p2= new Parastatiko("987654323" ,2341,true ,250000 ,a);
 		d1.addParastatiko(p1);
 		d1.addParastatiko(p2);
-		//tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true);
+
 		Assert.assertTrue(tds.TropopoihshParastatikwn(d1.getId(), 1234, 5, true));
 	}
 	
