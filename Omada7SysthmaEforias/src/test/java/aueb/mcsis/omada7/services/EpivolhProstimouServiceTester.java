@@ -59,17 +59,7 @@ public class EpivolhProstimouServiceTester  extends GenikoServiceTest{
 	
 	@Test
 	public void Testupdatesinoloprostimogiathnkathedhlwsh(){
-		/*
-		EntityManager em = JPAUtil.getCurrentEntityManager();
-		ep=new EpivolhProstimouService(em);
-		ElegxosApaths e=new ElegxosApaths(150, 1500, true);
-		e.setEnhmerwsheforou(true);
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		em.persist(e);
-		tx.commit();
-		Assert.assertEquals(ep.updateSinolikoProstimoGiathnkatheDhlwsh(),false);
-	*/
+	
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		natos=new ElegxosGiaApathService(em);
 		Dhlwsh d=new Dhlwsh(3, LocalDate.of(2017, 11, 28), 0, true);

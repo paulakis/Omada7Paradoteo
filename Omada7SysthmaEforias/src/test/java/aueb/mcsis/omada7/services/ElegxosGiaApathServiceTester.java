@@ -26,10 +26,10 @@ public class ElegxosGiaApathServiceTester extends GenikoServiceTest{
 
 
 
-	// prepei na doume ama exoume kapoia apath mesa ston pinaka 
+
 	 
 	
-	/*@Test
+	@Test
 	public void testFindElegxosApathsById()
 	{
 		//ftiaxnw ena antikeimeno tipou elegxos apaths kai to vazw sth vash
@@ -41,10 +41,10 @@ public class ElegxosGiaApathServiceTester extends GenikoServiceTest{
 		em.persist(e);
 		tx.commit();
 		
-		//gia kapoio logo den paizei
+
 		Assert.assertEquals(natos.ferePosesEggrafes(), 1);
 	}
-	*/
+	
 	
 	
 	
