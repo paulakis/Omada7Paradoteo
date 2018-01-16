@@ -1,6 +1,6 @@
 package aueb.mcsis.omada7.domain.eforia;
 import java.time.LocalDate;
-import java.util.Date;
+
 
 import org.junit.Assert;
 import org.junit.Test;

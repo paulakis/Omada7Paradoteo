@@ -4,7 +4,7 @@ import aueb.mcsis.omada7.services.eforia.EgrafhStoSistimaService;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 import org.junit.Assert;
 import org.junit.Test;
 

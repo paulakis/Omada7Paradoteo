@@ -30,7 +30,7 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 		super();
 	}
 
-	// den xreiazontaii mallon 
+
 	public AithmaElegxouEmprothesmisIpovolhs(double prostimoekprothesmis) {
 		super();
 		this.prostimoekprothesmis = prostimoekprothesmis;
@@ -43,7 +43,7 @@ public class AithmaElegxouEmprothesmisIpovolhs extends AithmaElegxou {
 	public void setProstimoekprothesmis(double prostimoekprothesmis) {
 		this.prostimoekprothesmis = prostimoekprothesmis;
 	}
-	//mallon prepei na figei
+
 	public void ElegkseGiaEkprothesmh(Dhlwsh d){
 		Trimhno ela=new Trimhno();
 		if (ela.paremeres()>20){

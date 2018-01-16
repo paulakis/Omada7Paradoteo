@@ -47,7 +47,7 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 		Assert.assertNull(ipo.KaneNeaDhlwsh(3));
 		Assert.assertEquals(ipo.fereArithmoDhlwsewn(), 3);
 	}
-	//den paizei
+
 	@Test
 	public void TestVresDhlwshById(){
 		ipo=new IpovolhDhlwshsService(em);
@@ -71,7 +71,7 @@ public class IpovolhdhlwshsServiceTester extends GenikoServiceTest {
 	
 	@Test
 	public void TestValeNeoParastatiko(){
-		//kane nea dhlwsh kai vale kai ena parastatiko alla den mporw na ta valw swsta
+		
 		ipo=new IpovolhDhlwshsService(em);
 		Assert.assertFalse(ipo.ValeNeoParastatiko(1));
 		Assert.assertEquals(ipo.fereTaParastatika(),9);

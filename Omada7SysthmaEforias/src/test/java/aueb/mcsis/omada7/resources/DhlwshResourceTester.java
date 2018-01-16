@@ -1,15 +1,14 @@
 package aueb.mcsis.omada7.resources;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.HashSet;
+
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Application;
-import javax.ws.rs.core.GenericType;
+
 import javax.ws.rs.core.Response;
 
 import javax.ws.rs.core.MediaType;
@@ -20,7 +19,7 @@ import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 import aueb.mcsis.omada7.persistence.eforia.JPAUtil;
 import aueb.mcsis.omada7.resource.eforia.DhlwshResource;
-import aueb.mcsis.omada7.services.eforia.TropopoihshDhlwshsService;
+
 
 
 public class DhlwshResourceTester extends EforiaResourceTest {

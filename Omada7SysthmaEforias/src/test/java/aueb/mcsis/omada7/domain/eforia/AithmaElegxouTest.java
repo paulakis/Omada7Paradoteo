@@ -9,7 +9,7 @@ public class AithmaElegxouTest {
 
 	@Test
 	public void aploTest(){
-		AithmaElegxou aitElnull = new AithmaElegxou();
+		
 		AithmaElegxou aitEl = new AithmaElegxou(true, true, true);
 		aitEl.setId(33);
 		aitEl.setDinatothtatropo(false);

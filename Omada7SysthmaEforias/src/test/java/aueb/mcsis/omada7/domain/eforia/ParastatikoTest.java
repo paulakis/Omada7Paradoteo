@@ -2,7 +2,7 @@ package aueb.mcsis.omada7.domain.eforia;
 import org.junit.*;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 
 public class ParastatikoTest {
@@ -56,8 +56,7 @@ Assert.assertEquals(p.getAfmsimvalwmenoou(),"123456789");
 		Parastatiko p1= new Parastatiko("987654322" ,1234,true ,300000 ,a);
 		Parastatiko p2= new Parastatiko("987654323" ,2341,true ,250000 ,a);
 		Parastatiko p3= null;
-		Parastatiko p4= new Parastatiko();
-		Parastatiko p5= new Parastatiko();
+
 		Assert.assertTrue(p1.equals(p1));
 		Assert.assertTrue(p1.equals(p2));
 		Assert.assertFalse(p1.equals(p3));

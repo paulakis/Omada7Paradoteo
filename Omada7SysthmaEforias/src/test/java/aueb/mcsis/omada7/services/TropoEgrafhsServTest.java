@@ -1,7 +1,7 @@
 package aueb.mcsis.omada7.services;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 import javax.persistence.EntityManager;
 
@@ -22,7 +22,7 @@ public class TropoEgrafhsServTest  {
 	{	
 		
 		LocalDate ho = LocalDate.now();
-		LocalDate he =  LocalDate.now();
+
 		
 		TropopoihshEggrafhsService service = new TropopoihshEggrafhsService(ha);
 		

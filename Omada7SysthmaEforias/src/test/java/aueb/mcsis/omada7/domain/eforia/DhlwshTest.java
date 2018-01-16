@@ -1,16 +1,11 @@
 package aueb.mcsis.omada7.domain.eforia;
 import java.time.LocalDate;
-import java.util.Date;
+
 import org.junit.*;
 
 import aueb.mcsis.omada7.domain.eforia.Dhlwsh;
 import aueb.mcsis.omada7.domain.eforia.Parastatiko;
 import aueb.mcsis.omada7.domain.eforia.LogariasmosEtairias;
-
-//import org.junit.Assert;
-//import junit.framework.Test;
-//import junit.framework.TestCase;
-//import junit.framework.TestSuite;
 
 public class DhlwshTest {
  
@@ -71,8 +66,7 @@ public class DhlwshTest {
 		
 		Assert.assertEquals(51, dhlwsh.hashCode());
 		
-		
-		
+	
 			
 	}
 	
@@ -91,19 +85,5 @@ public class DhlwshTest {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	/*@Test//tha thelei diorthosi
-	public void IparxeiHdhStaParastatika(){
-		Set<Parastatiko> parastatika = null;
-		Parastatiko p = new Parastatiko();
-		Assert.assertTrue(parastatika.contains(p)); 
-		
-	}*/
 
 }

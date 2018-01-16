@@ -56,12 +56,12 @@ public class ElegxosGiaApathService {
 		EntityManager em = JPAUtil.getCurrentEntityManager();
 		if(tsekareEanEntosXronikouOriou(a)){
 				m = new ElegxosApaths(DhmiourgiaProstimou(Ipopsifiaapath(a)),Ipopsifiaapath(a),EinaiApath(Ipopsifiaapath(a)));
-				//m.setD(a);
+			
 				EntityTransaction tx = em.getTransaction();
 				m.setEnhmerwsheforou(true);
-				// me karfwmenh dhlwsh paizei
-				//to testupdateprostimougiathnkathedhlwsh
-				//m.setD(a);
+			
+				//to testupdateprostimougiathnkathedhlwsh 
+				//m.setD(a); me set to test leitourgei kanonika alla xalaei to 46% tou kodika kai den eixame xrono na to ftiaksoume
 				tx.begin();
 				em.persist(m);
 				tx.commit();
@@ -100,10 +100,10 @@ public class ElegxosGiaApathService {
 	public boolean tsekareEanEntosXronikouOriou(Dhlwsh d){
 		Trimhno tr=new Trimhno(d.getSubmissiondate().getMonthValue(), d.getSubmissiondate().getYear(), d.getSubmissiondate().getDayOfMonth());
 		if(tr.paremeres()>=35){
-			System.out.println(tr.paremeres());
+			
 			return true;
 		}else{
-			System.out.println(tr.paremeres());
+			
 		return false;}
 		
 	}

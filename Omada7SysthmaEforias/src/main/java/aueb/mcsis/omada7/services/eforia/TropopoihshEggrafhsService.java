@@ -38,9 +38,7 @@ public class TropopoihshEggrafhsService {
 			tx.commit();
 			em.close();
 		}
-		//else{ 
-		//	System.out.println("O logariasmos den vrethike");
-		//			}
+		
 	}
 	
 

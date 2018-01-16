@@ -1,7 +1,7 @@
 package aueb.mcsis.omada7.domain.eforia;
 
-import java.time.LocalDate;
-import java.time.Period;
+
+
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +14,7 @@ public class TrimhnoTest {
 	public void ElegxosGiaSystemDate(){
 
 		Trimhno shmera= new Trimhno();
-		LocalDate a = shmera.SePioTrimhnoEisai();
+
 		
 		//Period periodos= Period.between(a,shmera.ela); 
 	//	int daysipo= periodos.getDays()+1+periodos.getMonths()*30;

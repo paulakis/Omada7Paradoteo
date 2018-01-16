@@ -190,15 +190,7 @@ public class Dhlwsh {
 		}
 	}
 
-	//den to exoume xrisimopoihsei akoma stin ulopoihsh
-//	public  boolean IparxeiHdhStaParastatika(Parastatiko p){
-//		if(parastatika.contains(p)){
-//			return true;	
-//		}else{
-//			return false;
-//		}
-		
-//	}
+
 	
 
 }
