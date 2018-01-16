@@ -30,8 +30,8 @@ public class EggrafhResourceTester extends EforiaResourceTest {
 
 @Test
 public void GirnaToSinoloTwnLogariasmwnTest(){
-	//int x = target("Logariasmos").request().get(Integer.class);
-	//Assert.assertEquals(4, x);
+	List<LogariasmosEtairias> x = target("Logariasmos").request().get(new GenericType<List<LogariasmosEtairias>>(){});
+	Assert.assertEquals(4, x.size());
 	//Response r=target("Logariasmos").request().get();
 	//Assert.assertEquals(200, r.getStatus());
 }

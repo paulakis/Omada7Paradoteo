@@ -85,5 +85,13 @@ public class EgrafhStoSistimaService {
 	}
 	
 	
+	@SuppressWarnings("unchecked")
+	public List<LogariasmosEtairias> FereEtairiesStoSysthma(){
+		EntityManager em = JPAUtil.getCurrentEntityManager();
+		List<LogariasmosEtairias> l = em.createQuery("select e from LogariasmosEtairias e").getResultList();
+		return l;
+		
+	}
+	
 	
 }

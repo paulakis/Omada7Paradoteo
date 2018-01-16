@@ -26,10 +26,10 @@ public class EggrafhResource extends AbstractResource {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public int GirnaToSinoloTwnLogariasmwn(){
+	public List<LogariasmosEtairias> GirnaToSinoloTwnLogariasmwn(){
 		EntityManager em = getEntityManager();
 		EgrafhStoSistimaService e= new EgrafhStoSistimaService(em);
-		return e.FerePosoiEinaiStoSysthma();
+		return e.FereEtairiesStoSysthma();
 	}
 	
 	@POST
