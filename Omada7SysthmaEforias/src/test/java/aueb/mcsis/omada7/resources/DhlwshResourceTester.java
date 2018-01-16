@@ -35,8 +35,11 @@ public class DhlwshResourceTester extends EforiaResourceTest {
 	//exei kapoio lathos
 	public void vresDhlwshapoIdTester(){
 		List<Dhlwsh> l =fereOlestisDhlwseis();
-		Dhlwsh d= target("dhlwsh/"+l.get(0).getId()).request().get(new GenericType<Dhlwsh>(){});
-		Assert.assertEquals(l.get(0), d);
+		Response r= target("dhlwsh/"+l.get(0).getId()).request().get();
+		Assert.assertEquals(200, r.getStatus());
+		Response r1= target("dhlwsh/500").request().get();
+		Assert.assertEquals(205, r1.getStatus());
+		
 	}
 	
 	

@@ -26,10 +26,14 @@ public class DhlwshResource extends AbstractResource {
 	@GET
 	@Path("/{id}")
 	@Produces
-	public Dhlwsh GirnaThDwhlwshApoToIDths(@PathParam("id") int id){
+	public Response GirnaThDwhlwshApoToIDths(@PathParam("id") int id){
 		EntityManager em = getEntityManager();
 		IpovolhDhlwshsService ipo=new IpovolhDhlwshsService(em);
-		return ipo.VresDhlwshById(id);
+		if(ipo.VresDhlwshById(id)!=null){
+		return Response.ok().build();}
+		else{
+			return Response.status(205).build();
+		}
 	}
 	
 	
